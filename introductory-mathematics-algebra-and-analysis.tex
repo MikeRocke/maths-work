@@ -1,0 +1,198 @@
+\documentclass[]{report}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{venndiagram}
+
+
+\title{Introductory Mathematics: Algebra and Analysis Solutions}
+\author{Michael Rocke}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 1}
+
+\subsection{Exercises}
+Notes \\
+
+$\mathbb{N} $ = Set of Natural numbers, $ \{1, 2, 3, .. \}$ \\
+
+$\mathbb{Z} $ = Set of Integers, $ \{..., -2, -1, 0, 1, 2, .. \}$ \\
+
+$\mathbb{Q} $ = Set of Rational Numbers, $ Q = \{\frac{a}{b} | a,b \in \mathbb{Z}, b \ne 0 \} $ \\
+
+$\mathbb{R} $ = Set of Real numbers
+
+\subsubsection{1.1}
+$ A = \{1,2,3\} , B = \{1, 2\}, C=\{1, 3\}, D=\{2, 3\}, E=\{1\}, F=\{2\}, G=\{3\}, H=\emptyset$ \\
+
+
+a) $A \cap B = B $ \\
+
+b) $A \cup C = A $ \\
+
+c) $A \cap (B \cap C) = E $ \\
+
+d) $(C \cup A) \cap B  = B $ \\
+
+e) $ A \setminus B = G $ \\
+
+f) $ C \setminus A = H $ \\
+
+g) $ (D \setminus F) \cup (F \setminus D)  = G$ \\
+
+h) $ G \setminus A = H$ \\
+
+j) $ A \cup ((B \setminus C) \setminus F)  = A$\\
+
+k) $ H \cup H = H $\\
+
+l) $ A \cap A = A $\\
+
+m) $ ((B \cup C) \cap C) \cup H = C $\\
+
+\subsubsection{1.2}
+
+a) i and ii are the same, iii is different \\
+b) i and ii are the same, iii is different \\
+c) $ i = \{1, 2, 3, 4, 5, 6, 7\}, ii = \{1, 2, 3, 4, 5, 6, 7, -1, -2, -3, -4, -5, -6, -7\}, iii = \{1, 2, 3, 4, 5, 6, 7\} $, so i and iii are the same, ii is different \\
+d) $ i = \{0, 1, 2, 3, ...\}, ii = \{1, 2, 3, ...\}, iii = \{1, 2, 3, ...\}$, ii and iii are the same, i is different \\
+e) i and iii are the same, ii is different \\
+\\
+f) ii and iii are same, i is different \\
+\\
+g) ii and iii are same, i is different \\
+h) i and iii are same, ii is different \\
+\\
+j) $ i = \emptyset, ii = \emptyset, iii = \{\emptyset\} $ i and ii are same, iii are different \\
+k) ii and iii are the same, i is different \\
+l) ii and iii are the same, i is different \\
+m) $ i = \{\emptyset, \{\emptyset\}, 0\}, ii = \{\emptyset, \{\emptyset\}, 0\}, iii  = \{\emptyset, 0\} $ i and ii are same, iii different\\ 
+
+\subsubsection{1.3}
+
+\begin{venndiagram3sets}
+\end{venndiagram3sets}
+
+a)
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillACapBCapC
+	\end{venndiagram3sets}
+	\caption{ $ A \cap B \cap C $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillACapBNotC
+	\end{venndiagram3sets}
+	\caption{ $ A \cap B \cap C' $}
+\end{figure}
+
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillACapCNotB
+	\end{venndiagram3sets}
+	\caption{ $ A \cap B' \cap C $}
+\end{figure}
+
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillBCapCNotA
+	\end{venndiagram3sets}
+	\caption{ $ A' \cap B \cap C $}
+\end{figure}
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyA
+	\end{venndiagram3sets}
+	\caption{ $ A \cap B' \cap C' $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyB
+	\end{venndiagram3sets}
+	\caption{ $ A' \cap B \cap C' $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyC
+	\end{venndiagram3sets}
+	\caption{ $ A' \cap B' \cap C $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillNotABC
+	\end{venndiagram3sets}
+	\caption{ $ A' \cap B' \cap C' $}
+\end{figure}
+
+b) 
+
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillBCapCNotA
+	\end{venndiagram3sets}
+	\caption{ $ (A \cup (B' \cup C'))' $}
+\end{figure}
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyA
+	\end{venndiagram3sets}
+	\caption{ $ (A' \cup B \cup C)' $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyB
+	\end{venndiagram3sets}
+	\caption{ $ (A \cup B' \cup C)' $}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillOnlyC
+	\end{venndiagram3sets}
+	\caption{ $ (A \cup B \cup C')' $}
+\end{figure}
+
+
+\begin{figure}
+	\begin{venndiagram3sets}
+		\fillNotABC
+	\end{venndiagram3sets}
+	\caption{ $ (A \cup B \cup C)' $}
+\end{figure}
+
+\end{document}
