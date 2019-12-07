@@ -1,6 +1,10 @@
 \documentclass[]{report}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{cancel}
+\usepackage{xcolor}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+
 
 \title{Precalculus Solutions}
 \author{Michael Rocke}
@@ -9,9 +13,11 @@
 
 \maketitle
 
+\tableofcontents
+
 \section{Algebra}
 
-\subsection{1.1}
+\subsection{1}
 
 \subsubsection{1}
 $\sqrt{9} = 3^2$ - Integer or Natural Number\\
@@ -220,5 +226,259 @@ c) $(x-1)(x^2 + x + 1) = x^3 + x^2 + x - x^2 - x - 1 = x^3 - 1$
 d) $(x-1)(x^3 + x^2 + x + 1) = x^4 + x^3 + x^2 + x - x^3 - x^2 - x - 1 = x^4 -1$
 
 e) $(x-1)(x^4+x^3+x^2+x+1) = x^5 - 1$
+
+\subsubsection{14}
+
+Factor 
+
+a) $x^2 -x - 6 = (x+2)(x-3)$
+
+b) $x^2 + 9x + 20 = (x + 5)(x + 4)$
+
+c) $x^2 + 12x + 20 = (x + 10)(x + 2)$
+
+d) $x^2 -4x + 4 = (x-2)(x-2) = (x-2)^2$
+
+e) $x^2 + 8x + 16 = (x+4)^2$
+
+f) $x^3 + 12x^2 + 36x = x(x^2 + 12x + 36) = x(x+6)^2$
+
+g)$x^4 - 16 = (x^2+4)(x-2)(x+2)$
+
+h) $x^2 + 13x - 30 = (x+15)(x-2)$
+
+i) $x^2 + 2x - 35 =  (x-5)(x+7)$
+
+j) $x^2 - 13x + 42 = (x - 6)(x - 7)$
+
+k) $x^3 - 3x^2 - 4x = x(x^2 - 3x - 4) = x(x-4)(x + 1)$
+
+l) $4x^2 + 2x - 12 = (2x - 3)(2x+4) $
+
+m) $10x^2 - 16x - 8 = (10x + 4)(x - 2)$
+
+\subsubsection{15}
+
+Verify the formula $(x-a)(x^2 + ax + a^2) = x^3 - a^3$
+
+$(x-a)(x^2 + ax + a^2) = x^3 \Ccancel[red]{+ ax^2 } \Ccancel[blue]{+ a^2x}  \Ccancel[red]{- ax^2}  \Ccancel[blue]{- a^2x} - a^3 = x^3 - a^3$
+
+a) $x^3 - 27 = (x^3 - 3^3) =(x-3)(x^2 + 3x + 3^2)  $
+
+b) $8x^3 - 125 = (2x-5)(4x^2 + 10x + 25) $
+
+
+\subsubsection{16}
+
+
+Verify the formula $(x+a)(x^2 - ax + a^2) = x^3 + a^3$
+$(x+a)(x^2 - ax + a^2) = x^3  \Ccancel[red]{- ax^2} \Ccancel[blue]{+ a^2x} \Ccancel[red]{+ ax^2} \Ccancel[blue]{- a^2x} + a^3$
+
+
+and use to factor
+
+a) $x^3 + 64 = x^3 + 4^3 = (x+4)(x^2 - 4x + 16)$
+
+b) $27x^3 + 8 = (3x)^3 + 2^3 = (3x + 2)(9x^2 - 6x + 4)$
+
+\subsubsection{17}
+
+Solve by factoring, and then by quadratic forumla
+
+Quadratic formula;
+
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+a) $x^2 + 3x - 28 = 0 = (x + 7)(x - 4)$
+
+or using Quadratic formula;
+\[
+let a = 1, b = 3, c = -28 \\
+\]
+
+\[
+x = \frac{-3 \pm \sqrt{(-3)^2 - 4\cdot1\cdot-28}}{2\cdot1} = \frac{-3 \pm \sqrt{9 + 112}}{2} = \frac{-3 \pm 11}{2}
+\]
+
+\[
+x = \frac{8}{2} = 4 ,  \frac{-14}{2} = -7
+\]
+
+b) $x^2 - 8x - 33 = 0 = (x + 3)(x - 11)$
+
+or using Quadratic formula
+
+\[
+let a=1, b=-8, c= -33
+\]
+
+\[
+x = \frac{-(-8) \pm \sqrt{(-8)^2 - 4\cdot1\cdot(-33)}}{2\cdot1} = \frac{8 \pm \sqrt{64  + 132}}{2} = \frac{8 \pm \sqrt{196}}{2} = \frac{8 \pm 14}{2}
+\]
+
+\[
+x = \frac{-6}{2}, \frac{22}{2}
+\]
+
+
+
+c) $2x^2 + x -15 = 0 = (2x - 5)(x + 3)$
+
+
+or  using Quadratic formula
+
+\[
+let a=2, b=1, c=-15
+\]
+
+\[
+x = \frac{-1 \pm \sqrt{1^2 - 4\cdot2\cdot(-15)}}{2\cdot2} = \frac{-1 \pm \sqrt{1 + 120}}{4} = \frac{-1 \pm 11}{4}
+\]
+
+\[
+x = \frac{-12}{4} = -3, \frac{10}{4}
+\]
+
+d) $6x^2 - 5x -21 = 0 = (3x - 7)(2x + 3)$
+
+or using Quadratic Formula
+
+\[
+let a=6, b=-5, c=-21
+\]
+
+\[
+x = \frac{-(-5) \pm \sqrt{(-5)^2 - 4\cdot6\cdot(-21)}}{2\cdot6} = \frac{5 \pm \sqrt{529}}{12} = \frac{5 \pm 23}{12}
+\]
+
+Thus
+
+\[
+x=\frac{-18}{12} = \frac{-3}{2}, \frac{28}{12} = \frac{7}{3}
+\]
+
+
+
+\subsubsection{18}
+
+Solve by the quadratic formula
+
+a) $5x^2 - 9x + 3 = 0 $
+
+\[
+x = \frac{-(-9) \pm \sqrt{(-9)^2 - 4\cdot5\cdot3}}{2\cdot5} = \frac{9 \pm \sqrt{21}}{10}
+\]
+
+b) $3x^2 + 7x + 3 = 0$
+
+\[
+x = \frac{-7 \pm \sqrt{7^2 - 4\cdot3\cdot3}}{2\cdot3} = \frac{-7 \pm \sqrt{13}}{6}
+\]
+
+c) $17x^2 - 6x + 1 = 0$
+
+\[
+x = \frac{-(-6) \pm \sqrt{(-6)^2 - 4\cdot17\cdot1}}{2\cdot17} = \frac{6 \pm \sqrt{-32}}{34}
+\]
+
+x has no real values, because you cannot sqaure root a negative number
+
+
+d) $x^2 + x + 1 = 0$
+
+\[
+x = \frac{-1 \pm \sqrt{1 - 4\cdot1\cdot1}}{2} = \frac{-1 \pm \sqrt{-3}}{2}
+\]
+
+x has no real values, because you cannot sqaure root a negative number
+
+\subsubsection{19}
+
+Insert the correct inequality sign, < or > in the following;
+
+a) $ 3 < 11$
+
+b) $5 > 2$
+
+c) $-4 < -3 $
+
+d) $-6 < -2$
+
+e) $-2 > -3$
+
+f) $\pi < 2\sqrt{3}$
+
+\subsubsection{20}
+
+Solve the linear inequalities
+
+a) $ 5-2x > 17 $
+
+\begin{align*}
+5-2x > 17  \\
+-2x > 17 - 5 > 12 \tag*{taking 5 off}\\
+-x > 6 \tag*{dividing by 2}\\
+x < -6 \tag*{multiplying by -1}
+\end{align*}
+
+b) $ 3x + 4 > 13$
+
+\begin{align*}
+3x + 4 > 13 \\
+3x > 9 \tag*{taking 4 off}\\
+x > 3 \tag*{dividing by 3}
+\end{align*}
+
+\subsubsection{21}
+
+Solve the equations
+
+a) $|x| = 2 $
+
+\[
+x = \pm 2
+\]
+
+b) $|2x| = 6$
+
+\[
+x = \pm 3
+\]
+c) $|\frac{1}{3}x| = 2 $
+\[
+x = \pm 6
+\]
+
+d) $|x-2| = 3 $
+
+\[
+x = -1 or 5
+\]
+
+e) $|x + 3 | = 1$
+
+\[
+x = -4, -2
+\]
+
+\subsubsection{22}
+
+Solve the quadratic inequality $x(x-1) > 0$ by noticing that both factors must be positive or both factors must be negative
+
+\[
+x < 0 , x > 1
+\]
+
+\subsubsection{23}
+Solve the quadratic inequality $x^2 + 2x - 15 > 0$ by noticing that both factors must be positive or both factors must be negative
+
+\[
+x^2 + 2x - 15  = (x - 3)(x + 5)
+x < -5, x > 3
+\]
+
+\subsection{2}
+
+
 \end{document}
 
