@@ -3,8 +3,11 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{gensymb}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
-
+\graphicspath{{./images/}}
 
 \title{Precalculus Solutions}
 \author{Michael Rocke}
@@ -14,6 +17,47 @@
 \maketitle
 
 \tableofcontents
+
+\section{Geometry}
+\subsection{1}
+
+
+\subsubsection{1}
+\includegraphics[width=\textwidth]{precalc-geo-section1-1.jpg}
+
+
+\subsubsection{2}
+
+\includegraphics[width=\textwidth]{precalc-geo-section1-2.jpg}
+In each case, for the first diagram, find the required angle;
+
+a) $A=40\degree, C=100\degree, D=?$
+
+b) $A=50\degree, B=30\degree, C=?$
+
+c) $A=50\degree, D=140\degree, C=?$
+
+
+\subsubsection{3}
+
+In each case, for the second diagram, find the angles not given;
+
+a) $A=150\degree, C=40\degree$
+
+b) $B=60\degree, C=65\degree$
+
+\subsection{4}
+
+In the third diagram, $AB \perp BC$ Find the angles $x, y, z, w$
+
+\subsubsection{5}
+What is the height of a rectangle whose area is 40 square inches and whos base is 8 inches?
+
+\subsubsection{6} 
+If the base of a triangle is 9 inches, and its area is 45 square inches, what is the height?
+
+\subsubsection{7}
+The height and base of a triangle are equal, and its area is 32 square inches. Find the height and base.
 
 \section{Algebra}
 
@@ -477,7 +521,92 @@ x^2 + 2x - 15  = (x - 3)(x + 5)
 x < -5, x > 3
 \]
 
-\subsection{2}
+\subsection{2} Functions and Graphs
+
+\subsubsection{1}
+if $f(x) = 4x-3$, find $f(0), f(1), f(2), f(3)$
+
+\begin{align*}
+f(0) = 4\cdot0 - 3 = -3\\
+f(1) = 4\cdot1 - 3 = 1 \\
+f(2) = 4\cdot2 - 3 = 5 \\
+f(3) = 4\cdot3 - 3 = 9
+\end{align*}
+
+\subsubsection{2}
+if $g(x) = \frac{2x-4}{3x^2 + 1}$ find $g(0), g(1), g(-\frac{1}{2})$
+
+
+\begin{align*}
+g(0) = \frac{2\cdot0-4}{3\cdot0^2 + 1} = \frac{-4}{1} = -4\\
+g(1) = \frac{2\cdot1 - 4}{3\cdot1^2 + 1} = \frac{-2}{4} = -\frac{1}{2}\\
+g(-\frac{1}{2}) = \frac{2\cdot(-\frac{1}{2}) - 4}{3\cdot(-\frac{1}{2})^2 + 1} = \frac{-5}{\frac{7}{4}} = -\frac{20}{7}
+\end{align*}
+
+
+\subsubsection{3}
+if $h(x) = x^3 - 3x^2 + 5x - 1$, find $h(x^3)$
+
+\[
+(x^3)^3 - 3(x^3)^2 + 5(x^3) - 1 = x^9 - 3x^6 + 5x^3 - 1
+\]
+
+\subsubsection{4}
+
+if $F(x) = \frac{x}{x-1}$ find $F[F(x)]$
+
+TODO
+
+\[
+F(\frac{x}{x-1}) = \frac{\frac{x}{x-1}}{\frac{x}{x-1}-1} = 
+\]
+
+\subsubsection{5}
+
+Express the area A of a square as a function of 
+
+a) the length of one side x
+
+b) the perimeter p
+
+\subsubsection{6}
+
+Express the area A of a circle as a function of its circumference c
+
+\subsubsection{7}
+Express the height of an equilateral triangle as a function of the base x
+
+\subsubsection{8}
+Two cyclists start racing along a straight road from the same place at the same time in the same direction.
+
+If one travels 40 mi/hr and the other 35 mi/hr, find the distance between them $t$ hours after they start
+
+\subsubsection{9}
+
+Draw the triangle having the following points as vertices;
+
+a) $(1, -1), (4, 2), (-3, 5)$
+
+\begin{tikzpicture}
+	\draw (-5, -5) grid (6, 6);
+	
+	\coordinate (a) at (1, -1);
+	\coordinate (b) at (4, 2);
+	\coordinate (c) at (-3, 5);
+	
+	\node[label=above:a, left of=a](a){};
+	
+	\node[label=above:b, left of=b](b){};
+	\node[label=above:c, left of=c](c){};
+	
+	\draw (1, -1) -- (4, 2) -- (-3, 5) -- cycle;
+\end{tikzpicture}
+
+b) $(5, -2)(-2, -4), (1, 4)$
+
+
+\subsubsection{10}
+TODO Write up
 
 
 \end{document}
