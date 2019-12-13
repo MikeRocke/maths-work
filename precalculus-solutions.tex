@@ -79,7 +79,7 @@ b) $B=60\degree, C=65\degree$
 A = 180 - 60 = 120\degree, D=180-65=115\degree, E=60\degree, F=180-65-60 = 55\degree, G=65\degree
 \]
 
-\subsection{4}
+\subsubsection{4}
 
 In the third diagram, $AB \perp BC$ Find the angles $x, y, z, w$
 
@@ -610,10 +610,9 @@ if $h(x) = x^3 - 3x^2 + 5x - 1$, find $h(x^3)$
 
 if $F(x) = \frac{x}{x-1}$ find $F[F(x)]$
 
-TODO
 
 \[
-F(\frac{x}{x-1}) = \frac{\frac{x}{x-1}}{\frac{x}{x-1}-1} = 
+F(\frac{x}{x-1}) = \frac{\frac{x}{x-1}}{\frac{x}{x-1}-1} = \frac{x}{x-1} \cdot \frac{1}{\frac{x}{x-1}-1} =  x
 \]
 
 \subsubsection{5}
@@ -622,19 +621,40 @@ Express the area A of a square as a function of
 
 a) the length of one side x
 
+\[
+Area(x) = x^2
+\]
+
 b) the perimeter p
+\[
+Area(p) = (\frac{p}{4})^2
+\]
 
 \subsubsection{6}
 
 Express the area A of a circle as a function of its circumference c
 
-\subsubsection{7}
+\[
+Circumference(d) = \pi \cdot d;
+Radius(c) = \frac{c}{\pi \cdot 2};
+Area(c) = \pi (\frac{c}{\pi \cdot 2})^2 = \pi \frac{c^2}{\pi^2 \cdot 4} = \frac{c^2}{4\pi}
+\]
+
+\subsubsection{7} TODO
 Express the height of an equilateral triangle as a function of the base x
+
+\[
+Height(x) = \sqrt{x^2 - (\frac{x}{2})^2}
+\]
 
 \subsubsection{8}
 Two cyclists start racing along a straight road from the same place at the same time in the same direction.
 
 If one travels 40 mi/hr and the other 35 mi/hr, find the distance between them $t$ hours after they start
+
+\[
+Distance(t) = (40\cdot t) - (35\cdot t) = 5t
+\]
 
 \subsubsection{9}
 
@@ -659,16 +679,245 @@ a) $(1, -1), (4, 2), (-3, 5)$
 
 b) $(5, -2)(-2, -4), (1, 4)$
 
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+\coordinate (a) at (5, -2);
+\coordinate (b) at (-2, -4);
+\coordinate (c) at (1, 4);
+
+\draw (a) -- (b) -- (c) -- cycle;
+
+
+\end{tikzpicture}
+
 
 \subsubsection{10}
 
-Find the length of the sides and the hypotenuse oof the right triangle whos vertices are;
+Find the length of the sides and the hypotenuse of the right triangle whos vertices are;
 
 a) (1, 2), (-3, 2), (-3, 5)
 
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+\coordinate (a) at (1, 2);
+\coordinate (b) at (-3, 2);
+\coordinate (c) at (-3, 5);
+
+\draw [line width=2pt, red] (a) -- (b) -- (c) -- cycle;
+
+\end{tikzpicture}
+
+\[
+height = 3, base = 4, hypotenuse = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]
+
 b) (2, -5), (2, 7), (-3, 7)
 
+\begin{tikzpicture}
+\draw (-10, -10) grid (10, 10);
+
+\coordinate (a) at (2, -5);
+\coordinate (b) at (2, 7);
+\coordinate (c) at (-3, 7);
+
+\draw [line width=2pt, red] (a) -- (b) -- (c) -- cycle;
+\end{tikzpicture}
+
+\[
+height = 12, base = 5, hypotenuse = \sqrt{5^2 + 12^2} = \sqrt{25+ 144} = \sqrt{169} = 13
+\]
+
+\subsubsection{11}
+
+Find the area of the rectangle whoose vertices are
+
+a) $(4, 1), (-2, 3), (-2, 1), (4, 3) $
+
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+\coordinate (a) at (4, 1);
+\coordinate (b) at (-2, 3);
+\coordinate (c) at (-2, 1);
+\coordinate (d) at (4, 3);
+
+\draw[line width=3pt, red] (a) -- (d) -- (b) -- (c) -- cycle;
 
 
+\end{tikzpicture}
+
+\[
+height =  3 - 1 = 2, width = 4 - (-2) = 6, area = 2 \cdot 6 = 12
+\]
+
+
+a) $(-3, 7), (4, 2), (-3, 2), (4, 7) $
+
+\begin{tikzpicture}
+\draw (-8, -8) grid (8, 8);
+
+\coordinate (a) at (-3, 7);
+\coordinate (b) at (4, 2);
+\coordinate (c) at (-3, 2);
+\coordinate (d) at (4, 7);
+
+\draw[line width=3pt, red] (a) -- (d) -- (b) -- (c) -- cycle;
+
+\end{tikzpicture}
+
+\[
+height = 7 - 2 =  5, width  = 4 - (-3) = 7, area = 5 \cdot 7 = 35
+\]
+
+
+\subsubsection{12}
+Find the coordinates of the midpoint of the segment joining
+
+a) $(0, 0) to (6, 8)$
+
+\begin{tikzpicture}
+\draw (0, 0) grid (10,10);
+
+\draw[red] (0, 0)  node[circle, fill, inner sep=1pt, label=above:(0\,0)](a){} -- (6, 8) node[circle, fill, inner sep=1pt, label=above:(6\,8)](b){};
+
+\draw[red] (3, 4)  node[circle, fill, inner sep=1pt, label=above:(3\,4)](mid){};
+
+\end{tikzpicture}
+
+
+
+\[
+midpoint = (0 + \frac{6-0}{2}, 0 + \frac{8-0}{2}) = (3, 4)
+\]
+
+b) $(1, 2) to (7, 8)$
+
+\begin{tikzpicture}
+\draw (0, 0) grid (10, 10);
+
+\draw[red] (1, 2) node[circle, fill, inner sep=1pt, label=above:(1\,2)](a){} -- (7, 8) node[circle, fill, inner sep=1pt, label=above:(7\,8)](b){};
+
+\draw[red] (4, 5)  node[circle, fill, inner sep=1pt, label=above:(4\,5)](mid){};
+\end{tikzpicture}
+
+\[
+midpoint = (1 + \frac{7 - 1}{2}, 2 + \frac{8 - 2}{2}) = (4, 5)
+\]
+
+\subsubsection{13}
+
+Sketch on a suitable diagram all points (x, y)
+such that
+
+a) $x = 3$
+
+\begin{tikzpicture}
+\draw (0, 0) grid (5, 5);
+
+\draw [red] (3, 0) -- (3, 5);
+
+\end{tikzpicture}
+
+b) $y= -4$
+
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+\draw [red] (-5, -4) -- (5, -4);
+\end{tikzpicture}
+
+c) $x<3 and y > 2$
+
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+\draw [red, fill] (-5, 3) -- (2, 3) -- (2, 5) -- (-5, 5) -- cycle;
+\end{tikzpicture}
+
+d) x or y (or both) is zero
+
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+\draw [red] (0, 0) -- (5, 0);
+
+\draw [red] (0, 0) -- (0, 5);
+
+\end{tikzpicture}
+
+e) $x >= 0 $ and $y <= 0$
+
+f) $x^2 <= 1$
+
+
+\subsubsection{14}
+
+Find the slope determined by 
+
+a) $(1, 2)$ and $(3, 6)$
+
+b) $(-2, 4)$ and $(3, 4)$
+
+c) $(-1, 2)$ and $(2, -3)$
+
+
+\subsubsection{15}
+
+Find the equation of the line through
+
+a) $(-1, -2)$ and $(1, 0)$
+
+b) $(0, 4)$ and $(1, 7)$
+
+c) $(4, -2)$ and $(4, 19)$
+
+
+\subsubsection{16}
+
+Show that the lines $3x + y = 2$ and $2y = 1- 6x$ are parallel
+
+\subsubsection{17}
+
+Write the equation of the line through (-2, -3) which is 
+
+a) parallel to $x + 2y = 3$
+
+b) perpendicular to $x + 2y = 3$
+
+
+\subsubsection{18}
+
+Write the equation of the circle with
+
+a) center (0,0) and radius 2;
+
+b) center (-2,0) and radius 7;
+
+c) center (3,6) and radius $\frac{1}{2}$;
+
+d) with (5, 5) and (-3, -1) as the ends of a diameter
+
+
+\subsubsection{19}
+
+Find the center and radius of the circle whose equation is
+
+a) $(x + 3)^2 + (y - 6) ^2 = 9$
+
+
+b) $(x - 4)^2 + (y) ^2 = 4$
+
+
+c) $(x )^2 + (y + 2) ^2 = 1$
+
+
+d) $x^2 + y^2 + 6x + 2y + 6  = 0$
+
+e) $x^2 + y^2 - 16x + 14y + 97 = 0$
+
+\subsubsection{20}
+
+On a single set of coordinate axes, sketch the line x + 16 = 7y and the circle 
 \end{document}
 
