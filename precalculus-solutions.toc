@@ -1,55 +1,58 @@
-\contentsline {section}{\numberline {0.1}Geometry}{2}% 
-\contentsline {subsection}{\numberline {0.1.1}1}{2}% 
-\contentsline {subsubsection}{1}{2}% 
-\contentsline {subsubsection}{2}{4}% 
-\contentsline {subsubsection}{3}{5}% 
-\contentsline {subsubsection}{4}{5}% 
-\contentsline {subsubsection}{5}{5}% 
-\contentsline {subsubsection}{6}{5}% 
-\contentsline {subsubsection}{7}{6}% 
-\contentsline {section}{\numberline {0.2}Algebra}{6}% 
-\contentsline {subsection}{\numberline {0.2.1}1}{6}% 
-\contentsline {subsubsection}{1}{6}% 
-\contentsline {subsubsection}{2}{6}% 
-\contentsline {subsubsection}{3}{6}% 
-\contentsline {subsubsection}{4}{6}% 
-\contentsline {subsubsection}{5}{7}% 
-\contentsline {subsubsection}{6}{7}% 
-\contentsline {subsubsection}{7}{7}% 
-\contentsline {subsubsection}{8}{7}% 
-\contentsline {subsubsection}{9}{8}% 
-\contentsline {subsubsection}{10}{8}% 
-\contentsline {subsubsection}{11}{9}% 
-\contentsline {subsubsection}{12}{9}% 
-\contentsline {subsubsection}{13}{9}% 
-\contentsline {subsubsection}{14}{9}% 
-\contentsline {subsubsection}{15}{10}% 
-\contentsline {subsubsection}{16}{10}% 
-\contentsline {subsubsection}{17}{10}% 
-\contentsline {subsubsection}{18}{11}% 
-\contentsline {subsubsection}{19}{12}% 
-\contentsline {subsubsection}{20}{12}% 
-\contentsline {subsubsection}{21}{12}% 
-\contentsline {subsubsection}{22}{13}% 
-\contentsline {subsubsection}{23}{13}% 
-\contentsline {subsection}{\numberline {0.2.2}2}{13}% 
-\contentsline {subsubsection}{1}{13}% 
-\contentsline {subsubsection}{2}{13}% 
-\contentsline {subsubsection}{3}{13}% 
-\contentsline {subsubsection}{4}{14}% 
-\contentsline {subsubsection}{5}{14}% 
-\contentsline {subsubsection}{6}{14}% 
-\contentsline {subsubsection}{7}{14}% 
-\contentsline {subsubsection}{8}{14}% 
-\contentsline {subsubsection}{9}{14}% 
-\contentsline {subsubsection}{10}{16}% 
-\contentsline {subsubsection}{11}{19}% 
-\contentsline {subsubsection}{12}{20}% 
-\contentsline {subsubsection}{13}{22}% 
-\contentsline {subsubsection}{14}{25}% 
-\contentsline {subsubsection}{15}{25}% 
-\contentsline {subsubsection}{16}{25}% 
-\contentsline {subsubsection}{17}{26}% 
-\contentsline {subsubsection}{18}{26}% 
-\contentsline {subsubsection}{19}{26}% 
-\contentsline {subsubsection}{20}{26}% 
+\contentsline {section}{\numberline {0.1}Geometry}{2}%
+\contentsline {subsection}{\numberline {0.1.1}1}{2}%
+\contentsline {subsubsection}{1}{2}%
+\contentsline {subsubsection}{2}{4}%
+\contentsline {subsubsection}{3}{5}%
+\contentsline {subsubsection}{4}{5}%
+\contentsline {subsubsection}{5}{5}%
+\contentsline {subsubsection}{6}{5}%
+\contentsline {subsubsection}{7}{6}%
+\contentsline {section}{\numberline {0.2}Algebra}{6}%
+\contentsline {subsection}{\numberline {0.2.1}1}{6}%
+\contentsline {subsubsection}{1}{6}%
+\contentsline {subsubsection}{2}{6}%
+\contentsline {subsubsection}{3}{6}%
+\contentsline {subsubsection}{4}{6}%
+\contentsline {subsubsection}{5}{7}%
+\contentsline {subsubsection}{6}{7}%
+\contentsline {subsubsection}{7}{7}%
+\contentsline {subsubsection}{8}{7}%
+\contentsline {subsubsection}{9}{8}%
+\contentsline {subsubsection}{10}{8}%
+\contentsline {subsubsection}{11}{9}%
+\contentsline {subsubsection}{12}{9}%
+\contentsline {subsubsection}{13}{9}%
+\contentsline {subsubsection}{14}{9}%
+\contentsline {subsubsection}{15}{10}%
+\contentsline {subsubsection}{16}{10}%
+\contentsline {subsubsection}{17}{10}%
+\contentsline {subsubsection}{18}{11}%
+\contentsline {subsubsection}{19}{12}%
+\contentsline {subsubsection}{20}{12}%
+\contentsline {subsubsection}{21}{12}%
+\contentsline {subsubsection}{22}{13}%
+\contentsline {subsubsection}{23}{13}%
+\contentsline {subsection}{\numberline {0.2.2}2}{13}%
+\contentsline {subsubsection}{1}{13}%
+\contentsline {subsubsection}{2}{13}%
+\contentsline {subsubsection}{3}{13}%
+\contentsline {subsubsection}{4}{14}%
+\contentsline {subsubsection}{5}{14}%
+\contentsline {subsubsection}{6}{14}%
+\contentsline {subsubsection}{7}{14}%
+\contentsline {subsubsection}{8}{14}%
+\contentsline {subsubsection}{9}{14}%
+\contentsline {subsubsection}{10}{16}%
+\contentsline {subsubsection}{11}{19}%
+\contentsline {subsubsection}{12}{20}%
+\contentsline {subsubsection}{13}{22}%
+\contentsline {subsubsection}{14}{27}%
+\contentsline {subsubsection}{15}{29}%
+\contentsline {subsubsection}{16}{29}%
+\contentsline {subsubsection}{17}{29}%
+\contentsline {subsubsection}{18}{30}%
+\contentsline {subsubsection}{19}{30}%
+\contentsline {subsubsection}{20}{30}%
+\contentsline {subsubsection}{21}{30}%
+\contentsline {subsubsection}{22}{30}%
+\contentsline {subsubsection}{23}{30}%

@@ -752,7 +752,7 @@ height =  3 - 1 = 2, width = 4 - (-2) = 6, area = 2 \cdot 6 = 12
 \]
 
 
-a) $(-3, 7), (4, 2), (-3, 2), (4, 7) $
+b) $(-3, 7), (4, 2), (-3, 2), (4, 7) $
 
 \begin{tikzpicture}
 \draw (-8, -8) grid (8, 8);
@@ -848,7 +848,20 @@ d) x or y (or both) is zero
 
 e) $x >= 0 $ and $y <= 0$
 
+\begin{tikzpicture}
+\draw(-5, -5) grid (5, 5);
+
+\draw [red, fill] (0, 0) -- (0, -5) -- (5, -5) -- (5, 0) -- cycle;
+\end{tikzpicture}
+
+
 f) $x^2 <= 1$
+
+\begin{tikzpicture}
+	\draw (-5, -5) grid (5, 5);
+	
+	\draw [red, fill] (-1, -5) -- (1, -5) -- (1, 5) -- (-1, 5) -- cycle;
+\end{tikzpicture}
 
 
 \subsubsection{14}
@@ -857,9 +870,39 @@ Find the slope determined by
 
 a) $(1, 2)$ and $(3, 6)$
 
+\begin{tikzpicture}
+\draw(0, 0) grid (7, 7);
+
+\draw [red](1, 2) -- (3, 6);
+\end{tikzpicture}
+
+\[
+	m = \frac{6 - 2}{3 - 1} = \frac{4}{2} = 2
+\]
+
 b) $(-2, 4)$ and $(3, 4)$
 
-c) $(-1, 2)$ and $(2, -3)$
+\begin{tikzpicture}
+\draw (-5,-5 ) grid (5, 5);
+
+\draw [red] (-2, 4) -- (3, 4);
+\end{tikzpicture}
+
+\[
+m = \frac{3 - (-2)}{4-4} = 0
+\]
+
+c) $(-2, 1)$ and $(2, -3)$
+
+\begin{tikzpicture}
+\draw(-5, -5) grid (5, 5);
+
+\draw [red] (-2, 1) -- (2, -3);
+\end{tikzpicture}
+
+\[
+	m = \frac{-3 - 1}{2 - (-2)} = \frac{-4}{4} = -1 
+\]
 
 
 \subsubsection{15}
@@ -918,6 +961,44 @@ e) $x^2 + y^2 - 16x + 14y + 97 = 0$
 
 \subsubsection{20}
 
-On a single set of coordinate axes, sketch the line x + 16 = 7y and the circle 
+On a single set of coordinate axes, sketch the line x + 16 = 7y and the circle $x^2 + y^2 - 4x + 2y = 20$ and find their points of intersection.
+
+\subsubsection{21}
+Find the focus and directrix of each of the following parabolas
+
+a) $ y = 2x^2$
+
+b) $y = \frac{1}{8}x^2$
+
+c) $y = -5x^2$
+
+d) $y = -\frac{1}{12}x^2$
+
+\subsubsection{22}
+
+A parabola has vetical axis and vertex at the origin.
+
+Write its equation if its focus is at 
+
+a) $(0, 3)$
+
+b) $(0, 16)$
+
+c) $(0, -1)$
+
+d) $(0, -\frac{1}{10})$
+
+\subsubsection{23}
+
+Find the vertex and focus of each of the following parabolas, and state whether it opens up or down;
+
+a) $y = x^2 - 4x + 1$
+
+b) $y = 2x^2 - 12x - 7 $
+
+c) $y = -x^2 -4x + 5$
+
+d) $y = 4 - 2x - \frac{1}{2} x^2$
+
 \end{document}
 
