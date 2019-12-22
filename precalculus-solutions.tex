@@ -978,12 +978,39 @@ Write the equation of the circle with
 
 a) center (0,0) and radius 2;
 
+$ (x + 0)^2 + (y+0)^2 = x^2 + y^2 = 2^2$
+
+
 b) center (-2,0) and radius 7;
+
+$(x+2)^2 +y^2 = 49$
 
 c) center (3,6) and radius $\frac{1}{2}$;
 
+$(x-3)^2 + (y-6)^2 = \frac{1}{4}$
+
 d) with (5, 5) and (-3, -1) as the ends of a diameter
 
+Proposing we draw a straight line from $(5, 5)$ to $(-3, -1)$, the midpoint indicates the center.
+$(\frac{5-3}{2}, \frac{5-1}{2}) = (1, 2)$
+
+\begin{tikzpicture}
+\draw (-5, -5) grid (5, 5);
+
+
+\draw[red] (-3, -1)  node[circle, fill, inner sep=1pt, label=above:(-3\,-1)](a){} -- (5, 5) node[circle, fill, inner sep=1pt, label=above:(5\,5)](b){};
+
+\draw[red] (1, 2)  node[circle, fill, inner sep=1pt, label=above:(1\,2)](mid){};
+
+\draw (1, 2) circle (5);
+
+\end{tikzpicture}
+
+thus the equation of the ciircle is 
+
+\[
+(x-1)^2 + (y-2)^2 = 25
+\]
 
 \subsubsection{19}
 
@@ -991,20 +1018,66 @@ Find the center and radius of the circle whose equation is
 
 a) $(x + 3)^2 + (y - 6) ^2 = 9$
 
+$r = \sqrt{9} = 3$
+
+$center = (-3, +6)$
+
 
 b) $(x - 4)^2 + (y) ^2 = 4$
+
+$r = 2$
+
+$center = (4, 0)$
 
 
 c) $(x )^2 + (y + 2) ^2 = 1$
 
+$r = 1$
+
+$center = (0, -2)$
+
 
 d) $x^2 + y^2 + 6x + 2y + 6  = 0$
+\begin{align*}
+	x^2 + y^2 + 6x + 2y + 6  = 0 \tag{1} \\
+	(x + 3)^2 + (y+1)^2  -4 = 0  \tag{factoring out x and y} \\
+	(x + 3)^2 + (y+1)^2 = 4
+\end{align*}
+
+Thus, $radius = \sqrt{4} = 2$ and $center = (-3, -1)$
 
 e) $x^2 + y^2 - 16x + 14y + 97 = 0$
 
+\begin{align*}
+x^2 + y^2 - 16x + 14y + 97 = 0	\tag{1} \\
+x^2 - 16x + 48 + (y + 7)^2 = 0 \tag{factoring out y}\\
+(x-8)^2 + (y+7)^2 - 16 = 0 \tag{factoring out x} \\
+(x-8)^2 + (y+7)^2 = 16
+\end{align*}
+
+Thus $radius = \sqrt{16} = 4$ and center $(8, -7)$
+
 \subsubsection{20}
 
-On a single set of coordinate axes, sketch the line x + 16 = 7y and the circle $x^2 + y^2 - 4x + 2y = 20$ and find their points of intersection.
+On a single set of coordinate axes, sketch the line $x + 16 = 7y$ and the circle $x^2 + y^2 - 4x + 2y = 20$ and find their points of intersection.
+
+\begin{align*}
+	x + 16 = 7y \tag{1} \\
+	x = 7y - 16 \tag{rearranging} \\
+	x^2 + y^2 - 4x + 2y = 20  \tag{2} \\
+	(7y - 16)^2 + y^2 - 4(7y -16) + 2y = 20 \tag{eliminating x} \\
+	49y^2 - 224y + 256 + y^2 - 28y  + 64 + 2y = 20 \tag{expanding} \\
+	50y^2 - 250y + 320 = 20 \\
+	50y^2 - 250y + 300 = 0 \\
+	y = \frac{250 \pm \sqrt{(-250)^2 - 4 \cdot 50 \cdot 300}}{2 \cdot 50} \\
+	y = \frac{250 \pm \sqrt{2500}}{100} = \frac{250 \pm 50}{100}\\
+	y = \frac{200}{100} = 2, or, y = \frac{300}{100} = 3
+\end{align*}
+
+Thus, when $y = 2$, $x = 7\cdot 2 - 16 = -2$ and when $y = 3$ then $x = 7\cdot 3 -16 = 5$
+
+So the points on intersection are, (-2, 2) and (5, 3)
+
 
 \subsubsection{21}
 Find the focus and directrix of each of the following parabolas
