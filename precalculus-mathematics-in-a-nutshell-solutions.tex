@@ -2251,14 +2251,14 @@ Use mathematical induction to proove the following, where $n \subset \mathbb{N}$
 a) $1 + 3 + 5 + ... + (2n-1) = n^2$
 
 \begin{proof}
-	Proving by mathematical induction.
-	First we prove the base case
-	Let n = 1
+	Proving by mathematical induction.\\
+	First we prove the base case\\
+	Let n = 1\\
 	\begin{align*}
 		(2\cdot 1 - 1) = 1^2 \\
 		1 = 1
 	\end{align*}	
-	Which is true. Now proving the inductive step, for $n$ and $n+1$
+	Which is true. Assuming this is true for $n$, we now prove the inductive step, $n+1$
 	\begin{align*}
 	1 + 3 + 5 + ... + (2n-1)  + (2(n+1) - 1) = (n + 1)^2\\
 	1 + 3 + 5 + ... + (2n-1)  + (2n + 2 - 1) = n^2 + 2n + 1 \\
@@ -2268,11 +2268,160 @@ a) $1 + 3 + 5 + ... + (2n-1) = n^2$
 
 b) $1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 = \frac{n(4n^2 -1)}{3}$
 
+\begin{proof}
+	Proving by mathematcal induction.
+	First we prove the base case\\
+	Let n = 1
+	\begin{align*}
+		1^2 = \frac{1(4\cdot 1^2 - 1)}{3} \\
+		1 = \frac{4 -1}{3}
+	\end{align*}
+	Which is true. Assuming this is true for $n$, we now prove the inductive step for $n+1$
+	
+	\begin{align*}
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{(n+1)(4(n+1)^2 -1)}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{(n+1)(4n^2 + 8n + 4 -1)}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{(4n^3 + 8n^2 + 4n -1n + 4n^2 + 8n + 4 - 1)}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{n(4n^2 + 8n + 4 -1 + 4n + 8) + 4 - 1}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{n((2n+1)(2n-1) + 12n + 12) + 3}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{n((2n+1)(2n-1)) + (12n^2 + 12n + 3)}{3}\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +(2(n+1) - 1)^2 = \frac{n((2n+1)(2n-1))}{3} + (4n^2 + 4n + 1)\\
+		1^2 + 3^2 + 5^2 + ...  +(2n - 1)^2 +\cancel{(2n+1)^2} = \frac{n((2n+1)(2n-1))}{3} + \cancel{(2n + 1)^2}\\
+	\end{align*}
+\end{proof}
+
 c) $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
+
+\begin{proof}
+	Proving by mathematical induction.
+	First we will prove the base case, where n = 1\\
+	\begin{align*}
+	1^3 = (\frac{1(1+1))}{2})^2 = 1^2 = 1
+	\end{align*}
+	Which is true. Assuming this holds for $n$, we now prove the inductive step for $n+1$
+	
+	\begin{align*}
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{(n+1)(n+2)}{2})^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{n^2 + n  + 2n + 2}{2})^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{n(n+1) + 2n + 2}{2})^2 \\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{n(n+1)}{2} + n+1)^2 \\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{1}{2}\cdot(n(n+1)) + n+1)^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = (\frac{1}{2}a + n+1)^2\\ \tag{let a = n(n+1))}
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2 + an +  a + n^2 + 2n + 1\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2 + an +  a + (n+1)^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2 + n^2(n+1) + n(n+1) + (n+1)^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2 + n^3 + 2n^2 + n + (n+1)^2\\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2 + n(n+1)^2 + (n+1)^2 \\
+		1^3 + 2^3 + 3^3 + ... + n^3 + (n+1)^3 = \frac{1}{4}a^2  + (n+1)^3 \\
+		1^3 + 2^3 + 3^3 + ... + n^3 + \cancel{(n+1)^3} = (\frac{n(n+1)}{2})^2 + \cancel{(n+1)^3} \\
+	\end{align*}
+\end{proof}
 
 d) $2^{2n} - 1$ is divisible by 3
 
+\begin{proof}
+	Proving with mathematical induction.
+	First we will prove the base case, where n = 1;
+	\begin{align*}
+	2^{2\cdot 1} - 1 = 2^2 -1 = 4 -1 = 3
+	\end{align*}
+	Which 3 is divisible by 3. Assuming this holds for $n$ we now prove the inductive step for $n+1$
+	
+	\begin{align*}
+		2^{2n}  - 1 = 3x \tag{our original statement with x being some unknown integer} \\
+		2^{2(n+1)}  - 1 = 3y \tag{for n+1 with a new unknown y}\\
+		2^{(2n+2)}  - 1 = 3y\\
+		2^{2n} \cdot 2^2 -1 = 3y \tag{splitting the power into two components}\\
+		2^{2n} \cdot 4 - 1 -3 = 3y - 3 \tag{taking 3 off both sides}\\
+		4(2^{2n} - 1) = 3y - 3 \\
+		4(3x) = 3y - 3 \tag{substituting the original statement in}
+	\end{align*}
+	where both sides are a multiple of 3, thus prooving the statement $2^{2n} - 1$ is divisible by 3
+\end{proof}
+
 e) $3^{2n} - 1$ is divisible by 8
+
+\begin{proof}
+	Proving with mathematical induction.
+	First we will prove the base case where n = 1.
+	
+	\begin{align*}
+		3^{2\cdot 1} - 1 = 3^2 - 1 = 9-1 = 8
+	\end{align*}
+	
+	Which is divisible by 8. Assuming this holds for $n$ we now prove the inductive step for $n+1$
+	
+	\begin{align*}
+		3^{2n} - 1 = 8x \tag{our original statement, with x being some unknown integer}\\
+		3^{2(n+1)} - 1 = 8y \tag{for n+1 with a new unknown y}
+		3^{2n + 2} - 1 = 8y\\
+		3^2n \cdot 3^2 - 1 = 8y\\
+		9(3^2n - 1) = 8y - 8 \tag{taking 8 from both sides}\\
+		9(8x) = 8y - 8
+	\end{align*}
+	where both sides are divisible by 8, thus prooving the statement $3^{2n} - 1$ is divisible by 8
+\end{proof}
+
+\section{Trigonometry}
+
+\subsection{3}
+
+\subsubsection{1}
+
+Express the following angles in radians
+$2\pi = 360\degree$
+$\pi = 180\degree$
+$\frac{\pi}{2} = 90\degree$
+$\frac{\pi}{3} = 60\degree$
+$\frac{\pi}{6} = 30\degree$
+
+a) $12\degree = \frac{2\pi}{30} = \frac{\pi}{15}$
+b) $24\degree = \frac{2\pi}{15}$
+c) $36\degree = \frac{3\pi}{15} = \frac{\pi}{5}$
+d)$15\degree = \frac{\pi}{12}$
+e)$5\degree = \frac{\pi}{36}$
+f)$20\degree = \frac{\pi}{9}$
+g)$75\degree = \frac{5\pi}{12}$
+h)$80\degree = \frac{4\pi}{9}$
+i)$105\degree = \frac{7\pi}{12}$
+j)$270\degree = \frac{3\pi]}{2}$
+k)$27\degree = \frac{3\pi}{20}$
+l)$-720\degree = -4\pi$
+m)$630\degree = 2\pi + \frac{3\pi}{2} = \frac{4\pi}{2} + \frac{3\pi}{2} = \frac{7\pi}{2}$
+n)$-240\degree = -\pi - \frac{\pi}{3} = -\frac{4\pi}{3}$
+o)$225\degree = \pi + \frac{\pi}{4} = \frac{5\pi}{4}$
+p)$285\degree = \pi + \frac{7\pi}{12} = \frac{19\pi}{12}$
+q)$150\degree = \frac{\pi}{2} + \frac{\pi}{3} = \frac{5\pi}{6}$
+r)$450\degree = 2\pi + \frac{\pi}{2} = \frac{5\pi}{2}$
+
+\subsubsection{2}
+a) $\frac{5\pi}{3} = \frac{900}{3} = 300\degree$
+b) $\frac{-2\pi}{3} = \frac{-360}{3} = -120\degree$
+c) $\frac{5\pi}{4} = \frac{900}{4} = 225\degree$
+d)$\frac{7\pi}{4} = \frac{1260}{4} = 315\degree$
+e) $\frac{\pi}{5} = \frac{180}{5} = 36\degree$
+f) $\frac{3\pi}{5} = \frac{540}{5} = 108\degree$
+g) $\frac{6\pi}{5} = 216\degree$
+h) $\frac{9\pi}{5} = 324\degree$
+i) $\frac{11\pi}{5} = 396\degree$
+j) $\frac{5\pi}{6} = 150\degree$
+k) $\frac{-13\pi}{6} = -390\degree$
+l) $\frac{7\pi}{6} = 210\degree$
+m) $\frac{4\pi}{9} = 80\degree$
+n) $\frac{5\pi}{12} = 75\degree$
+
+
+\subsection{4}
+Establish the following identities
+
+1. $\frac{\sin \theta + \tan \theta}{\csc \theta + \cot \theta} = \sin \theta \tan \theta$
+
+Given $\csc \theta = \frac{1}{\sin \theta}$ and $\cot \theta = \frac{1}{\tan \theta}$
+
+Then we have
+
+$\frac{\sin \theta + \tan \theta}{\csc \theta + \cot \theta} = (\sin \theta + \tan \theta) \cdot (\frac{1}{\frac{1}{\sin\theta} +\frac{1}{\tan \theta}}) = $
+
 \end{document}
 
 
