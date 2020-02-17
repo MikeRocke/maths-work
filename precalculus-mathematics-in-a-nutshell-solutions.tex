@@ -2416,12 +2416,81 @@ Establish the following identities
 
 1. $\frac{\sin \theta + \tan \theta}{\csc \theta + \cot \theta} = \sin \theta \tan \theta$
 
-Given $\csc \theta = \frac{1}{\sin \theta}$ and $\cot \theta = \frac{1}{\tan \theta}$
+Given $\csc \theta = \frac{1}{\sin \theta}$ and $\cot \theta = \frac{1}{\tan \theta}$ and $\tan \theta = \frac{\sin \theta}{\cos \theta}$
 
 Then we have
 
-$\frac{\sin \theta + \tan \theta}{\csc \theta + \cot \theta} = (\sin \theta + \tan \theta) \cdot (\frac{1}{\frac{1}{\sin\theta} +\frac{1}{\tan \theta}}) = $
 
+
+\begin{align*}
+\frac{\sin \theta + \tan \theta}{\csc \theta + \cot \theta} = \\
+\frac{\sin \theta + \frac{\sin \theta} {\cos \theta} }{\frac{1}{\sin \theta} + \frac{\cos \theta}{\sin \theta}}  = \\
+\frac{\sin \theta (1 + \frac{1} {\cos \theta}) }{\frac{1}{\sin \theta} + \frac{\cos \theta}{\sin \theta}}  = \\
+\frac{\sin \theta (1 + \frac{1} {\cos \theta}) }{\frac{1}{\sin \theta}(1 + \cos \theta)}  = \\
+\frac{\sin^2 \theta (1 + \frac{1} {\cos \theta}) }{(1 + \cos \theta)} = \\
+\frac{\sin^2 \theta (\frac{\cos \theta + 1}{\cos \theta}) }{(1 + \cos \theta)} = \\
+ \frac{\sin^2 \theta} {\cos \theta} = \\
+ \sin \theta \tan\theta
+\end{align*}
+
+2. 
+$\frac{\sin \theta + \tan \theta}{1 + \sec \theta} = \sin \theta$
+
+\begin{align*}
+\frac{\sin \theta + \tan \theta}{1 + \sec \theta} = \\
+\frac{\sin \theta + \frac{\sin \theta}{\cos \theta}}{1 + \frac{1}{\cos \theta}} = \\
+\frac{\sin \theta \cancel{(1 + \frac{1}{\cos \theta})} }{\cancel{1 + \frac{1}{\cos \theta}}} =\\
+\sin \theta
+\end{align*}
+
+3.
+$\frac{1 - 2\cos^2\theta}{\sin \theta \cos \theta} = \tan \theta - \cot \theta$
+
+$2\cos^2\theta = 1+\cos 2 \theta$
+$\cos2\theta = \cos^2 \theta - \sin^2 \theta$
+
+$-\cos2\theta =\sin^2 \theta - \cos^2 \theta$
+
+\begin{align*}
+\frac{1 - 2\cos^2\theta}{\sin \theta \cos \theta} = \\
+\frac{1 - 1 - \cos 2 \theta}{\sin \theta \cos \theta} = \\
+\frac{\sin^2\theta - \cos^2 \theta}{\sin \theta \cos \theta} =\\
+\frac{\sin^2\theta}{\sin \theta \cos \theta} - \frac{\cos^2\theta}{\sin \theta \cos \theta} = \\
+\frac{\sin \theta}{\cos \theta} - \frac{\cos\theta}{\sin\theta} = \\
+\tan \theta - \cot \theta
+\end{align*}
+
+\subsection{5}
+
+Evaluate
+
+1.
+
+ $\frac{\sin \frac{\pi} {2}  + \cos \frac{\pi}{2}}{\sin \pi + \cos \pi} = \frac{1 + 0}{0 - 1} = -1$
+
+
+2. 
+
+$\sec \theta= \frac{1}{\cos \theta}$
+$\csc \theta = \frac{1}{\sin \theta}$
+
+$\frac{1 + \tan^2 \frac{\pi}{3}}{1 + \cot^2 \frac{\pi}{3}} = \frac{\sec^2 \frac{\pi}{3}}{\csc^2 \frac{\pi}{3}} = \frac{4}{\frac{4}{3}} = 3$
+
+3.
+$\frac{\sin \pi + \cos (-\pi)}{\sin\frac{\pi}{2} + \cos(-\frac{\pi}{2})} = \frac{0 - 1}{1 + 0} = -1$
+
+
+4.
+$\frac{\tan\frac{\pi}{3} + \tan\pi}{\cot \frac{\pi}{6} + \cot\frac{\pi}{2}} = \frac{\sqrt{3} + 0}{\sqrt{3} +0} =  1$
+
+5.
+$\frac{\sin\pi\cos\pi\tan\pi}{\sin\frac{\pi}{3}\cos\frac{\pi}{3}\tan\frac{\pi}{3}} = 0$
+
+6. $\frac{\sin \frac{3\pi}{2} - \cos \frac{5\pi}{2} }{\sin \frac{5\pi}{2} - \cos \frac{3\pi}{2}} = \frac{-1 - 0}{1 - 0} = -1$
+
+7. $\sin \frac{5\pi}{4} \sin \frac{3\pi}{4} \sin\frac{\pi}{4} = -\frac{\sqrt{2}}{2} \cdot \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{2}}{2} = -\frac{\sqrt{2}}{4} $
+
+8. $\frac{\sin \frac{\pi}{3} \sin \frac{\pi}{2}  - \cos \frac{\pi}{3} \cos \frac{\pi}{2}}{\sin \frac{\pi}{3} \cos \frac{\pi}{2}  + \cos \frac{\pi}{3} \sin\frac{\pi}{2}} = \frac{-\cos (\frac{\pi}{3} +\frac{\pi}{2})  }{\sin (\frac{\pi}{3} +\frac{\pi}{2})} = \frac{\frac{-\sqrt{3}}{2}}{\frac{1}{2}} = \sqrt{3}$
 \end{document}
 
 
