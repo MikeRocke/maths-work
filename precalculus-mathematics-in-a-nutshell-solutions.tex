@@ -3,7 +3,9 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{pgfplots}
+\usepackage{pgf}
 \usepackage{xcolor}
+\usetikzlibrary{arrows}
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{gensymb}
@@ -116,6 +118,310 @@ The height and base of a triangle are equal, and its area is 32 square inches. F
 base = \sqrt{64} = 8; height =8
 \]
 
+\subsubsection{8}
+\includegraphics[width=\textwidth]{precalc-geo-section1-question-8.jpg}
+
+In the triangle $ABC$, $D$ and $E$ are the midpoints of $AC$ and $BC$. The segments $AE$ and $BD$ intersect at $F$. Show that regions $a_2$ and $a_4$ have equal areas
+
+Solution:
+\[
+(a_1 + a_2) = \frac{1}{2} \cdot DB \cdot AD
+\]
+
+Given $D$ is midway between $AC$, we have the following
+\[
+AD = DC
+\]
+Thus
+\[
+(a_3 + a_4) = \frac{1}{2} \cdot DB \cdot DC = \frac{1}{2} \cdot DB  \cdot AD = (a_1  + a_2)
+\]
+
+Applying the same logic, we find the areas of $(a_2  + a_3)  = \frac{1}{2}  \cdot AE \cdot BE  = (a_1 + a_4)$ as $BE = EC$
+
+We have the following identities
+
+\begin{align*}
+a_3 + a_4 = a_1 + a_2  \tag{first}\\
+a_2 + a_3 = a_1 + a_4  \tag{second}\\
+a_4 = a_1 + a_2 - a_3 \tag{Rearranging first identity} \\
+a_2 =a_1 + a_4 - a_3 \tag{Rearraging second identity}
+\end{align*}
+Which we can see $a_2 = a_4$ and $a_1 = a_3$
+
+
+\subsubsection{9}
+A quarter (a 25 cents piece) is $\frac{3}{4}$ inch in diameter, and when placed 7 feet from the eye will just block out the disc of the moon. if the diameter of the moon is 2160 miles, how far is the moon from the earth?
+
+Solution:
+
+Given the triangle formed by the eye and quarter piece,
+
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm] 
+\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-12,2) -- (-8,3) -- (-8,1) -- cycle;
+\draw [line width=2pt,color=zzttqq] (-12,2)-- (-8,3);
+\draw [line width=2pt,color=zzttqq] (-8,3)-- (-8,1);
+\draw [line width=2pt,color=zzttqq] (-8,1)-- (-12,2);
+\draw (-12.64,1.92) node[anchor=north west] {Eye};
+\draw (-7.34,2.3) node[anchor=north west] {Quarter};
+\draw (-7.48,1.6) node[anchor=north west] {$B_1C_1 = \frac{3}{4} inch$};
+\draw (-10.92,1.02) node[anchor=north west] {$A_1D_1 = 7 feet = 84 inches$};
+\begin{scriptsize}
+\draw [fill=ududff] (-12,2) circle (2.5pt);
+\draw[color=ududff] (-11.84,2.43) node {$A_1$};
+\draw [fill=ududff] (-8,3) circle (2.5pt);
+\draw[color=ududff] (-7.84,3.43) node {$B_1$};
+\draw [fill=ududff] (-8,1) circle (2.5pt);
+\draw[color=ududff] (-7.84,1.43) node {$C_1$};
+\draw [fill=uuuuuu] (-8,2) circle (2pt);
+\draw[color=uuuuuu] (-7.84,2.39) node {$D_1$};
+\draw [fill=uuuuuu] (-10,2) circle (2pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+And the similar triangle for the Earth to the moon
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm] 
+\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-12,2) -- (-8,3) -- (-8,1) -- cycle;
+\draw [line width=2pt,color=zzttqq] (-12,2)-- (-8,3);
+\draw [line width=2pt,color=zzttqq] (-8,3)-- (-8,1);
+\draw [line width=2pt,color=zzttqq] (-8,1)-- (-12,2);
+\draw (-12.64,1.92) node[anchor=north west] {Earth};
+\draw (-7.34,2.3) node[anchor=north west] {Moon};
+\draw (-7.48,1.6) node[anchor=north west] {$B_2C_2 = 2160 miles$};
+\draw (-10.92,1.02) node[anchor=north west] {$A_2D_2 = ??$};
+\begin{scriptsize}
+\draw [fill=ududff] (-12,2) circle (2.5pt);
+\draw[color=ududff] (-11.84,2.43) node {$A_2$};
+\draw [fill=ududff] (-8,3) circle (2.5pt);
+\draw[color=ududff] (-7.84,3.43) node {$B_2$};
+\draw [fill=ududff] (-8,1) circle (2.5pt);
+\draw[color=ududff] (-7.84,1.43) node {$C_2$};
+\draw [fill=uuuuuu] (-8,2) circle (2pt);
+\draw[color=uuuuuu] (-7.84,2.39) node {$D_2$};
+\draw [fill=uuuuuu] (-10,2) circle (2pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+We know that the ratios between the sides should be the same
+\[
+\frac{A_1D_1}{B_1D_1} = \frac{A_2D_2}{B_2D_2} 
+\]
+
+Using 7 Feet as 84 inches
+
+So to determine $A_2D_2  = B_2D_2 \cdot \frac{A_1D_1}{B_1D_1} = 2160 \cdot 112 = 241920 miles$
+
+Not too sure with this solution
+
+\subsubsection{10}
+A man, 6 feet tall, stands at the foot of a flagpole. If the shadow of the man and the pole are 4 feet and 40 feet in length, how tall is the pole?
+
+So the Man
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-16,6) -- (-16,8) -- (-16.8,6) -- cycle;
+\draw [line width=2pt,color=zzttqq] (-16,6)-- (-16,8);
+\draw [line width=2pt,color=zzttqq] (-16,8)-- (-16.8,6);
+\draw [line width=2pt,color=zzttqq] (-16.8,6)-- (-16,6);
+\draw (-15.62,7.22) node[anchor=north west] {AB = 6 feet};
+\draw (-17.08,5.6) node[anchor=north west] {AC = 4 feet};
+\begin{scriptsize}
+\draw [fill=ududff] (-16,6) circle (2.5pt);
+\draw[color=ududff] (-15.84,6.43) node {$A$};
+\draw [fill=ududff] (-16,8) circle (2.5pt);
+\draw[color=ududff] (-15.84,8.43) node {$B$};
+\draw [fill=ududff] (-16.8,6) circle (2.5pt);
+\draw[color=ududff] (-16.64,6.43) node {$C$};
+\draw [fill=uuuuuu] (-16,7) circle (2pt);
+\draw [fill=uuuuuu] (-16.4,6) circle (2pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+And the flag pole
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-16,6) -- (-16,8) -- (-16.8,6) -- cycle;
+\draw [line width=2pt,color=zzttqq] (-16,6)-- (-16,8);
+\draw [line width=2pt,color=zzttqq] (-16,8)-- (-16.8,6);
+\draw [line width=2pt,color=zzttqq] (-16.8,6)-- (-16,6);
+\draw (-15.62,7.22) node[anchor=north west] {AB = ?? feet};
+\draw (-17.08,5.6) node[anchor=north west] {AC = 40 feet};
+\begin{scriptsize}
+\draw [fill=ududff] (-16,6) circle (2.5pt);
+\draw[color=ududff] (-15.84,6.43) node {$A$};
+\draw [fill=ududff] (-16,8) circle (2.5pt);
+\draw[color=ududff] (-15.84,8.43) node {$B$};
+\draw [fill=ududff] (-16.8,6) circle (2.5pt);
+\draw[color=ududff] (-16.64,6.43) node {$C$};
+\draw [fill=uuuuuu] (-16,7) circle (2pt);
+\draw [fill=uuuuuu] (-16.4,6) circle (2pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+The ratio of $\frac{6}{4}$ should be the same ratio as $\frac{??}{40}$ so the height of the flag pole should be 60 feet
+
+\subsubsection{11}
+In each fiigure, the dotted line is parallel to a side of the triangle. Find x.
+
+a)
+\includegraphics[width=\textwidth]{precalc-geo-section1-question-11a.jpg}
+
+To figure out the length of the dashed line, we use the Pythagorean formula $a^2 + b^2 = c^2$
+
+so dashed line has length $ = \sqrt{5^2 - 4^2} = \sqrt{9} = 3$
+
+Given the length of the dashed line, we can calculate the length of the similar line below (which we will call $y$) with the following
+
+\[
+\frac{5}{3} = \frac{8}{y}
+\]
+
+\[
+y = \frac{8\cdot3}{5} = \frac{24}{5}
+\]
+
+So to calculate x, we can use the Pythagorean formula again
+
+$8^2 = (\frac{24}{5})^2  + (x + 4)^2$
+or 
+$(x+4) =\sqrt{8^2  - (\frac{24}{5})^2} = \sqrt{64 - 23.04} = \sqrt{40.96} = 6.4$
+$x  = 6.4  - 4  = 2.4 = \frac{12}{5}$
+
+Or the quick way to solve this
+
+$\frac{4}{5} =\frac{x+4}{8}$
+$x+4 = \frac{4}{5} \cdot 8 = 6.4$
+
+b)
+
+\includegraphics[width=\textwidth]{precalc-geo-section1-question-11b.jpg}
+
+Using the ratios of sides we get
+$\frac{3}{4} =  \frac{x}{9}$
+so $x = \frac{27}{4} $
+
+\subsubsection{12}
+\includegraphics[width=\textwidth]{precalc-geo-section1-question-12.jpg}
+Find x and y in the adjoining similar triangles
+
+$\frac{6}{10} = \frac{x}{6}= \frac{y}{8}$
+
+$ x = \frac{36}{10} = \frac{18}{5}$
+$y = \frac{48}{10} = \frac{24}{5}$
+
+\subsubsection{13}
+The areas of two similar triangles are 25 and 16. If the perimeter of the first is 15, find the perimeter of the second.
+\[
+RatioOfAreas =  \frac{16}{25} =   \frac{4^2}{5^2} 
+\]
+
+Lets now calculate the ratio for the length by $\sqrt{\frac{4^2}{5^2}} = \frac{4}{5}$
+
+Applying that to the permiter length of 15, $15 \cdot \frac{4}{5} = 12$
+
+
+\subsubsection{14}
+Two equilateral triangles have sides of 4 inches and 6 inches. What is the ratio of their perimeters? Of their Areas? Of their heights?
+
+\[
+RatioOfPerimeter =\frac{4}{6}= \frac{2}{3}
+\]
+
+\[
+RatioOfAreas = (\frac{2}{3})^2 = \frac{4}{9}
+\]
+
+\[
+RatioOfHeights = RatioOfPerimeter = \frac{2}{3}
+\]
+
+
+\subsubsection{15}
+Find x in each of the following right triangles:
+
+\includegraphics[width=\textwidth]{precalc-geo-section1-question-15.jpg}
+a)
+
+\[
+x = \sqrt{6^2 + 2^2} = \sqrt{36 + 4} = \sqrt{40}
+\]
+
+
+b)
+
+\[
+	x = \sqrt{6^2 - 2^2} = \sqrt{32}
+\]
+
+c)
+\[
+x = \sqrt{8^2 - 4^2} = \sqrt{48}
+\]
+
+\subsubsection{16}
+A 20-foot ladder leans against a wall with its foot 6 feet from the wall. A man stands on a rung which is 12 feet from the bottom of the ladder. How far is the man from the wall and from the ground.
+
+
+
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+
+
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+
+	\fill[line width=2pt,color=cqcqcq,fill=cqcqcq,fill opacity=0.1] (-1,-2) -- (1,2) -- (1,-2) -- cycle;
+	\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0,0) -- (0,-2) -- (-1,-2) -- cycle;
+	\draw [line width=2pt,color=cqcqcq] (-1,-2)-- (1,2);
+	\draw [line width=2pt,color=cqcqcq] (1,2)-- (1,-2);
+	\draw [line width=2pt,color=cqcqcq] (1,-2)-- (-1,-2);
+	\draw (-0.88,-2.5) node[anchor=north west] {AC = 6 feet};
+	\draw (1.36,1.16) node[anchor=north west] {AB = 20 feet};
+	\draw [line width=2pt,color=zzttqq] (0,0)-- (0,-2);
+	\draw [line width=2pt,color=zzttqq] (0,-2)-- (-1,-2);
+	\draw [line width=2pt,color=zzttqq] (-1,-2)-- (0,0);
+	\draw (1.1,-0.64) node[anchor=north west] {AD = 12 feet};
+	\begin{scriptsize}
+	\draw [fill=ududff] (-1,-2) circle (2.5pt);
+	\draw[color=ududff] (-0.84,-1.57) node {$A$};
+	\draw [fill=ududff] (1,2) circle (2.5pt);
+	\draw[color=ududff] (1.16,2.43) node {$B$};
+	\draw [fill=ududff] (1,-2) circle (2.5pt);
+	\draw[color=ududff] (1.16,-1.57) node {$C$};
+	\draw[color=cqcqcq] (0.08,-1.45) node {$2$};
+	\draw [fill=uuuuuu] (0,-2) circle (2pt);
+	\draw [fill=uuuuuu] (0,0) circle (2pt);
+	\draw [fill=xdxdff] (0,0) circle (2.5pt);
+	\draw[color=xdxdff] (0.16,0.43) node {$D$};
+	\draw [fill=xdxdff] (0,-2) circle (2.5pt);
+	\draw[color=xdxdff] (0.16,-1.57) node {$E$};
+	\draw [fill=uuuuuu] (-0.5,-1) circle (2pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+
+$BD = \sqrt{20^2 - 6^2} = \sqrt{400 - 36} = \sqrt{364}$
+
+Given this iis a problem of similar triangles we will use ratios to help us figure the lengths
+
+$\frac{12}{20} = \frac{AE}{6} = \frac{DE}{\sqrt{364}}$
+
+$AE = \frac{12 \cdot 6}{20} = \frac{72}{20} = \frac{18}{5} = 3.6$ feet from the wall
+$DE = \sqrt{12^2 -  3.6^2} = \sqrt{144 - 12.96} = \sqrt{131.04} = 11.45$ feet from the ground
+
+\subsubsection{17}
+What is the diagonal of a square whos side is $a$?
+
+$Diagonal = \sqrt{a^2 + a^2} = a\sqrt{2}$
+
+\subsubsection{18}
+What is the side of a square whos diagonal is $a$?
+
+$Side = \sqrt{\frac{a^2}{2}}$
 \section{Algebra}
 
 \subsection{1}
@@ -2695,6 +3001,7 @@ c) $\cos4\theta$ in terms of $\cos \theta$
 
 a) Show that $\sin\theta\sin\phi = \frac{1}{2}[\cos(\theta-\phi) - \cos(\theta+\phi)]$
 
+TODO
 
 \subsection{8}
 Find the values of the following expressions
