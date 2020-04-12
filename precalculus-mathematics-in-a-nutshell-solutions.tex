@@ -3145,24 +3145,98 @@ f) $\tan^2 \theta =\frac{1 - \cos2\theta}{1 + \cos2\theta}$
 
 \begin{align*}
 \tan^2\theta = \\
-TODO \\
+\frac{\sin\theta}{\cos\theta} = \\
+\frac{2\sin^2\theta}{2\cos^2\theta} = \\
+\frac{\sin^2\theta + \cos^2\theta - \cos^2\theta + \sin^2\theta}{\sin^2\theta + \cos^2\theta + \cos^2\theta - \sin^2\theta} = \\
+\frac{1 - \cos^2\theta + \sin^2\theta}{1 + \cos^2\theta - \sin^2\theta} = \\
+\frac{1 - (\cos^2\theta - \sin^2\theta)}{1 + (\cos^2\theta - \sin^2\theta)} = \\
 \frac{1 - \cos2\theta}{1 + \cos2\theta}
 \end{align*}
 
 g) $\tan\frac{1}{2} \theta =\frac{\sin\theta}{1 + \cos\theta}$
 
+\begin{align*}
+\tan\frac{1}{2} \theta = \\
+\sqrt{\frac{1 - \cos\theta}{1 + \cos\theta}} = \\
+\sqrt{\frac{(1 - \cos\theta)(1 + \cos\theta)}{(1 + \cos\theta)^2}} = \\
+\sqrt{\frac{1 - \cos^2\theta}{(1 + \cos\theta)^2}} = \\
+\sqrt{\frac{\sin^2\theta}{(1 + \cos\theta)^2}} = \\
+\frac{\sin\theta}{1 + \cos\theta}
+\end{align*}
+
 h) $\tan\theta\tan\frac{1}{2}\theta =\sec\theta - 1$
+
+\begin{align*}
+\tan\theta\tan\frac{1}{2}\theta = \\
+\frac{\sin\theta}{\cos\theta}\cdot \frac{1 - \cos\theta}{\sin\theta} = \\
+\frac{1-\cos\theta}{\cos\theta} = \\
+\frac{1}{\cos\theta} - 1 = \\
+\sec\theta - 1
+\end{align*}
 
 i) $\frac{1 + \sin\theta + \cos\theta}{1 + \sin\theta - \cos\theta} =\cot\frac{1}{2}\theta$
 
+Let $\frac{\theta}{2} = \mu$
+\begin{align*}
+\frac{1 + \sin\theta + \cos\theta}{1 + \sin\theta - \cos\theta} = \\
+\frac{1 + \sin2\mu + \cos2\mu}{1 + \sin2\mu - \cos2\mu} = \\
+\frac{1 + 2\sin\mu\cos\mu + \cos2\mu}{1 + 2\sin\mu\cos\mu - \cos2\mu} = \\
+\frac{1 + 2\sin\mu\cos\mu + 2\cos^2\mu - 1}{1 + 2\sin\mu\cos\mu - (1-2\sin^2\mu)} = \\
+\frac{ \cos^2\mu}{\sin^2\mu} = \\
+\frac{(\cos\mu)}{(\sin\mu)} = \\
+\cot\frac{1}{2}\theta
+\end{align*}
+
 j) $1 - 4\sin^4\theta = \cos2\theta(1+2\sin^2\theta)$
+
+\begin{align*}
+1 - 4\sin^4\theta = \\
+1 - 2\sin^2\theta(2\sin^2\theta) = \\
+1 - (1 - \cos2\theta)(2\sin^2\theta) = \\
+1 - 2\sin^2\theta + \cos2\theta2\sin^2\theta = \\
+\cos2\theta+ \cos2\theta2\sin^2\theta = \\
+\cos2\theta(1+2\sin^2\theta)
+\end{align*}
 
 k) $\tan \frac{1}{2} \theta + \cot\frac{1}{2}\theta = 2\csc\theta$
 
+Let $\mu = \frac{\theta}{2}$
+
+\begin{align*}
+\tan \frac{\theta}{2} + \cot\frac{\theta}{2} = \\
+\tan \mu + \cot\mu = \\
+\frac{\sin\mu}{\cos\mu} + \frac{\cos\mu}{\sin\mu} = \\
+\frac{\sin^2\mu + \cos^2\mu}{\sin\mu\cos\mu}  = \\
+\frac{1}{\sin\mu\cos\mu}  = \\
+\frac{1}{\frac{1}{2}\sin2\mu}  = \\
+\frac{1}{2\sin\theta}  = \\
+2\csc\theta
+\end{align*}
+
 l) $\cos^4\theta =\frac{1}{8}(3 + 4\cos2\theta + \cos4\theta)$
+
+\begin{align*}
+	\cos^4\theta = \\
+	(\cos^2\theta)^2 = \\
+	(\frac{\cos2\theta + 1}{2})^2 = \\
+	\frac{(\cos2\theta+1)^2}{4} = \\
+	\frac{1}{4} (\cos^22\theta + 2\cos2\theta + 1) = \\
+	\frac{1}{4} (\frac{1 + \cos4\theta}{2}+ 2\cos2\theta + 1) = \\
+	\frac{1}{8} (1 + \cos4\theta+ 4\cos2\theta + 2) = \\
+	\frac{1}{8}(3 + 4\cos2\theta + \cos4\theta)
+\end{align*}
 
 m) $\sin^4\theta =\frac{1}{8}(3 - 4\cos2\theta + \cos4\theta)$
 
+\begin{align*}
+\sin^4\theta = \\
+(\sin^2\theta)^2 = \\
+\frac{(1 - \cos2\theta)^2}{4} = \\
+\frac{1 - 2\cos2\theta + \cos^22\theta}{4} = \\
+\frac{1 - 2\cos2\theta + \frac{1 + \cos4\theta}{2}}{4} = \\
+\frac{2 - 4\cos2\theta + 1 + \cos4\theta}{8} = \\
+\frac{1}{8}(3 - 4\cos2\theta + \cos4\theta)
+\end{align*}
 
 
 \subsection{8}
