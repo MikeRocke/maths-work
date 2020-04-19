@@ -422,6 +422,119 @@ $Diagonal = \sqrt{a^2 + a^2} = a\sqrt{2}$
 What is the side of a square whos diagonal is $a$?
 
 $Side = \sqrt{\frac{a^2}{2}}$
+
+\subsubsection{19}
+Find the area of an equilateral triangle where side is $a$
+
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+	\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (3,1)-- (4,-0.7320508075688772);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (2,-0.7320508075688772)-- (3,1);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (2,-0.7320508075688772)-- (4,-0.7320508075688772);
+	\draw (2.08,0.4) node[anchor=north west] {a};
+	\draw (3.84,0.42) node[anchor=north west] {a};
+	\draw (2.9,-0.84) node[anchor=north west] {a};
+	\begin{scriptsize}
+	\draw [fill=xdxdff] (3,1) circle (2.5pt);
+	\draw [fill=xdxdff] (3,1) circle (2.5pt);
+	\draw [fill=xdxdff] (3,1) circle (2.5pt);
+	\draw [fill=xdxdff] (3,1) circle (2.5pt);
+	\draw [fill=xdxdff] (4,-0.7320508075688772) circle (2.5pt);
+	\draw[color=xdxdff] (4.24,-0.31) node {$C'$};
+	\draw [fill=ududff] (2,-0.7320508075688772) circle (2.5pt);
+	\draw [fill=xdxdff] (3,1) circle (2.5pt);
+	\draw [fill=xdxdff] (4,-0.7320508075688772) circle (2.5pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+	
+	Area = $\frac{1}{2} base \cdot height$
+	
+	$halfBase = \frac{a}{2}$
+	$height = \sqrt{a^2 - (\frac{a}{2})^2} = \sqrt{a^2 - \frac{a^2}{4}} = \sqrt{\frac{3a^2}{4}} = \frac{1}{2}\sqrt{3}a$
+	$Area = \frac{1}{2} \cdot a \cdot \frac{1}{2}\sqrt{3}a = \frac{\sqrt{3}a^2}{4}$
+
+
+\subsubsection{20}
+
+Heron's formula  states that the area of a triangle with sides a, b, c is given by $A = \sqrt{s(s - a))(s - b)(s - c)}$, where the number $s = 'frac{1}{2} (a + b + c )$ is called the semi perimeter. Prove this formula by verifying the following steps:
+
+
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+	\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+	\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-13,5) -- (-9,7) -- (-7,5) -- cycle;
+	\draw [line width=2pt,color=zzttqq] (-13,5)-- (-9,7);
+	\draw [line width=2pt,color=zzttqq] (-9,7)-- (-7,5);
+	\draw [line width=2pt,color=zzttqq] (-7,5)-- (-13,5);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (-9,7)-- (-9,5);
+	\draw (-11.06,6.54) node[anchor=north west] {a};
+	\draw (-7.48,6.52) node[anchor=north west] {b};
+	\draw (-8.06,5.54) node[anchor=north west] {d};
+	\draw (-9.54,6.4) node[anchor=north west] {h};
+	\draw (-10.7,5.56) node[anchor=north west] {c-d};
+	\draw (-9.76,5.04) node[anchor=north west] {c};
+	\begin{scriptsize}
+	\draw [fill=ududff] (-13,5) circle (2.5pt);
+	\draw [fill=ududff] (-9,7) circle (2.5pt);
+	\draw [fill=ududff] (-7,5) circle (2.5pt);
+	\draw [fill=xdxdff] (-9,5) circle (2.5pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+	
+	a) = $A = \frac{1}{2} hc$
+	
+	If we break this problem into two
+	
+		\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+	\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+	\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-13,5) -- (-9,7) -- (-7,5) -- cycle;
+	\draw [line width=2pt,color=zzttqq] (-13,5)-- (-9,7);
+	\draw [line width=2pt,color=zzttqq] (-13,7)-- (-9,7);
+	\draw [line width=2pt,color=zzttqq] (-13,7)-- (-13,5);
+	\draw [line width=2pt,color=zzttqq] (-9,7)-- (-7,5);
+	\draw [line width=2pt,color=zzttqq] (-7,5)-- (-13,5);
+	\draw [line width=2pt,color=zzttqq] (-7,7)-- (-13,7);
+	\draw [line width=2pt,color=zzttqq] (-7,5)-- (-7,7);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (-9,7)-- (-9,5);
+	\draw (-11.06,6.54) node[anchor=north west] {a};
+	\draw (-7.48,6.52) node[anchor=north west] {b};
+	\draw (-8.06,5.54) node[anchor=north west] {d};
+	\draw (-9.54,6.4) node[anchor=north west] {h};
+	\draw (-10.7,5.56) node[anchor=north west] {c-d};
+	\draw (-9.76,5.04) node[anchor=north west] {c};
+	\begin{scriptsize}
+	\draw [fill=ududff] (-13,5) circle (2.5pt);
+	\draw [fill=ududff] (-9,7) circle (2.5pt);
+	\draw [fill=ududff] (-7,5) circle (2.5pt);
+	\draw [fill=xdxdff] (-9,5) circle (2.5pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+	
+	We can see the area of the two rectangles are;
+	$A_1 = h \cdot (c-d)$
+	
+	$A_2 = h \cdot d$
+	
+	Adding these two areas together we get
+	$A_1 + A_2 = h (c -  d  + d)$
+	
+	And we can halve it to get the area of the triangle, shaded in red
+	
+	$A = \frac{hc}{2}$
+	
+	b) $a^2 = b^2 + c^2 - 2cd$
+	
+	
+	
+
+
 \section{Algebra}
 
 \subsection{1}
@@ -948,7 +1061,7 @@ Radius(c) = \frac{c}{\pi \cdot 2};
 Area(c) = \pi (\frac{c}{\pi \cdot 2})^2 = \pi \frac{c^2}{\pi^2 \cdot 4} = \frac{c^2}{4\pi}
 \]
 
-\subsubsection{7} TODO
+\subsubsection{7} 
 Express the height of an equilateral triangle as a function of the base x
 
 \[
