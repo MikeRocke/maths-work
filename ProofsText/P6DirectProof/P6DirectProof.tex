@@ -1,0 +1,160 @@
+\chapter{Direct Proof}
+
+Direct proof is the most often used, and in some sense most useful, proof writing method.  Students new to writing proofs often attempt to employ more complicated proof techniques when a direct proof will suffice.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Write a direct proof based on given definitions
+	\item Write a proof with subtle steps (rewriting proofs)
+	\item Develop a proof by considering examples of the statement
+	\end{itemize}
+}}
+\end{center}
+
+Here we prove statements either of the form $P \Ra Q$ or statements that can be written this way.  Hopefully you will recall that statements of the form $P \Ra Q$ can be thought of as universal statements: ``For all $x$ such that $P(x)$ is true, $Q(x)$ is true.''\\
+
+It's important to distinguish the universal statements we will prove in this chapter from the existential statements we proved in Chapter 4.  Examples are never enough to prove universal statements and therefore we'll need to work a little harder here.\\
+
+We will need the following definitions for this packet and throughout the remainder of the semester.
+
+\begin{definition}[Even] An integer $n$ is \textbf{even} if $n= 2k$ for $k \in \Z$.
+\label{even}
+\end{definition}
+
+\begin{definition}[Odd] An integer $n$ is \textbf{odd} if $n=2k+1$ for $k \in \Z$.
+\label{odd}
+\end{definition}
+
+\begin{definition}[Divides] An integer $a$ \textbf{divides} an integer $b$, denoted $a \divides b$, if and only if there exists $k \in \Z$ such that $ak=b$.
+\label{divides}
+\end{definition}
+
+\noindent \textit{Note:} The expression ``$a \divides b$'' is a mathematical statement, not a mathematical expression.  That is, ``$a \divides b$'' is true or false.  Do not confuse this notation with the expression ``$a/b$'' which is a rational number.\\
+
+\noindent  If $a,b \in \Z$ and $a \divides b$, then we will often say that $b$ is a \textbf{multiple} of $a$.  For instance, ``$5 \divides 10$'' and ``10 is a multiple of 5'' give us the same information.  The terms ``divides'' and ``multiple'' can be used in similar situations, but ``divides'' tends to be more concise.  For instance, consider
+
+\[\set{k \in \N : k \divides 12} = \set{k \in \N : 12 \ \text{is a multiple of }k} = \set{1,2,3,4,6,12}.\]
+
+\noindent \textbf{Writing note:}  The word ``divides'' is an active verb, where as ``is'' is not.  Most of us naturally prefer action verbs when reading.  As a result, saying ``$5 \divides 10$'' instead of ``10 is a multiple of 5'' will make your writing more interesting to read.\\
+
+The goal of this workbook is generally not to tell you exactly how to do things.  You're much better off trying to do things on your own and looking back at the examples provided in the textbook for more clarity later.  That way you're critically thinking about the task at hand rather than trying to duplicate the process that somebody else used.\\
+
+That being said, proofs of statements of the form $P \Ra Q$ tend to have some similarities.  They'll start off by saying something like ``Let [$P$ be true]'' where $P$ is replaced with the appropriate statement.  These proofs usually end by arriving at the statement $Q$.  It's up to the writer to connect the two ideas using whatever valid mathematical steps are necessary.\\
+
+For right now, your goal is to be able to connect the $P$ and $Q$ statements.  We'll focus more on clear writing as we move forward.  You should still try your best to communicate your ideas as clearly and efficiently as possible.\\
+
+It's important in proof writing to accept that a particular proof writer's style can have a drastic impact on the appearance of their proofs.  Developing your own style will be helpful as it will add to sense of comfort and familiarity to your writing so that you won't spend as much time thinking about how to say things.  Ultimately you'll need to be careful to make sure that your style conforms to the writing expectations within mathematics.
+
+\newpage
+
+\noindent \textbf{Directions:}  For each of the following claims answer the questions about the claim and then attempt to prove the claim.
+
+\begin{claim}  If $x$ is an even integer, then $x^2$ is even.
+\end{claim}
+\begin{mdframed}[backgroundcolor=white]
+	\begin{question}
+	\item  Determine statements $P$ and $Q$ so that the claim can be written in the form $P \Rightarrow Q$.
+	\vspace{1in}
+	
+	\item  According to Definition 1, what does it mean for $x$ to be even?
+	
+	\vspace{.75in}
+	
+	\item  Square your new expression for $x$.  Can you rewrite this expression so it has the form of an even integer?
+	\end{question}
+	
+	\vspace{1in}
+
+\fbox{\parbox{6in}{
+\begin{proof} Let $x\in \Z$ be even.
+
+\vspace{3in}
+
+\end{proof}
+}}
+\end{mdframed}
+
+\newpage
+
+\begin{claim} Suppose $a$, $b$, and $c$ are integers.  If $a \divides b$ and $b \divides c$, then $a \divides (b+c)$.
+\end{claim}
+\begin{mdframed}
+	\begin{question}[resume]
+	\item According to Definition 3, what does it mean to say that $a \divides b$?
+	\vspace{.75in}
+	\item According to Definition 3, what does it mean to say that $b \divides c$?
+	\vspace{.75in}
+	\item What must we show to be able to conclude that $a \divides (b+c)$?
+	\vspace{.75in}
+	\end{question}
+
+\fbox{\parbox{6in}{
+\begin{proof}  Let $a,b,c \in \Z$ such that
+
+\vspace{4in}
+
+\end{proof}
+}}
+\end{mdframed}
+\vspace{.75in}
+
+\begin{claim}  Suppose $a$ is an integer.  If $7 \divides 4a$, then $7 \divides a$.\\
+\end{claim}
+\begin{mdframed}
+	\begin{question}[resume]
+	\item According to Definition 3, what does it mean to say that $7 \divides 4a$?
+	\vspace{.75in}
+	\item What do you need to show to be able to conclude that $7 \divides a$?
+	\vspace{.75in}
+	\item Find an integer $a$ such that $7 \divides 4a$.  What do you notice about the numbers $4a$ and $a$?
+	\vspace{1in}
+	\end{question}
+
+
+\begin{proof} Let $a \in \Z$ such that
+
+\vspace{4in}
+
+\end{proof}
+\end{mdframed}
+\newpage
+\begin{claim}  If $x$ is a real number and $0<x<4$, then $\ds \frac{4}{x(4-x)} \geq 1$.
+\end{claim}
+\begin{mdframed}
+\begin{question}[resume]
+\item Here we have \fbox{P: $x$ is a real number and $0<x<4$}, \fbox{Q: $\frac{4}{x(4-x)} \geq 1$}, and we want to show $P \Rightarrow Q$.  It isn't clear how we should start this (there's no way into the maze).  Begin with Q and manipulate the expression into a simple statement about $x$.
+\end{question}
+	\vspace{4in}
+
+
+\begin{proof}  Let $x \in \R$ such that $0<x<4$.
+
+\vspace{2.6in}
+
+\end{proof}
+\end{mdframed}
+
+
+\begin{claim} Every odd integer is a difference of two squares.  (Example: $7=4^2-3^2$)
+\end{claim}
+\begin{mdframed}
+	\begin{question}[resume]
+	\item It will be very beneficial for you to find more examples.  Can you find the appropriate integers for 5, 9, and 11?  That is, find integers $a$ and $b$ such that $5 = a^2-b^2$ then do the same for $9$ and $11$.
+	\vspace{2in}
+	\item What do you notice about the relationship between $a$ and $b$?
+	\vspace{1in}
+	\end{question}
+
+
+
+\begin{proof} Let
+
+\vspace{3.65in}
+\end{proof}
+\end{mdframed}
+
+
+
+
+

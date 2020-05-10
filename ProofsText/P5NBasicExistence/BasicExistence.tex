@@ -1,0 +1,212 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\an}{\set{a_n}}
+\newcommand{\bn}{\set{b_n}}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\mymod}[3]{#1 \equiv #2 (\bmod #3)}
+\newcommand{\psub}{\subset}
+\newcommand{\ilim}{\lim_{x \ra \infty}}
+\newcommand{\esub}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+
+\renewcommand{\P}{\mathscr{P}}
+
+
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\renewcommand{\subset}{\subseteq} 
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+
+
+\newcommand{\mybox}{\tikz[baseline=(current bounding box.center)]{\draw (0,0) rectangle (1cm,1cm);}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}
+	\newtheorem{claim}{Claim}
+	
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}%[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem{axiom}{Axiom}[]
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Basic Existence Proofs}
+\end{center}
+
+Many definitions in mathematics involve existence statements.  In some sense the most fundamental piece of proof writing is showing that an element of a set satisfies some definition.  Doing so requires what is called an existence proof.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Write existence proofs based on given definitions
+	\end{itemize}
+}}
+\end{center}
+
+\noindent \textbf{Why you're here:}  You're in this course to learn to write mathematical proofs of statements.  To make this a digestible task, you'll be writing proofs of statements that we already know to be true.  You will often think to yourself ``Isn't that obvious?''  Maybe it is, but that doesn't mean you don't have to prove it.  If a statement isn't an axiom then it needs to be proven.  Once it has been proven it can be used in the future.\\
+
+You need to master the art of proof writing before you move on to more advanced math courses.  Abstract Algebra and Real Analysis are difficult enough on their own.  If you're trying to digest material from these courses and figure out how to write proofs in them at the same time, then you won't be successful.  \\
+
+We will need the following definitions for this topic and throughout the remainder of the semester.
+
+\begin{definition}[Even] An integer $n$ is \textbf{even} if there exists $k \in \Z$ such that  $n= 2k$.
+\end{definition}
+
+\begin{definition}[Odd] An integer $n$ is \textbf{odd} if there exists $k \in \Z$ such that $n=2k+1$.
+\end{definition}
+
+\begin{definition}[Divides] An integer $a$ \textbf{divides} an integer $b$, denoted $a \divides b$, if and only if there exists $k \in \Z$ such that $ak=b$.
+\end{definition}
+
+\noindent \textit{Note:} The expression ``$a \divides b$'' is a mathematical statement, not a mathematical expression.  That is, ``$a \divides b$'' is true or false.  Do not confuse this notation with the expression ``$a/b$'' which is a rational number.\\
+
+\noindent  If $a,b \in \Z$ and $a \divides b$, then we will often say that $b$ is a \textbf{multiple} of $a$.  For instance, ``$5 \divides 10$'' and ``10 is a multiple of 5'' give us the same information.  The terms ``divides'' and ``multiple'' can be used in similar situations, but ``divides'' tends to be more concise.  For instance, consider
+
+\[\set{k \in \N : k \divides 12} = \set{k \in \N : 12 \ \text{is a multiple of }k} = \set{1,2,3,4,6,12}.\]
+
+\noindent \textbf{Writing note:}  The word ``divides'' is an active verb, where as ``is'' is not.  Most of us naturally prefer action verbs when reading.  As a result, saying ``$5 \divides 10$'' instead of ``10 is a multiple of 5'' will make your writing more interesting to read.\\
+
+\noindent Consider the statement $P$:``The integer 6 is even.''  Odds are that you're willing to accept this statement as being true without any argument.  You've been exposed to even and odd integers for some time now.  Still, this example will serve as great practice.  \\
+
+\noindent The statement $P$ is an existence statement in disguise.  
+\[P \equiv Q:\text{``There exists an integer $k$ such that $6=2k$.}\]
+While statements $P$ and $Q$ say exactly the same thing, $Q$ helps us understand what we need to do to demonstrate that $P$ is true: we need to provide and integer $k$ so that $2k=6$.  The integer $3$ should work just fine.
+
+\begin{claim} The integer 6 is even.
+\end{claim}
+\begin{proof}
+Notice that $2(3)=6$, so there exists an integer $k$ such that $6=2k$.  Thus 6 is even by definition.
+\end{proof}
+
+\noindent \textbf{Directions:} Prove the following existence statements.  Please note that being asked to prove something means you're being asked to do more than provide the example for the existence statement.  You need to use full sentences and reference appropriate definitions and axioms.
+
+\begin{claim} The integer $8$ is even.
+\end{claim}
+
+\begin{claim} The integer 7 is odd.
+\end{claim}
+
+\begin{claim} The integer $-5$ is odd.
+\end{claim}
+
+\begin{claim} The integer $0$ is even.
+\end{claim}
+
+\begin{claim}  For some integer $k$, the integer $8k$ is even.
+\end{claim}
+
+\begin{claim} For some integer $k$, the integer $2k+3$ is odd.
+\end{claim}
+
+\begin{claim} For some integers $n$ and $m$, the integer $2n+2m+1$ is odd.
+\end{claim}
+
+\begin{claim} The integer 15 divides the integer 30.
+\end{claim}
+
+\begin{claim} For some integer $k$, $2|(4k+6)$.
+\end{claim}
+
+\noindent Hopefully you found the claims in this chapter relatively easy to prove.  These basic existence proofs will often appear as a part of larger, more substantive proofs.  Later in the semester we will discuss existence proofs that require more than knowledge or arithmetic.
+\end{document}
+
+
+
+

@@ -1,0 +1,159 @@
+\chapter{Axiomatic Systems}
+
+You have most likely heard of Euclid's axioms and you've maybe even heard of the Axiom of Choice.  While there are a few famous axioms, most of the axioms of mathematics live in the dark corners and are ignored most of the time.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Describe some fundamental axioms.
+\item Use the Division Algorithm.
+\end{itemize}
+}}
+\end{center}
+
+Mathematics is the most rigorous scientific field.  However, even in mathematics, if you ask the question ``But why?'' enough times you arrive at a question without an answer.  An axiom is the frustrated parent of the mathematical world's way of saying ``Because I said so.''  In reality, \textbf{an axiom is just something we assume to be true without any proof that it is true.}\\
+
+For our purposes, we will take some properties of sets to be axiomatic.  Most of our axioms will seem so obviously true, that you may question why we're taking the time to point them out at all.  However, almost all of \textit{our} axioms are provable, just not with the mathematics available to us in this course.  That is, a mathematician's choice of axioms is often dependent on how much work he or she is willing to do.  See Section 1.10 of the text to learn about some of the impacts of the choice of axioms in mathematics.
+
+\section{Some Set Related Axioms}
+
+\begin{axiom} If $A$ is a set, then $A \esub A$.
+\end{axiom}
+	We will assume that every set is a subset of itself.  This axiom isn't required in general, and some very interesting things happen if you throw it out.\\
+	
+	\begin{question}
+	\item Consider the set $A = \set{X : X \text{ is a set and } X \not\in X}$.
+	\begin{qpart}
+	\item By the definition of $A$, what would be implied if $A \not\in A$?
+	\vspace{.5in}
+	\item What would be implied if $A \in A$?
+	\vspace{.5in}
+	\item What's wrong with these implications?
+	\vspace{.5in}
+	\end{qpart}
+	\end{question}
+	One of the set related axioms that we're using (but not explicitly stating) is that the questions above don't make sense because they would require that the set $A$ be defined in terms of itself. 
+	
+\begin{axiom} If $A$ is a set, then $\emptyset \esub A$.
+\end{axiom}
+	
+There are actually quite a few axioms for sets that we'll be assuming without explicitly stating.  Most of them are for strange situations that are beyond the scope of this course.
+
+\section{Arithmetic Properties of the Real Numbers and Their Subsets}
+
+\noindent A lot of time in this course will be spent dealing with real numbers.  The good news is that you've been working with the real numbers for most of your life, so you're pretty familiar with them.  The bad news is that we'll want be taking all of your knowledge as axiomatic.  That is, we'll assume a few basic things to be true and then prove the rest later.  Many of the axioms we assume can be proven, just not without a great knowledge of mathematics.\\
+
+
+\begin{axiom}[Closure under addition] For $X = \Z,$ $\R$, or $\Q$, if $a \in X$ and $b \in X$, then $a+b \in X$.  
+\end{axiom}
+		\begin{question}[resume]
+		\item Consider $X = \Z$ in the axiom.  Can you think of a reasonable argument that the statement is true that doesn't rely on the statement?
+		\vspace{1in}
+		\item We probably don't need to take the statement as an axiom when $X=\Q$.  Let $x=\sfrac{a}{b}$ and $y=\sfrac{c}{d}$.  Provide a reasonable explanation for the statement $x+y \in \Q$.
+		\vspace{1.5in}
+		
+		\item Your argument for Q3.~probably made an assumption about multiplication.  What assumption did you make?
+		\vspace{.5in}
+		\end{question}
+
+\noindent We'll often need to reference closure in our proofs when we need to explain how we know that the quantities we're dealing with are in the sets in which we claim them to be.  Axiom 3.4 below should be pretty familiar.  We can assume it without reference in our proofs.
+
+\begin{axiom}[Common Arithmetic Properties]  For $X = \Z$, $\R$, or $\Q$ and $a,b,c \in X$.
+		\begin{itemize}
+		\item $a(b+c) = ab+ac$  (\textit{Distribution}) 
+		\item $a+b=b+a$ and $ab=ba$  (\textit{Commutativity})
+		\item $(a+b)+c=a+(b+c)$ and $(ab)c=a(bc)$  (\textit{Associativity})
+		\end{itemize}
+\end{axiom}
+
+\begin{remark}  If you go back through the few properties that we have for arithmetic, you'll find the division isn't mentioned anywhere.  That's because \textit{our sets are not closed under division}.  In proof writing, it's best to avoid using division altogether.   
+\end{remark}
+
+\begin{axiom}{The Zero Product Law}  If $a$ and $b$ are real numbers and $ab=0$, then $a=0$ or $b=0$.
+\end{axiom}
+
+\begin{question}[resume]
+\item The Zero Product Law is the fundamental tool in most of algebra.  Use it to solve the equation $x^2+5x+6=0$.
+\vspace{1in}
+\item The Zero Product Law is also the tool we use to avoid division.  Solve the equation $2x^2=4x$ using only the allowed arithmetic operations and the Zero Product Law.  Do not use division.
+\vspace{1in}
+\end{question}
+
+\noindent Additionally, we will assume that the following rules for working with fractions are valid.  They're easy enough to prove, but we'll just assume them for now.
+
+\begin{axiom} Given real numbers $a$, $b$, $c$, and $d$
+	\begin{itemize}
+	\item $\ds \frac{a}{b}=\frac{ac}{bc}$ if $b\neq 0$ and $c \neq 0$
+	\item $\ds \frac{a}{b}+\frac{c}{d} = \frac{ad+bc}{bd}$ if $b\neq 0$ and $d \neq 0$
+	\item $\ds \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$ if $b \neq 0$ and $d \neq 0$.
+	\item $\ds \frac{\sfrac{a}{b}}{\sfrac{c}{d}} = \frac{ad}{bc}$ if $b\neq 0$, $c \neq 0$, and $d \neq 0$
+	\end{itemize}
+\end{axiom}
+
+\noindent This is all that we'll be assuming about the operations of the real numbers.  Any other properties will have to be proven as we go.
+
+\section{General Properties of the Real Numbers and Their Subsets}
+
+\begin{axiom}[Trichotomy of the Real Numbers] If $x$ and $y$ are real numbers, then $x=y$, $x<y$, or $x>y$.
+\end{axiom}
+
+\noindent The Trichotomy of the Reals is sometimes just called the ordering of the reals (which doesn't sound as cool or impressive).  It's the property that allows us to plot real numbers on a number line in a meaningful way.
+	
+\begin{axiom}[The Well-Ordering Principal]	Any set of natural numbers contains a smallest element.
+\end{axiom}
+	\begin{question}[resume]
+	\item Consider the set $A=\set{\frac{1}{n} : n\in \R, n > 0}$.  
+		\begin{qpart}
+		\item Is $A$ a set of natural numbers?  
+		\vspace{.5in}
+		\item Does $A$ have a smallest element?  
+		\vspace{.5in}
+		\item Can you say that the Well-Ordering Principal holds for sets other than the natural numbers?
+	\vspace{1in}
+	\end{qpart}
+	\end{question}
+	
+
+
+	\begin{question}[resume]
+	\item A concept closely related to the Well-Ordering Principal is the Quotient-Remainder Theorem (which is also knowns as the Division Algorithm).  To get things started, we need to go back to elementary school.
+	\begin{qpart}
+		\item Use long division to determine the remainder when 113 is divided by 8.
+		
+		\vspace{2in}
+		
+		\item Give integers $p$ and $r$ such that $113=8p+r$ where $0 \leq r<8$.
+		
+		\vspace{1.5in}
+		
+	\end{qpart}
+	\item Repeat the steps above when 258 is divided by 17.
+	\vspace{2in}
+	
+	\end{question}
+	
+\noindent The Quotient-Remainder Theorem sounds scary, but it really just says that you can do long division the way you have since grade school. It is stated below.
+
+\begin{axiom}[The Quotient-Remainder Theorem]  Given any integers $a$ and $b$ with $b>0$, there exist integers $q$ and $r$ such that $a=qb+r$ where $0 \leq r < b$.
+\end{axiom}
+
+\noindent The variable $q$ is sometimes referred to as the quotient and $r$ as the remainder.  Hence the name of the theorem.\\
+
+\noindent The most important thing to take from the Quotient-Remainder Theorem is the restriction on $r$.  It says that if $a$ is divided by $b$ then the remainder will be less than $b$.  This fact is surprisingly useful.\\
+
+	\begin{question}[resume]
+	\item What are the possible remainders when dividing by $2$?  What about when dividing by $3$?
+	\vspace{.75in}
+	\item We can talk about writing integers in terms of other integers using the Quotient-Remainder Theorem.  For instance, we can write $7$ in terms of $2$ by writing $7=3(2)+1$.  In the notation of the theorem, we have $a=7$, $b=2$, $q=3$, and $r=1$.
+		\begin{qpart}
+		\item Let $n \in \Z$.  Ignoring the fact that we don't know the value for $q$, what are the only ways that $n$ can be written in terms of $2$?
+		\vspace{.75in}
+		\item Ignoring $q$ again, what are the only ways to write an integer $n$ in terms of $3$?
+		\vspace{.75in}
+		\end{qpart}
+	\end{question}
+
+For now, we'll take the Quotient-Remainder Theorem as an axiom.  We will prove it later this semester when we're ready.
+
+
+
+

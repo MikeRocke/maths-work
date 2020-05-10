@@ -1,0 +1,155 @@
+\chapter[Countability \& Cardinality]{To Infinity and Beyond: Countability and Cardinality}
+\chaptermark{Coutability \& Cardinality}
+
+It is now time to put our newfound knowledge of functions to some good use.  Somewhat surprisingly, we will be using that knowledge to ``count'' the number of elements in sets.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Define countability for sets
+\item Compare cardinalities of different sets
+\end{itemize}
+}}
+\end{center}
+
+
+Before beginning, your textbook really does a great job of exploring cardinality and countability in chapter 13.  You should absolutely read the chapter.  We'll be taking a slightly different approach here just so you feel like you are getting more out of class than an exploration of the textbook.  The two together should make a great resource.
+
+\section{Countability}
+
+We begin by exploring what it means to be able to count the number of elements in a set.  Of course, if the set is finite then we shouldn't have any trouble (as long as the set isn't too complicated).  What if the set is infinite?  We realize that this means we will never finish counting the elements in the set, but that doesn't mean we couldn't make progress if we tried.\\
+
+Let's start by considering the integers.  In the table below, elements of the integers appear on in the second row.  We'll count using the natural numbers just like you have for your entire life.
+
+\begin{center}
+\begin{tabular}{c|cccccccccccc}
+\hline
+Counter & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &11 & $\cdots$\\
+\hline
+Integers & 0 &1 & $-1$ & 2 & $-2$ & 3 & $-3$ & 4 & $-4$ & 5 & $-5$ & $\cdots$\\
+\hline
+\end{tabular}
+\captionof{table}{Counting the Integers}
+\label{tab:ints}
+\end{center}
+\begin{question}
+\item Using this counting method, what will your counter be when you get to the integer $-11$?
+
+\vspace{1in}
+\item Is there an integer you couldn't eventually get to by listing the integers in this way?
+
+\vspace{1in}
+\end{question}
+
+In some sense, saying that we can count a set means that we can order its elements in a way that will allow us to reach all elements eventually.
+
+\begin{question}[resume]
+\item Provide a method for counting both the even integers and the odd integers below.
+
+\vspace{4in}
+\end{question}
+
+If we're going to talk about counting infinite sets, we should have an example of an infinite set that is not countable.  That is, no matter how long we count there will always be numbers in the list that we can't reach.  The set $\set{x \in \R: 0 < x < 1}$ is such a set.  You know this set more commonly as the open unit interval $(0,1)$.  The proof that this set is uncountable is surprisingly only about 150 years old, which is pretty young in mathematics.  You'll write a formal proof later, but for now let's just explore the idea.\\
+
+The argument proceeds by contradiction, so it starts off by assuming that we have an ordering for the numbers in the unit interval that let's us count them.  Suppose the table below is the start of such a list.
+	\begin{center}
+	\begin{tabular}{c|l}
+	Counter & Real Number \\
+	\hline
+	1 & $0.567458720384\ldots$\\
+	2 & $0.103910000000\ldots$\\
+	3 & $0.9001928491001\ldots$\\
+	4 & $0.000000010000001\ldots$\\
+	5 & $0.25999987453321\ldots$\\
+	6 & $0.888888888888888\ldots$\\
+	7 & $0.121212121212121212\ldots$\\
+	$\vdots$ & $\vdots$
+	\end{tabular}
+	\end{center}
+When we build our table we use the decimal forms of the numbers and we list an infinite number of zeros at the end of numbers with a finite amount of decimal places.  To form our contradiction, we construct a number that is not in the list.
+\begin{question}[resume]
+\item The number we construct must be between $0$ and $1$, so it will start with ``0.''.  We construct the number one decimal place at a time.  To form the first digit after the decimal, go to the first digit after the decimal of the first number.  If that digit is a 0 write a 1.  If that digit is anything other than 0, write a 0.  Proceed by going to the second digit of the second number to get the next digit.  Construct the number for the list above.
+\vspace{2in}
+\item Could you construct such a number for any list of the reals in the unit interval?  Explain.  What does that tell you about our ability to build a list of the numbers in the unit interval?
+
+\vspace{2in}
+\end{question}
+
+Having played around with the idea of countability, let's see a formal definition.
+
+\begin{definition}[Countable]  The set $A$ is \textit{countable} if $|A|$ is finite or if there exists a bijection, $f:\N \to A$.
+\end{definition}
+
+Looking at Table~\ref{tab:ints}, we see that we have defined a bijection from the naturals to the integers.  Notice that we don't need to provide a formula (an $f(x)$ if you will) to describe the bijection.
+
+\begin{question}[resume]
+\item It should come as no surprise that the positive even integers are also countable.  Provide the necessary bijection.
+
+\vspace{2in}
+\item Provide a bijection that shows that the positive multiples of 10 are countable.
+
+\vspace{2in}
+\end{question}
+
+\section{Cardinality}
+
+The idea of countability brings with it a very important question: ``So what?''  If a set is infinite and countable, is that really any different from being infinite and uncountable?  The blunt answer is no, both sets are still infinite.  However, that doesn't mean we can't gain some interesting insights about infinity if we start comparing the cardinalities of infinite sets.\\
+
+We were able to define a bijection between $\N$ and $\Z$.  In some sense, that means for each natural number there is exactly one integer.  We were also able to find a bijection from $\N$ to the even integers.  Putting the two ideas together suggests that there are as many even integers as there are integers.  There is no bijection between $\N$ and $(0,1)$, therefore they can't have the same number of elements.\\
+
+\begin{definition}[Same Cardinality]  Two sets $A$ and $B$ have the \textit{same cardinality}, denoted $|A|=|B|$, if there exists a bijection between $A$ and $B$.
+\end{definition}
+
+\begin{question}[resume]
+\item Find a bijection from $(0,1)$ to $(0,100)$ to prove that $|(0,1)|=|(0,100)|$.  (Don't try too hard.  The simplest type of function possible should do it.)
+
+\newpage
+\item Let $a,b,c,d\in \R$.  Find a bijection from the interval $(a,b)$ to the interval $(c,d)$ to show that any bounded interval of real numbers has the same cardinality.
+
+\vspace{2in}
+\item Find a bijection from $(0,1)$ to $(-\infty,\infty)$ to show that $|(0,1)|=|\R|$.  (Hint:  You'll need to come up with a function that is capable of mapping a bounded interval to $(-\infty,\infty)$ and make adjustments from there.)
+
+\newpage
+\item Find a bijection from $\N$ to a proper subset of $(0,1)$.  (Let fractions be your guide.)  Can you now conclude that there are more elements in $(0,1)$ than there are in $\N$?
+
+\vspace{3in}
+\end{question}
+
+Of course, there are times when finding a bijection isn't quite so simple.  In this case, we have to accept the fact that we may not be able to provide a formula for our bijections.  That doesn't mean we can't describe it.
+
+\begin{question}[resume]
+\item It can be shown that the rational numbers, $\Q$, are countable.  The book provides the full argument, but here we'll just show that the positive rationals are countable.  (The arguments are nearly identical.)\\
+
+The trick is finding a way to list the rationals to show that they are countable.  Such a list is given below, but the 2D array doesn't really prove anything.  Can you come up with the necessary ordering of the rationals to show that they are countable?  Note, you can't just go across a row or down a column because you would never get to the numbers in the neighboring rows or columns.
+\begin{center}
+\begin{tikzpicture}
+\def \num {6}
+\def \den {6}
+
+\foreach \x in {1,...,\num}
+	{\foreach \y in {1,...,\den}
+		{\node at (\x,-\y){$\frac{\x}{\y}$};
+		}
+	}
+\foreach \y in {1,...,\num}
+	{\node at (7,-\y){$\cdots$};
+	}
+\foreach \x in {1,...,\num}
+	{\node at (\x,-7){$\vdots$};
+	}
+\end{tikzpicture}
+\end{center}
+\end{question}
+
+Providing bijections between sets to prove they are somehow the same is one of the cornerstone methods of mathematics.  It's vital in analysis to go between sequences; in algebra to go between groups, rings, and fields; in Linear Algebra to go between vector spaces; it's the fundamental concept behind all of manifold theory; and its subtly hidden throughout Calculus 3, Differential Equations, and Discrete Dynamics.  You will see it again.
+\newpage
+\section{Hilbert's Hotel}
+
+David Hilbert is one of the most influential mathematicians of recent times.  He is one of several individuals responsible for our modern, rigorously proof based approaches to mathematics.  Further, he posed 23 problems during his life that largely influenced the world of mathematical research during the 20$^{\text{th}}$ century.  The following thought experiment is named in honor of him.  \\
+
+The Grand Hilbert Hotel is a historic landmark of immense size.  It features a countably infinite number of rooms (with all the amenities) numbered according to the natural numbers.  During the 42$^{\text{nd}}$ Fancy Cat Festival, the hotel was proud to boast that it had filled all of its rooms.  However, as we all know, the Fancy Cat Festival draws quite a crowd.  The day before the festival was to begin, a countably infinite number of guests showed up looking for rooms.  Despite being fully booked, the Grand Hilbert staff found a way to free up an infinite number of rooms by simply having guests move to other rooms.  Can you suggest a room changing scheme that can accommodate everyone?  (Remember to avoid the elevator during the switching.  It's likely to be busy for some time.)
+
+
+
+
+

@@ -1,0 +1,201 @@
+\chapter{Logic and Statements Review}
+
+Recall that a \textbf{statement} is a sentence that is definitely true or definitely false.  We can combine statements to make more complicated statements using the logical connectives ``and,'' ``or,'' and ``not.''\\
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Combine statements using ``and,'' ``or,'' and ``not.''
+\item Write and parse conditional statements.
+\item Use truth tables to determine the truth value of complex statements.
+\end{itemize}
+}}
+\end{center}
+
+\begin{question}  
+\item Determine which of the following are statements.  Recall that a statement is sentence that \textit{is} true or false, not a sentence that could be true or false.
+	\begin{qpart} \itemsep=.5in
+	\item The integer 5 is even.
+	\item $x^2=4$
+	\item $x^2=-1$
+	\item $\jme$'s cat has three legs.
+	\item Brian called his dad. 
+	\vspace{.5in}
+	\end{qpart}
+\end{question}
+
+\begin{definition}  Let $P$ and $Q$ be statements.  The statement ``$P$ \textbf{and} $Q$'' is true if and only if both $P$ and $Q$ are true.  The statement ``$P$ \textbf{and} $Q$'' is expressed symbolically as
+\[ P \wedge  Q \]
+and is known as a \textbf{conjunction}.
+\end{definition}
+
+\begin{definition}  Let $P$ and $Q$ be statements.  The statement ``$P$ \textbf{or} $Q$'' is true if and only if $P$ is true, $Q$ is true, or both $P$ and $Q$ are true.  The statement ``$P$ or $Q$'' is expressed symbollically as 
+\[ P \vee Q \] 
+and is known as a \textbf{disjunction}.
+\end{definition}
+
+Remember that the word ``or'' is often used differently in mathematics than it is in common English.  For instance, a police officer might say ``Drop your weapon or I will shoot you'' and you would understand that if you drop your gun you will not be shot.  However, in mathematics the above statement would still be true if you drop your weapon AND the officer shoots you.  A mathematician might say ``Either drop your weapon or you will be shot, but not both.''
+
+\begin{definition}  Let $P$ be a statement.  The statement ``It is not true that $P$,'' known as the \textbf{negation} of $P$ and denoted $\sim\!P$, is true if and only if $P$ is false.  
+\end{definition}
+
+\begin{question}[resume]
+ \item Let $P$ be the statement ``$n^2$ is even'' and $Q$ be the statement ``$m$ is a multiple of 3.''  Express the following as ordinary English sentences.
+	\begin{qpart}
+	\item $P \wedge Q$
+	
+	\vspace{.75in}
+	
+	\item $P \vee Q$
+	
+	\vspace{.75in}
+	
+	\item $\sim\!P$
+	
+	\vspace{.75in}
+	
+	\item $\sim\!Q$
+	
+	\vspace{.75in}
+	
+	\item $ \sim\!(P \wedge Q)$
+	
+	\vspace{.75in}
+	
+	\item $ \sim\!(P \vee Q)$
+	
+	\vspace{.75in}
+	
+	\end{qpart}
+\end{question}
+
+\noindent When dealing with a complicated statement, it can be handy to use a \textbf{truth table} to determine the truth value of the statement.  The truth tables for the basic connectives are below.
+\begin{multicols}{3}
+{\tabulinesep=.1in
+\begin{tabu}{|cc|c|}
+\hline
+$P$ & $Q$ & $P \wedge Q$ \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{tabu}}
+
+{\tabulinesep=.1in
+\begin{tabu}{|cc|c|}
+\hline
+$P$ & $Q$ & $P \vee Q$ \\
+\hline
+T & T & T \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{tabu}}
+
+{\tabulinesep=.1in
+\begin{tabu}{|c|c|}
+\hline
+$P$ & $\sim P$ \\
+\hline
+T & F \\
+F & T \\
+\hline
+\end{tabu}}
+\end{multicols}
+
+\vspace{.5in}
+
+\begin{question}[resume]
+\item Make truth tables for the following statements.  I've given you the start of the table for the first two to give you the idea.
+	\begin{qpart}
+	\item $\sim\!( P \wedge Q)$\\
+	
+		{\tabulinesep=.1in
+		\begin{tabu}{|cc|c:c|}
+		\hline
+		$P$ & $Q$ &$ (P \wedge Q)$ & $\sim\!(P \wedge Q)$\\
+		\hline
+		T & T & \ & \ \\
+		T & F & \ & \ \\
+		F & T & \ & \ \\
+		F & F & \ & \ \\
+		\hline
+		\end{tabu}}
+		\medskip
+	\item $(\sim\!P) \wedge (\sim\!Q)$\\
+	
+	{\tabulinesep=.1in
+	\begin{tabu}{|cc|c:c:c|}
+		\hline
+		$P$ & $Q$ &$ \sim\!P$ & $\sim\!Q$ & $(\sim\!P) \wedge (\sim\!Q)$\\
+		\hline
+		T & T & \ & \ & \ \\
+		T & F & \ & \ & \ \\
+		F & T & \ & \ & \ \\
+		F & F & \ & \ & \ \\
+		\hline
+		\end{tabu}}
+
+	\item $(\sim\!P) \vee (\sim\!Q)$
+	
+	\vspace{3in}
+	
+	\end{qpart}
+	
+\item In the truth table above you looked at the statements ``$\sim\!( P \wedge Q)$,'' ``$(\sim\!P) \wedge (\sim\!Q)$,'' and ``$(\sim\!P) \vee (\sim\!Q)$.''  Based on these truth tables, do you think there is a distribution rule for negation?  That is, is ``$\sim\!( P \wedge Q)$'' the same as ``$(\sim\!P) \wedge (\sim\!Q)$?''
+
+\vspace{.75in}
+
+\end{question}
+
+\begin{definition}  If $P$ and $Q$ are statements the conditional statement ``\textbf{If $P$, then $Q$}'' is denoted $P \Rightarrow Q$ and has the truth table below.
+	\begin{center}
+	{\tabulinesep=.1in
+	\begin{tabu}{|cc|c|}
+	\hline
+	$P$ & $Q$ & $ P \Rightarrow Q$ \\
+	\hline
+	T & T & T\\
+	T & F & F\\
+	F & T & T\\
+	F & F & T\\
+	\hline
+	\end{tabu}}
+	\end{center}
+\end{definition}
+\newpage
+\begin{question}[resume]
+\item Suppose $\me$ were to tell you ``If you come to every class, then you will get an A in the course.''  Find simple statements, $P$ and $Q$, so that this statement is the same as ``$P \Rightarrow Q$.'' Then determine what conditions are necessary for $\me$ to have lied to you.
+
+\vspace{2in}
+
+\item Express each complex statement using statement variables and the logical connectives.  Parse the statement as much as possible, and remember to say what your variables stand for.
+	\begin{qpart}
+	\item If I eat now, then I will not be hungry later.
+	
+	\vspace{1in}
+	
+	\item If $f$ is not differentiable, then $f$ is not continuous.
+	
+	\vspace{1in}
+	
+	\item Matrix $M$ is invertible and matrix $N$ is in row reduced form.
+	
+	\vspace{1in}
+	
+	\item If it snows today, then we will not have class and I will not learn anything.
+	
+	\vspace{1in}
+	\end{qpart}
+\end{question}
+
+This packet has been designed to help you review some of the content from your Introduction to Formal Mathematics class.  In reality, we won't spend much time determining if things are statements, converting to symbolic logic, or building truth tables.  Most of our time will be spent proving conditional statements.    
+
+
+
+
+
+

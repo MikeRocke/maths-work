@@ -1,0 +1,119 @@
+\chapter{Proofs Involving Sets}
+
+Since most structures in mathematics are collections of objects, many of the proofs we write are related to sets.  The proof techniques we use are the same ones we have seen before, but there are proof techniques associated with sets that work in general and are usually expected by an audience.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Prove that an object is an element of a set.
+	\item Prove that a set is contained in another set.
+	\item Prove that two sets are equal.
+	\end{itemize}
+}}
+\end{center}
+
+\section{Proving $a \in A$}
+
+In linear algebra you must show that vectors are contained in vector spaces.  In abstract algebra you must show that elements are contained in groups.  In real analysis you must show that functions are contained in functional spaces.  All of these structures are sets, so the proof boils down to showing that the object in question is in the set in question.\\
+
+Notice, if a set is finite then there should be no issue with showing that a given element is contained in the set.  Infinite sets, on the other hand, are usually defined using set builder notation, that is $A = \set{x : P(x)}$.  Recall that $P(x)$ is an open sentence, and if $P(x)$ is true then $x \in A$. Otherwise $x \notin A$.
+\begin{question}
+\item Given a set $A=\set{x : P(x)}$, what do you think you need to show to ensure that $a \in A$?
+\vspace{1.5in}
+\newpage
+\item Prove that $18 \in \set{x \in \Z : 2 \divides x \ \mbox{and} \ 3\divides x}.$
+
+\vspace{2in}
+
+\item Prove that $(2,3) \in \set{(x,y): \exists\ k \in \R \ \mbox{where} \ x^k=y}$.
+
+\vspace{2in}
+
+\end{question}
+
+\section{Proving $A \esub B$}
+
+\begin{question}[resume]
+\item If $A$ and $B$ are two non-empty sets, what does it mean to say $A \esub B$?  
+
+\vspace{1in}
+
+\item What steps do you think are necessary to show that $A \esub B$?  Remember, if $A$ and $B$ are infinite sets then it is not possible to check if every element of $A$ is contained in $B$.
+
+\vspace{3in}
+
+\item Prove that $\set{x \in \Z : 8 \divides x} \esub \set{x \in \Z : 4 \divides x}$.
+
+\vspace{4in}
+
+\item Prove that $\set{x \in \Z : 12 \divides x} \esub \set{x \in \Z : 3 \divides x}$.
+
+\vspace{3in}
+\newpage
+\item Suppose $A$ and $B$ are non-empty sets.  Prove $A \cap B \esub B$.
+
+\vspace{2in}
+\end{question}
+
+\section{Proving $A = B$}
+Recall that two sets, $A$ and $B$, are equal if they contain the same elements.  Of course, this means that all the elements of $A$ are contained in $B$ and all the elements of $B$ are contained in $A$.  More succinctly,
+\[A = B \Leftrightarrow (A \esub B \wedge B \esub A).\]
+As such, we show two sets are equal by showing that each set contains the other.  This is not the only way to show that two sets are equal, but it is the most expected method.
+
+\begin{question}[resume]
+\item Prove that $\set{2k+1: k \in \Z} = \set {2k+3 : k \in \Z}$.
+
+\newpage
+
+\item Prove that $\set{x \in \Z: 15 \divides x} = \set{x \in \Z: 3 \divides x} \cap \set{x \in \Z: 5 \divides x}$.
+
+\newpage
+
+\item Prove that $\set{y=\sqrt{1-x^2}: 0 \leq x \leq 1} = [0,1]$.
+
+\newpage
+
+
+\end{question}
+
+\noindent  Sometimes this proof technique is a little clumsy, especially if we do not have specific details about the sets with which we are dealing.  This happens especially when we have to prove general properties of sets.  In these instances, we use the definitions for basic set structures.\\
+
+\begin{question}[resume]
+
+\item Justify each step of the following proof of one of DeMorgan's Laws.  Fill in the definitions below the statement of the law to help you.
+
+\noindent \textbf{DeMorgan's Law:}  If $A$ and $B$ are subsets of a universal set $\mathcal{U}$, then $\c{A \cup B} = \c{A} \cap \c{B}.$\\
+\begin{mdframed}
+$\ds A \cap B = $ \\[.5in]
+
+$\ds A \cup B = $ \\[.5in]
+
+$\ds A - B = $\\[.5in]
+
+$\c{A} = $
+\vspace{4in}
+\begin{proof}  Suppose $A$ and $B$ are subsets of a universal set $\mathcal{U}$.  Then
+\begingroup
+\addtolength{\jot}{2.5em}
+	\begin{align*}
+	\c{A \cup B} &= \mathcal{U} - (A \cup B) \\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (x \notin A \cup B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge \sim (x \in A \cup B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge \sim ( (x \in A) \vee (x \in B))}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (\sim (x \in A) \wedge \sim (x \in B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge ((x \notin A) \wedge (x \notin B))}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (x \in \mathcal{U}) \wedge (x \notin A) \wedge (x \notin B)}\\
+	\ &= \set{x: (x \in \mathcal{U} \wedge (x \notin A) \wedge (x \in \mathcal{U}) \wedge (x \notin B)}\\
+	\ &= \set{x: ((x \in \mathcal{U} \wedge (x \notin A)) \wedge ((x \in \mathcal{U}) \wedge (x \notin B)}\\
+	\ &= \set{x: (x\in \mathcal{U}) \wedge (x \notin A)} \cap \set{x : (x \in \mathcal{U} \wedge (x \notin B)}\\
+	\ &= (\mathcal{U}-A) \cap (\mathcal{U}-B)\\
+	\ &= \c{A} \cap \c{B}.
+	\end{align*}
+	\endgroup
+\end{proof}
+\end{mdframed}
+\end{question}
+
+
+
+
+

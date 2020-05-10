@@ -458,7 +458,7 @@ Find the area of an equilateral triangle where side is $a$
 
 \subsubsection{20}
 
-Heron's formula  states that the area of a triangle with sides a, b, c is given by $A = \sqrt{s(s - a))(s - b)(s - c)}$, where the number $s = 'frac{1}{2} (a + b + c )$ is called the semi perimeter. Prove this formula by verifying the following steps:
+Heron's formula  states that the area of a triangle with sides a, b, c is given by $A = \sqrt{s(s - a))(s - b)(s - c)}$, where the number $s = \frac{1}{2} (a + b + c )$ is called the semi perimeter. Prove this formula by verifying the following steps:
 
 
 	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
@@ -485,7 +485,7 @@ Heron's formula  states that the area of a triangle with sides a, b, c is given 
 	\end{scriptsize}
 	\end{tikzpicture}
 	
-	a) = $A = \frac{1}{2} hc$
+	a)  $A = \frac{1}{2} hc$
 	
 	If we break this problem into two
 	
@@ -531,8 +531,232 @@ Heron's formula  states that the area of a triangle with sides a, b, c is given 
 	
 	b) $a^2 = b^2 + c^2 - 2cd$
 	
+	Using the pythagorean formula 
 	
+	\[
+	h^2 + d^2 = b^2, \; h^2 + (c-d)^2 = a^2
+	\]
 	
+	re-arranging we get
+	\[
+	h^2 = b^2 - d^2 = a^2 - (c-d)^2
+	\]
+
+With a bit of algebra manipulation we get
+\begin{align*}
+b^2 - d^2 = a^2 - (c-d)^2 =  \\
+b^2 - d^2 + (c-d)^2 =  a^2 = \\
+b^2 - d^2 + (c^2 -2cd + d^2) = a^2 \\
+b^2 + c^2 - 2cd = a^2
+\end{align*}
+
+c) $d = \frac{b^2 +c^2 - a^2}{2c}$
+
+Continuing with the manipulation
+
+\begin{align*}
+b^2 + c^2 - 2cd = a^2 \\
+b^2 + c^2 = a^2 + 2cd \\
+b^2 + c^2 - a^2 = 2cd \\
+\frac{b^2+c^2-a^2}{2c} = d
+\end{align*}
+
+
+d) $h^2 = b^2 - d^2$
+
+todo
+
+\subsubsection{21}
+Use Heron's formula and one other method to find the area of a right triangle with sides 3, 4 5.
+
+
+
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+	\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt] (-9.96,5.1)-- (-6.96,5.1);
+	\draw (-8.52181818181818,4.945454545454545) node[anchor=north west] {3};
+	\draw (-6.794545454545453,7.163636363636363) node[anchor=north west] {4};
+	\draw (-8.849090909090908,7.436363636363636) node[anchor=north west] {5};
+	\draw [line width=2pt] (-6.96,5.1)-- (-6.976363636363635,9.163636363636364);
+	\draw [line width=2pt] (-6.976363636363635,9.163636363636364)-- (-9.96,5.1);
+	\begin{scriptsize}
+	\draw [fill=ududff] (-9.96,5.1) circle (2.5pt);
+	\draw[color=ududff] (-9.81272727272727,5.4818181818181815) node {$A$};
+	\draw [fill=xdxdff] (-6.96,5.1) circle (2.5pt);
+	\draw[color=xdxdff] (-6.812727272727272,5.4818181818181815) node {$B$};
+	\draw [fill=ududff] (-6.976363636363635,9.163636363636364) circle (2.5pt);
+	\draw[color=ududff] (-6.83090909090909,9.554545454545455) node {$C$};
+	\end{scriptsize}
+	\end{tikzpicture}
+
+Using Heron's formula $Area = \sqrt{s(s-a)(s-b)(s-c)}$
+
+\[
+s = \frac{1}{2}(3 + 4 + 5) = 6, \; Area = \sqrt{6(6-3)(6-4)(6-5)} = \sqrt{6\cdot3\cdot2\cdot1} = \sqrt{6\cdot6} = 6
+\]
+
+Lets try the same but now starting with a rectangle
+
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt] (-9.96,5.1)-- (-6.96,5.1);
+	\draw (-8.52181818181818,4.945454545454545) node[anchor=north west] {3};
+	\draw (-6.794545454545453,7.163636363636363) node[anchor=north west] {4};
+	\draw (-8.849090909090908,7.436363636363636) node[anchor=north west] {5};
+	\draw [line width=2pt] (-6.96,5.1)-- (-6.976363636363635,9.163636363636364);
+	\draw [line width=2pt] (-6.976363636363635,9.163636363636364)-- (-9.96,5.1);
+	\draw [line width=2pt] (-6.976363636363635,9.163636363636364)-- (-10.012727272727272,9.145454545454545);
+	\draw [line width=2pt] (-10.012727272727272,9.145454545454545)-- (-9.96,5.1);
+	\begin{scriptsize}
+	\draw [fill=ududff] (-9.96,5.1) circle (2.5pt);
+	\draw[color=ududff] (-9.81272727272727,5.4818181818181815) node {$A$};
+	\draw [fill=xdxdff] (-6.96,5.1) circle (2.5pt);
+	\draw[color=xdxdff] (-6.812727272727272,5.4818181818181815) node {$B$};
+	\draw [fill=ududff] (-6.976363636363635,9.163636363636364) circle (2.5pt);
+	\draw[color=ududff] (-6.83090909090909,9.554545454545455) node {$C$};
+	\draw [fill=ududff] (-10.012727272727272,9.145454545454545) circle (2.5pt);
+	\draw[color=ududff] (-9.794545454545453,9.536363636363635) node {$B'$};
+	\end{scriptsize}
+	\end{tikzpicture}
+
+Just mirroing the triangle two form a rectangle, we can see the area of the rectangle is $Area_{rectangle} = 3\cdot4$. As we have 2 lots of the triangle, we can now form $Area_{triangle} = \frac{3\cdot4}{2} =  6$
+
+\subsubsection{22}
+Apply the Heron formula to verify the result of Question 19.
+
+\[
+s = \frac{1}{2}(a + a + a) = \frac{3a}{2} \; Area = \sqrt{s(\frac{3a}{2}-a)^3} = \sqrt{\frac{3a}{2} (\frac{a}{2})^3} = \sqrt{\frac{3a^4}{16}} = \frac{\sqrt{3}a^2}{4}
+\]
+
+\subsubsection{23}
+Find the hypotenuse of a right angled triangle whos legs are 
+
+a) $3, 4$ 
+
+\[
+h = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]
+
+b) $5, 12$
+
+\[
+h = \sqrt{5^2 + 12^2} = \sqrt{25 + 144} = 13
+\]
+
+c) $6, 8$
+
+\[
+h = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = 10
+\]
+
+
+d) $7, 24$
+
+\[
+h= \sqrt{7^2 + 24^2} = \sqrt{49 + 576} = 25
+\]
+
+e) $8, 15$
+
+\[
+h = \sqrt{8^2 + 15^2} = \sqrt{64 + 225} = 17
+\]
+
+\subsubsection{24}
+The hypotenuse of a right triangle is 15 and one leg is 12. What is the other leg?
+
+$b = \sqrt{15^2 - 12^2} = \sqrt{225 - 144} = \sqrt{81} = 9$
+
+\subsubsection{25}
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0,0) -- (3,0) -- (3,2) -- (0,2) -- cycle;
+	\draw [line width=2pt,color=zzttqq] (0,0)-- (3,0);
+	\draw [line width=2pt,color=zzttqq] (3,0)-- (3,2);
+	\draw [line width=2pt,color=zzttqq] (3,2)-- (0,2);
+	\draw [line width=2pt,color=zzttqq] (0,2)-- (0,0);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (0,0)-- (3,2);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (0,2)-- (3,0);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (1.5,1)-- (1.5,2);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (1.5,1)-- (1.5,0);
+	\draw (0.62,1.1) node[anchor=north west] {a};
+	\draw (2.5,0.94) node[anchor=north west] {b};
+	\draw (2.22,2.04) node[anchor=north west] {c};
+	\draw (0.9,1.96) node[anchor=north west] {d};
+	\begin{scriptsize}
+	\draw [fill=ududff] (0,0) circle (2.5pt);
+	\draw[color=ududff] (0.16,0.43) node {$A$};
+	\draw [fill=ududff] (3,0) circle (2.5pt);
+	\draw[color=ududff] (3.16,0.43) node {$B$};
+	\draw [fill=ududff] (3,2) circle (2.5pt);
+	\draw[color=ududff] (3.16,2.43) node {$C$};
+	\draw [fill=ududff] (0,2) circle (2.5pt);
+	\draw[color=ududff] (0.16,2.43) node {$D$};
+	\draw [fill=uuuuuu] (1.5,1) circle (2pt);
+	\draw[color=uuuuuu] (1.66,1.39) node {$E$};
+	\end{scriptsize}
+	\end{tikzpicture}
+If E is any interior point on the indicated rectangle, show that $a^2 + c^2 = b^2 + d^2$.
+
+Given we have a rectangle, we know that the lengths $AB = CD$ and $AD = CB$
+We can also conclue that the triangle $AEB$ has sides $a, b, AB$ which would mean the triangle $CED$ has sides $c, d, DC$,
+
+Using pythagorean formula $AB^2 = a^2 + b^2 = DC^2 = c^2 + d^2$ meaning $a^2 - c^2 = d^2 - b^2$
+
+Applying the same idea to the other pair of sides in the rectangle,
+$AD = CB$
+
+$AD^2 = a^2 + d^2 = CB^2 = c^2 + b^2$
+
+Thus, $a^2 - c^2 = b^2 - d^2$
+
+Putting the two together $a^2 - c^2 = d^2 - b^2 = b^2 - d^2$
+
+
+TODO: check me
+
+\subsubsection{26}
+
+In the adjoining figure find a, b, c, d, e
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt,color=zzttqq] (0,0)-- (0,-1);
+	\draw [line width=2pt,color=zzttqq] (0,-1)-- (1,-1);
+	\draw [line width=2pt,color=zzttqq] (1,-1)-- (0,0);
+	\draw [line width=2pt,dash pattern=on 1pt off 1pt] (1,-1)-- (1.7071067811865475,-0.29289321881345254);
+	\draw [line width=2pt] (0,0)-- (1.7071067811865475,-0.29289321881345254);
+	\draw [line width=2pt] (1.7071067811865475,-0.29289321881345254)-- (1.8682695174888417,0.694034626790043);
+	\draw [line width=2pt] (0,0)-- (1.8682695174888417,0.694034626790043);
+	\draw [line width=2pt] (1.8682695174888417,0.694034626790043)-- (1.4966543006709305,1.622421469991398);
+	\draw [line width=2pt] (0,0)-- (1.4966543006709305,1.622421469991398);
+	\draw [line width=2pt] (1.4966543006709305,1.622421469991398)-- (0.6203611583356138,2.1041997682740172);
+	\draw [line width=2pt] (0,0)-- (0.6203611583356138,2.1041997682740172);
+	\draw (-0.274,-0.166) node[anchor=north west] {1};
+	\draw (0.43,-0.892) node[anchor=north west] {1};
+	\draw (1.64,-0.408) node[anchor=north west] {1};
+	\draw (2.212,0.428) node[anchor=north west] {1};
+	\draw (1.992,1.55) node[anchor=north west] {1};
+	\draw (1.266,2.32) node[anchor=north west] {1};
+	\begin{scriptsize}
+	\draw [fill=ududff] (0,0) circle (2.5pt);
+	\draw [fill=ududff] (0,-1) circle (2.5pt);
+	\draw [fill=ududff] (1,-1) circle (2.5pt);
+	\draw [fill=xdxdff] (1.7071067811865475,-0.29289321881345254) circle (2.5pt);
+	\draw [fill=xdxdff] (1.8682695174888417,0.694034626790043) circle (2.5pt);
+	\draw [fill=xdxdff] (1.4966543006709305,1.622421469991398) circle (2.5pt);
+	\draw [fill=xdxdff] (0.6203611583356138,2.1041997682740172) circle (2.5pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+	
+
+$a = \frac{1}{2} 1 \cdot 1 = \frac{1}{2}$\\
+$b = \frac{1}{2} 1 \cdot (\sqrt{1^2 + 1^2}) = \frac{\sqrt{2}}{2}$\\
+$c = \frac{1}{2} 1 \cdot (\sqrt{1^2 + \sqrt{2^2}}) = \frac{\sqrt{3}}{2}$\\
+$d = \frac{1}{2} 1 \cdot ( \sqrt{1^2 + \sqrt{3^2}}) = \frac{\sqrt{4}}{2} = 1$\\
+$e = \frac{1}{2} 1 \cdot (\sqrt{1^2 + \sqrt{4^2}}) = \frac{\sqrt{5}}{2}$
+
 
 
 \section{Algebra}

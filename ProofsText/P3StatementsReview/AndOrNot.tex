@@ -1,0 +1,300 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{cor}{Colrollary}[section]
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.3 Logic and Statements Review}
+\end{center}
+
+Recall that a \textbf{statement} is a sentence that is definitely true or definitely false.  We can combine statements to make more complicated statements using the logical connectives ``and,'' ``or,'' and ``not.''\\
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Combine statements using ``and,'' ``or,'' and ``not.''
+\item Write and parse conditional statements.
+\item Use truth tables to determine the truth value of complex statements.
+\end{itemize}
+}}
+\end{center}
+
+\begin{enumerate}  
+\item Determine which of the following are statements.  Recall that a statement is sentence that \textit{is} true or false, not a sentence that could be true or false.
+	\begin{enumerate} \itemsep=.5in
+	\item The integer 5 is even.
+	\item $x^2=4$
+	\item $x^2=-1$
+	\item Dr.~Wright's cat has three legs.
+	\item Brian called his dad. 
+	\vspace{.5in}
+	\end{enumerate}
+\end{enumerate}
+
+\begin{definition}  Let $P$ and $Q$ be statements.  The statement ``$P$ \textbf{and} $Q$'' is true if and only if both $P$ and $Q$ are true.  The statment ``$P$ \textbf{and} $Q$'' is expressed symbolically as
+\[ P \wedge  Q \]
+and is known as a \textbf{conjunction}.
+\end{definition}
+
+\begin{definition}  Let $P$ and $Q$ be statements.  The statement ``$P$ \textbf{or} $Q$'' is true if and only if $P$ is true, $Q$ is true, or both $P$ and $Q$ are true.  The statement ``$P$ or $Q$'' is expressed symbollically as 
+\[ P \vee Q \] 
+and is known as a \textbf{disjunction}.
+\end{definition}
+
+Remember that the word ``or'' is often used differently in mathematics than it is in common English.  For instance, a police officer might say ``Drop your weapon or I will shoot you'' and you would understand that if you drop your gun you will not be shot.  However, in mathematics the above statement would still be true if you drop your weapon AND the officer shoots you.  A mathematician might say ``Either drop your weapon or you will be shot, but not both.''
+
+\begin{definition}  Let $P$ be a statement.  The statement ``It is not true that $P$,'' known as the \textbf{negation} of $P$ and denoted $\sim\!P$, is true if and only if $P$ is false.  
+\end{definition}
+
+\begin{enumerate}\setcounter{enumi}{1} \item Let $P$ be the statement ``$n^2$ is even'' and $Q$ be the statement ``$m$ is a multiple of 3.''  Express the following as ordinary English sentences.
+	\begin{enumerate}
+	\item $P \wedge Q$
+	
+	\vspace{.75in}
+	
+	\item $P \vee Q$
+	
+	\vspace{.75in}
+	
+	\item $\sim\!P$
+	
+	\vspace{.75in}
+	
+	\item $\sim\!Q$
+	
+	\vspace{.75in}
+	
+	\item $ \sim\!(P \wedge Q)$
+	
+	\vspace{.75in}
+	
+	\item $ \sim\!(P \vee Q)$
+	
+	\vspace{.75in}
+	
+	\end{enumerate}
+\end{enumerate}
+
+\noindent When dealing with a complicated statement, it can be handy to use a \textbf{truth table} to determine the truth value of the statement.  The truth tables for the basic connectives are below.
+\begin{multicols}{3}
+{\tabulinesep=.1in
+\begin{tabu}{|cc|c|}
+\hline
+$P$ & $Q$ & $P \wedge Q$ \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{tabu}}
+
+{\tabulinesep=.1in
+\begin{tabu}{|cc|c|}
+\hline
+$P$ & $Q$ & $P \vee Q$ \\
+\hline
+T & T & T \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{tabu}}
+
+{\tabulinesep=.1in
+\begin{tabu}{|c|c|}
+\hline
+$P$ & $\sim P$ \\
+\hline
+T & F \\
+F & T \\
+\hline
+\end{tabu}}
+\end{multicols}
+
+\vspace{.5in}
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Make truth tables for the following statements.  I've given you the start of the table for the first two to give you the idea.
+	\begin{enumerate}
+	\item $\sim\!( P \wedge Q)$\\
+	
+		{\tabulinesep=.1in
+		\begin{tabu}{|cc|c:c|}
+		\hline
+		$P$ & $Q$ &$ (P \wedge Q)$ & $\sim\!(P \wedge Q)$\\
+		\hline
+		T & T & \ & \ \\
+		T & F & \ & \ \\
+		F & T & \ & \ \\
+		F & F & \ & \ \\
+		\hline
+		\end{tabu}}
+		\medskip
+	\item $(\sim\!P) \wedge (\sim\!Q)$\\
+	
+	{\tabulinesep=.1in
+	\begin{tabu}{|cc|c:c:c|}
+		\hline
+		$P$ & $Q$ &$ \sim\!P$ & $\sim\!Q$ & $(\sim\!P) \wedge (\sim\!Q)$\\
+		\hline
+		T & T & \ & \ & \ \\
+		T & F & \ & \ & \ \\
+		F & T & \ & \ & \ \\
+		F & F & \ & \ & \ \\
+		\hline
+		\end{tabu}}
+
+	\item $(\sim\!P) \vee (\sim\!Q)$
+	
+	\vspace{3in}
+	
+	\end{enumerate}
+	
+\item In the truth table above you looked at the statements ``$\sim\!( P \wedge Q)$,'' ``$(\sim\!P) \wedge (\sim\!Q)$,'' and ``$(\sim\!P) \vee (\sim\!Q)$.''  Based on these truth tables, do you think there is a distribution rule for negation?  That is, is ``$\sim\!( P \wedge Q)$'' the same as ``$(\sim\!P) \wedge (\sim\!Q)$?''
+
+\vspace{.75in}
+
+\end{enumerate}
+
+\begin{definition}  If $P$ and $Q$ are statements the conditional statement ``\textbf{If $P$, then $Q$}'' is denoted $P \Rightarrow Q$ and has the truth table below.
+	\begin{center}
+	{\tabulinesep=.1in
+	\begin{tabu}{|cc|c|}
+	\hline
+	$P$ & $Q$ & $ P \Rightarrow Q$ \\
+	\hline
+	T & T & T\\
+	T & F & F\\
+	F & T & T\\
+	F & F & T\\
+	\hline
+	\end{tabu}}
+	\end{center}
+\end{definition}
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item Suppose Dr. Wright were to tell you ``If you come to every class, then you will get an A in the course.''  Find simple statements, $P$ and $Q$, so that this statement is the same as ``$P \Rightarrow Q$.'' Then determine what conditions are necessary for Dr. Wright to have lied to you.
+
+\vspace{2in}
+
+\item Express each complex statement using statement variables and the logical connectives.  Parse the statement as much as possible, and remember to say what your variables stand for.
+	\begin{enumerate}
+	\item If I eat now, then I will not be hungry later.
+	
+	\vspace{1in}
+	
+	\item If $f$ is not differentiable, then $f$ is not continuous.
+	
+	\vspace{1in}
+	
+	\item Matrix $M$ is invertible and matrix $N$ is in row reduced form.
+	
+	\vspace{1in}
+	
+	\item If it snows today, then we will not have class and I will not learn anything.
+	
+	\vspace{1in}
+	\end{enumerate}
+\end{enumerate}
+
+This packet has been designed to help you review some of the content from your Introduction to Formal Mathematics class.  In reality, we won't spend much time determining if things are statements, converting to symbolic logic, or building truth tables.  Most of our time will be spent proving conditional statements.    
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,143 @@
+\chapter{Basic Existence Proofs}
+
+Many definitions in mathematics involve existence statements.  In some sense the most fundamental piece of proof writing is showing that an element of a set satisfies some definition.  Doing so requires what is called an existence proof.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Write existence proofs based on given definitions
+	\item Disprove statements using existence proofs
+	\end{itemize}
+}}
+\end{center}
+
+\section{Why you're here}  
+
+You're in this course to learn to write mathematical proofs of statements.  To make this a digestible task, you'll be writing proofs of statements that we already know to be true.  You will often think to yourself ``Isn't that obvious?''  Maybe it is, but that doesn't mean you don't have to prove it.  If a statement isn't an axiom then it needs to be proven.  Once it has been proven it can be used in the future.\\
+
+You need to master the art of proof writing before you move on to more advanced math courses.  In upper level courses like Geometries, Abstract Algebra, and Analysis proofs will be the primary assessment tool.  You will demonstrate your understanding of concepts and definitions by writing proofs about them.  Of course, that requires that you already know how to write a proof when you get there.  Proof writing is to advanced mathematics as algebra is to calculus.  It will be assumed that you have a perfect working knowledge of it when you're called upon to use it.  \\
+
+\section{Definitions}
+
+Definitions are the cornerstone of advanced mathematics.  We work from axioms and definitions to build new ideas.  As the semester progress, you'll learn to work with a lot of new and interesting definitions.  Some will be somewhat familiar, while others will be very new.  There are two important things to keep in mind about mathematical definitions.  First, you only know a definition if you can restate it verbatim.  Paraphrasing isn't good enough.  Second, definitions change between textbooks and mathematical works.  You should never accept your prior knowledge as good enough where a definition is concerned.  Always do your best to find the authors version of the definition.\\
+
+We will need the following definitions for this topic and throughout the remainder of the semester.
+
+\begin{definition}[Even] An integer $n$ is \textbf{even} if there exists $k \in \Z$ such that  $n= 2k$.
+\end{definition}
+
+\begin{definition}[Odd] An integer $n$ is \textbf{odd} if there exists $k \in \Z$ such that $n=2k+1$.
+\end{definition}
+
+\begin{definition}[Divides] An integer $a$ \textbf{divides} an integer $b$, denoted $a \divides b$, if and only if there exists $k \in \Z$ such that $ak=b$.
+\end{definition}
+
+\noindent \textit{Note:} The expression ``$a \divides b$'' is a mathematical statement, not a mathematical expression.  That is, ``$a \divides b$'' is true or false.  Do not confuse this notation with the expression ``$a/b$'' which is a rational number.\\
+
+\noindent  If $a,b \in \Z$ and $a \divides b$, then we will often say that $b$ is a \textbf{multiple} of $a$.  For instance, ``$5 \divides 10$'' and ``10 is a multiple of 5'' give us the same information.  The terms ``divides'' and ``multiple'' can be used in similar situations, but ``divides'' tends to be more concise.  For instance, consider
+
+\[\set{k \in \N : k \divides 12} = \set{k \in \N : 12 \ \text{is a multiple of }k} = \set{1,2,3,4,6,12}.\]
+
+\noindent \textbf{Writing note:}  The word ``divides'' is an active verb, where as ``is'' is not.  Most of us naturally prefer action verbs when reading.  As a result, saying ``$5 \divides 10$'' instead of ``10 is a multiple of 5'' will make your writing more interesting to read.\\
+
+\section{Existence Proofs}
+
+\noindent Consider the statement $P$:``The integer 6 is even.''  Odds are that you're willing to accept this statement as being true without any argument.  You've been exposed to even and odd integers for some time now.  Still, this example will serve as great practice.  \\
+
+\noindent The statement $P$ is an existence statement in disguise.  
+\[P \equiv Q:\text{``There exists an integer $k$ such that $6=2k$.}\]
+While statements $P$ and $Q$ say exactly the same thing, $Q$ helps us understand what we need to do to demonstrate that $P$ is true: we need to provide and integer $k$ so that $2k=6$.  The integer $3$ should work just fine.
+
+\begin{claim} The integer 6 is even.
+\end{claim}
+\begin{proof}
+Notice that $2(3)=6$, so there exists an integer $k$ such that $6=2k$.  Thus 6 is even by definition.
+\end{proof}
+
+\begin{question}
+\item \textbf{Directions:} Prove the following existence statements.  Please note that being asked to prove something means you're being asked to do more than provide the example for the existence statement.  You need to use full sentences and reference appropriate definitions and axioms.
+\end{question}
+\begin{claim} The integer $8$ is even.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} The integer 7 is odd.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} The integer $-5$ is odd.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} The integer $0$ is even.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim}  For some integer $k$, the integer $8k$ is even.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} For some integer $k$, the integer $2k+3$ is odd.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} For some integers $n$ and $m$, the integer $2n+2m+1$ is odd.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} The integer 15 divides the integer 30.
+\end{claim}
+
+\vspace{1.5in}
+
+\begin{claim} For some integer $k$, $2|(4k+6)$.
+\end{claim}
+
+
+\vspace{1.5in}
+
+
+\noindent Hopefully you found the claims in this section relatively easy to prove.  These basic existence proofs will often appear as a part of larger, more substantive proofs.  Later in the semester we will discuss existence proofs that require more than knowledge or arithmetic.
+
+\section{Disproof}
+
+When not proving statements of the form $\exists \ x, P(x)$ we'll be proving statements of the form $\forall \ x, P(x)$.
+
+\begin{question}[resume]
+\item If $\forall \ x, P(x)$ is false, then its negation is true.  Give the negation of this statement.
+\vspace{.5in}
+\item If we want to show that a universally quantified statement is false, what method do you think we can employ?
+\vspace{.75in}
+\end{question}
+
+\noindent Since we prove that a universal statement is false by proving that a related existence statement is true, and we prove existence statements by providing an example, we often call the example used to disprove a universal statement a \textit{counter example}.\\
+
+
+\begin{question}[resume]
+\item \textbf{Directions:} Disprove the following statements by providing a counter example.
+\end{question}
+\begin{claim} If $x,y \in \R$ and $x<y$, then $x^2<y^2$.
+\end{claim}
+
+\vspace{1in}
+
+\begin{claim} For $n \in \Z$, if $2 |n$, then $4|n$.
+\end{claim}
+
+\vspace{1in}
+
+\begin{claim} For integers $n$ and $k$, if $n=2k$ then $k$ is even.
+\end{claim}
+
+\vspace{1in}
+
+Disproving statements isn't considered all that interesting by mathematicians.  However, we often employ disproof techniques to find errors in proofs.  For example, if Natal has written a proof containing the claim ``Since $x \in \R,$ $x^2>1$'' we know Natal's proof is entirely wrong if we can provide a counterexample to this single statement.
+
+

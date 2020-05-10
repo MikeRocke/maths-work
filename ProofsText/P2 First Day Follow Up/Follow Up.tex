@@ -1,0 +1,149 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.8in}
+\addtolength{\hoffset}{-.9in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+%\usepackage{enumerate}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{tabu}
+\usepackage{arydshln}
+\usepackage[shortlabels]{enumitem}
+\usepackage{totcount}
+%\usepackage{mathptmx}
+%\usepackage[T1]{fontenc}
+\newtotcounter{totalpoints}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ds}{\displaystyle} 
+\newcommand{\inner}[1]{\left\langle#1\right\rangle}
+\newcommand{\jmax}{\max\limits_{t \in J}}
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\va}{\textbf{a}}
+\newcommand{\vb}{\textbf{b}}
+\newcommand{\vr}{\textbf{r}}
+\newcommand{\vT}{\textbf{T}}
+\renewcommand{\P}{\mathcal{P}}
+\renewcommand{\tt}[1]{\texttt{#1}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{thm}{Theorem}[section]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{cor}{Colrollary}[section]
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.2 Developing an Argument}
+\end{center}
+
+Writing a proof is similar to writing an argument that something is true.  It's important to think in advance about what makes an argument good or bad, and how to go about putting an argument together.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Write arguments that your solutions to the first day exercises are correct.
+\item Analyze these arguments for any deficiencies.
+\end{itemize}
+}}
+\end{center}
+
+\begin{enumerate}
+\item Revisit your solutions to exercises 4 and 5 from the first packet.  Discuss your solutions with your group and then write down a carefully worded argument that your solution is correct.  Avoid being excessively vague or excessively verbose.
+
+\newpage
+
+\item Do the same for question 6.  Try to express your argument without the use of pictures or diagrams.  
+
+\vspace{4in}
+
+\item Try to find a solution for question 7 again and write down an explanation of how you know your solution to be correct.
+
+\newpage
+
+\item There are certain similarities to developing the solutions and arguments to the provided logic problems.  Name some of those similarities.  Specifically, focus on how the arguments need to begin.
+
+\vspace{4in}
+
+\item By now you've discussed different arguments enough to know what makes one good or bad.  In your opinion, what are the necessary elements of a good argument?  What should they avoid?
+\end{enumerate}
+\end{document}
+
+
+
+

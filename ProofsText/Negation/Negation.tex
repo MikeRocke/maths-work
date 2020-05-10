@@ -1,0 +1,210 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{cor}{Colrollary}[section]
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Negation}
+\end{center}
+
+We often have to negate statements when writing proofs.  Negation can be very simple, but some negation forms are not very useful.  Furthermore, negating statements with multiple quantifiers can actually be quite complicated.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Negate statements using logically equivalent expressions
+	\item Negate qualified statements
+	\item Negate statements with multiple quantifiers
+	\end{itemize}
+}}
+\end{center}
+
+\noindent Consider the following statements.
+	\begin{align*}
+	P &: \ \mbox{The number 2 is an integer.}\\
+	Q &: \ \mbox{The function $g$ is continuous.}
+	\end{align*}
+	
+Recall that negating these statements is essentially putting the phrase ``It is not true that'' in front of the statement.
+	\begin{align*}
+	\sim P &: \ \mbox{It is not true that 2 is an integer.} \ \equiv \ \mbox{The number 2 is not an integer.}\\
+	\sim Q &: \ \mbox{It is not true that $g$ is continuous.} \ \equiv \ \mbox{Function $g$ is not continuous.}
+	\end{align*}
+
+Notice that two forms of the above statements are given.  The first is the direct negation, while the second is, in some sense, a more helpful version of the negation.
+
+\begin{enumerate}
+	\item Negate the following simple statements and open sentences.  Express the negation in a more natural way if possible.  That is, don't simple write ``It is not true that'' in front of the original statement.
+	\begin{enumerate} \itemsep.5in
+	\item Matrix $A$ is invertible.
+	\item The function $e^x$ is integrable on $[0,1]$.
+	\item The sum of 2 and 3 is 7.
+	\vspace{.5in}
+	\end{enumerate}
+\end{enumerate}
+
+\noindent It can be more complicated to negate a complicated statement or open sentence.  Consider the statement below.
+	\begin{align*}
+	R &: \ \mbox{Integer $a$ is even and integer $b$ is odd.}\\
+	\sim R&: \ \mbox{It is not true that $a$ is even and $b$ is odd.}
+	\end{align*}
+
+Notice that the statement given for $\sim R$ does not tell us anything specific about $a$ or $b$.  Thus, it is the correct negation, but of no practical use.  We can see that $R \equiv P \wedge Q$ if $P:$ ``Integer $a$ is even'' and $Q:$ ``Integer $b$ is odd.''  Recall that by DeMorgan's Laws, $\sim (P \wedge Q) \equiv (\sim P) \vee (\sim Q)$.  Then we can express $\sim R$ as follows.
+	\begin{align*}
+	\sim R &: \ \mbox{Integer $a$ is odd \textit{or} integer $b$ is even.}
+	\end{align*}
+	
+\noindent You have previously shown that $ \sim(P \Rightarrow Q) \equiv P \wedge (\sim Q)$ using truth tables.  This logical equivalence offers a much more useful way to express the negation of a conditional statement.
+	\begin{align*}
+	R &: \ \mbox{If $f$ is differentiable, then $f$ is continuous.}\\
+	\sim R &: \ \mbox{Function $f$ is differentiable and $f$ is not continuous.}
+	\end{align*}
+	
+\begin{enumerate}
+\setcounter{enumi}{1}
+	\item Negate the following complicated statements using DeMorgan's Laws and the negation of a conditional statement.
+	\begin{enumerate} \itemsep1in
+	\item A matrix is singular or it is invertible.
+	\item Integer 2 is a divisor of 10 and 20.
+	\item If $\sqrt{2}$ is rational, then $\sqrt{2}= p/q$ for integers $p$ and $q$.
+	\item For a sequence $a_n$ to be convergent, it is sufficient that it is absolutely convergent.
+	\item For $4$ to be a solution of $x^2-16=0$, it is necessary that $(4)^2-16=0$.
+	\vspace{1in}
+	\end{enumerate}
+	
+	\item Consider the statements $P:$ ``Every real number is an even integer'' and $Q:$ ``There exists an infinite subset of $\mathbb{N}$.''
+	\begin{enumerate} \itemsep1in
+	\item  Is $\sim P$ true or false?  Explain your reasoning.  
+	\item What is the most clear way to express $\sim P$ in English?
+	\item Is $\sim Q$ true or false?  Explain your reasoning.
+	\item What is the most clear way to express $\sim Q$ in English.
+	\item Suppose $S$ is a set and $P(x)$ is an open sentence concerning $x$.  What is the proper negation of the statement ``$\forall \ x \in S, \ P(x)$?''
+	\item What is the proper negation of ``$\exists \ x\in S, \ P(x)$?''
+	\end{enumerate}
+\end{enumerate}
+
+\noindent Statements or open sentences that contain multiple quantifiers can be tricky to negate.  Consider the following statements.
+	\begin{align*}
+	P &: \ \forall \ m \in \Z, \ \exists \ n \in \Z, m+n =0 \\
+	Q &: \ \exists \ k \in \Z, \ \forall \ m \in \Z, km = 0\\
+	R &: \ \forall a,b \in \N, \ \exists \ k \in \N, a^n > b
+	\end{align*}
+
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item Notice that each statement is true.  Determine exactly what would have to be true for each statement to be false.
+	\vspace{4in}
+
+
+
+\item Negate the following statements.  Determine whether the original statement or the negation is true.
+	\begin{enumerate} \itemsep1in
+	\item $\forall \ x \in \R, \ \exists \ y \in \R, \ y^3=x$
+	\item $\exists \ b \in \R, \ \forall \ a \in \Z-\set{0}, \ ab=1$
+	\item For every polynomial $p(x)$, there exists polynomial $q(x)$ such that $p'(x)=q(x)$.
+	\item $\forall \ \epsilon >0, \ \exists \ N \in \N, \ (n > N \Rightarrow |a_n - L| < \epsilon)$
+	\item $\forall \ \epsilon >0, \ \exists \ \delta > 0, (|x-a|<\delta \Rightarrow |f(x)-L| < \epsilon$)
+	\end{enumerate}
+	
+
+\end{enumerate}
+\end{document}
+
+
+
+

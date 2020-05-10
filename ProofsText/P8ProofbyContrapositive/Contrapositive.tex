@@ -1,0 +1,316 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+\newcommand{\mymod}[1]{ \ (\bmod \ #1)}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem*{lemma*}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	\newtheorem{claim}{Claim}
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem*{definition*}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.8 Contrapositive and Proof by Contrapositive}
+\end{center}
+
+Proof by contrapositive is a very powerful proof technique.  Technically speaking, any statement that can be proven with a direct proof can be proven with a contrapositive proof and vice versa.  However, it is almost always the case that one proof is significantly easier to write. 
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Negate statements in a useful manner
+	\item Construct contrapositive statements
+	\item Write proofs using contrapositive statements.
+	\end{itemize}
+}}
+\end{center}
+
+\noindent Before we start working on writing proofs by contrapositive, let's review negating statements.  Consider the following statements.
+	\begin{align*}
+	P &: \ \mbox{The number 2 is even.}\\
+	Q &: \ \mbox{$x<y$.}\\
+	R &: \ \mbox{Set $A= \emptyset$.}
+	\end{align*}
+	
+Recall that negating these statements is essentially putting the phrase ``It is not true that'' in front of the statement.
+	\begin{align*}
+	\sim P &: \ \mbox{It is not true that 2 is even.} \ \equiv \ \mbox{The number 2 is odd.}\\
+	\sim Q &: \ \mbox{It is not true that $x<y$.} \ \equiv \ \mbox{$x \geq y$.}\\
+	\sim R &: \ \mbox{It is not true that $A = \emptyset$.} \ \equiv \ \mbox{$|A|>0$.}
+	\end{align*}
+
+Notice that two forms of the above statements are given.  The first is the direct negation, while the second is, in some sense, a more helpful version of the negation.
+
+\begin{enumerate}
+	\item Negate the following simple statements and open sentences.  Express the negation in a more natural way if possible.  That is, don't simple write ``It is not true that'' in front of the original statement.
+	\begin{enumerate} \itemsep.5in
+	\item The sum of $a$ and $b$ is odd.
+	\item $a \ndivides 2b$.
+	\item $x \geq 1$.
+	\vspace{.5in}
+	\end{enumerate}
+\end{enumerate}
+
+\noindent It can be more complicated to negate a complicated statement or open sentence.  Consider the statement below.
+	\begin{align*}
+	R &: \ \mbox{Integer $a$ is even and integer $b$ is odd.}\\
+	\sim R&: \ \mbox{It is not true that $a$ is even and $b$ is odd.}
+	\end{align*}
+
+Notice that the statement given for $\sim R$ does not tell us anything specific about $a$ or $b$.  Thus, it is the correct negation, but of no practical use.  We can see that $R \equiv P \wedge Q$ if $P:$ ``Integer $a$ is even'' and $Q:$ ``Integer $b$ is odd.''  Recall that by DeMorgan's Laws, $\sim (P \wedge Q) \equiv (\sim P) \vee (\sim Q)$.  Then we can express $\sim R$ as follows.
+	\begin{align*}
+	\sim R &: \ \mbox{Integer $a$ is odd \textit{or} integer $b$ is even.}
+	\end{align*}
+	
+% \noindent You have previously shown that $ \sim(P \Rightarrow Q) \equiv P \wedge (\sim Q)$ using truth tables.  This logical equivalence offers a much more useful way to express the negation of a conditional statement.
+% 	\begin{align*}
+% 	R &: \ \mbox{If $f$ is differentiable, then $f$ is continuous.}\\
+% 	\sim R &: \ \mbox{Function $f$ is differentiable and $f$ is not continuous.}
+% 	\end{align*}
+	
+\begin{enumerate}
+\setcounter{enumi}{1}
+	\item Negate the following complicated statements using DeMorgan's Laws and the negation of a conditional statement.
+	\begin{enumerate} \itemsep1in
+	\item $2 \divides a$ or $2 \ndivides b$.
+	\item Integer 2 is a divisor of 10 and 20.
+	\item $x<1$ or $x \geq 2$.
+	\item $-2<x<3$.
+% 	\item If $\sqrt{2}$ is rational, then $\sqrt{2}= p/q$ for integers $p$ and $q$.
+% 	\item For a sequence $a_n$ to be convergent, it is sufficient that it is absolutely convergent.
+% 	\item For $4$ to be a solution of $x^2-16=0$, it is necessary that $(4)^2-16=0$.
+	\vspace{1in}
+	\end{enumerate}
+	
+% 	\item Consider the statements $P:$ ``Every real number is an even integer'' and $Q:$ ``There exists an infinite subset of $\mathbb{N}$.''
+% 	\begin{enumerate} \itemsep1in
+% 	\item  Is $\sim P$ true or false?  Explain your reasoning.  
+% 	\item What is the most clear way to express $\sim P$ in English?
+% 	\item Is $\sim Q$ true or false?  Explain your reasoning.
+% 	\item What is the most clear way to express $\sim Q$ in English.
+% 	\item Suppose $S$ is a set and $P(x)$ is an open sentence concerning $x$.  What is the proper negation of the statement ``$\forall \ x \in S, \ P(x)$?''
+% 	\item What is the proper negation of ``$\exists \ x\in S, \ P(x)$?''
+% 	\end{enumerate}
+% \end{enumerate}
+
+% \noindent Statements or open sentences that contain multiple quantifiers can be tricky to negate.  Consider the following statements.
+% 	\begin{align*}
+% 	P &: \ \forall \ m \in \Z, \ \exists \ n \in \Z, m+n =0 \\
+% 	Q &: \ \exists \ k \in \Z, \ \forall \ m \in \Z, km = 0\\
+% 	R &: \ \forall a,b \in \N, \ \exists \ k \in \N, a^n > b
+% 	\end{align*}
+
+
+% \begin{enumerate}
+% \setcounter{enumi}{3}
+% \item Notice that each statement is true.  Determine exactly what would have to be true for each statement to be false.
+% 	\vspace{4in}
+
+
+
+% \item Negate the following statements.  Determine whether the original statement or the negation is true.
+% 	\begin{enumerate} \itemsep1in
+% 	\item $\forall \ x \in \R, \ \exists \ y \in \R, \ y^3=x$
+% 	\item $\exists \ b \in \R, \ \forall \ a \in \Z-\set{0}, \ ab=1$
+% 	\item For every polynomial $p(x)$, there exists polynomial $q(x)$ such that $p'(x)=q(x)$.
+% 	\item $\forall \ \epsilon >0, \ \exists \ N \in \N, \ (n > N \Rightarrow |a_n - L| < \epsilon)$
+% 	\item $\forall \ \epsilon >0, \ \exists \ \delta > 0, (|x-a|<\delta \Rightarrow |f(x)-L| < \epsilon$)
+% 	\end{enumerate}
+\end{enumerate}
+
+\noindent Now that we feel comfortable negating statements, let's recall what the contrapositive actually is.  Fill in the following truth table.
+
+\begin{center}
+{\tabulinesep=.1in
+	\begin{tabu}{c|c|c|c|c|c}
+	$P$ & $Q$ & $P \Rightarrow Q$ & $\sim Q$ & $\sim P$ & $\sim Q \Rightarrow \sim P$\\
+	\hline
+	T & T & \ & \ & \ & \ \\
+	T & F & \ & \ & \ & \ \\
+	F & T & \ & \ & \ & \ \\
+	F & F & \ & \ & \ & \ \\
+	\end{tabu}}
+\end{center}
+
+Notice that the statements $P \Rightarrow Q$ and $\sim Q \Rightarrow \sim P$ are logically equivalent.  That is, they produce they same truth values for any given $P$ and $Q$.  This means that if we are asked to prove a statement of the form $P \Rightarrow Q$, we can instead prove the statement $\sim Q \Rightarrow \sim P$.  This probably doesn't seem like much of an improvement.  Like integration by parts in Calculus 2, this seems to make things more difficult rather than less difficult. However, like integration by parts, contrapositive can be very handy in practice. Consider the following example.
+	\begin{align*}
+	P &: \mbox{$n^2$ is even}\\
+	Q &: \mbox{$n$ is even}
+	\end{align*}
+	
+If asked to prove this statement, we might start out with something like 
+\[\mbox{``Suppose $n^2$ is even.  Then $n^2=2a$ for $a \in \Z$.''}\]
+
+Unfortunately, there's no clear way to turn this into a statement about $n$.  (Give some thought as to why you can't just take the square root of each side of the equation.)  On the other hand, the contrapositive is quite simple to prove.
+	\begin{enumerate}[resume]
+		\item \begin{enumerate}
+		\item  For the statements $P$ and $Q$ listed above, give the contrapositive of $P \Rightarrow Q$.  Remember to restate the negations in a useful manner.
+		\vspace{1.5in}
+		\item Prove the contrapositive found in part (a) using a direct proof.
+		\vspace{3in}
+		\end{enumerate}
+	\end{enumerate}
+	
+\noindent Before we really start writing proofs by contrapositive, we need to discuss two conventions that we'll use in this class.  The first is used almost universally by mathematicians, and the second is just for the purposes of our class.\\
+
+\begin{description}
+\item[Let the reader know it's a contrapositive proof:]  Keep in mind that our proof reader is either someone who is skeptical of our claim or someone who doesn't fully understand our claim.  If we decide to write a contrapositive proof rather than a direct proof, then our reader could quickly become very confused.  For that reason, we always inform the reader at the start of the proof that we are writing a proof by contrapositive.  The two most common ways to do this are as follows.
+	\begin{claim}  Suppose $n$ is an integer.  If $n^2$ is even, then $n$ is even.
+	\end{claim}
+		\begin{enumerate}[label=(\roman*)]
+		\item \begin{proof} (By Contrapositive) Suppose $n$ is odd.  Then $\ldots$\\
+		\end{proof}
+		\item \begin{proof} We proceed by contrapositive, so suppose $n$ is odd.  Then $\ldots$\\
+		\end{proof}
+		\end{enumerate}
+	Dr.~J Wright prefers the first method be used by his students, and Dr.~E Wright prefers the second.
+	
+\item[Give the contrapositive:]  This convention is only for the purposes of this course, and shouldn't be used otherwise.  Because you're new at this, it is a good idea to state the thing that you are trying to prove outright.  This will prevent Dr.~Wright from trying to decide if you're proving the wrong thing correctly or the right thing incorrectly if there's a problem.  Our proof should appear as follows.
+	\begin{proof}(By Contrapositive) [If $n$ is odd, then $n^2$ is odd.] Suppose $n$ is odd.  Then $\ldots$\\
+	\end{proof}
+\end{description}
+\newpage
+\begin{enumerate}[resume]
+\item You're finally ready.  Prove the following claims using a proof by contrapositive.  Follow all conventions.
+
+\begin{claim}  Suppose $x \in \Z$.  If $x^2-6x+5$ is even, then $x$ is odd.
+\end{claim}
+\vspace{3in}
+\begin{claim}  Suppose $x,y \in \Z$.  If $5 \ndivides xy$, then $5 \ndivides x$ and $5 \ndivides y$.
+\end{claim}
+\newpage
+\begin{claim}  Suppose $a$ and $b$ are integers.  If $a+b$ is even and $ab$ is even, then $a$ and $b$ are both even.
+\end{claim}
+\vspace{5in}
+\end{enumerate}
+
+\noindent  With a new proof technique comes new definitions.
+\begin{definition*}  Given integers $a$ and $b$ and an $n \in \N$, we say that $a$ and $b$ are \textbf{congruent modulo n} if (and only if) $n|(a-b)$.  We express this as $ a \equiv b \mymod{n}$.  If $a$ and $b$ are not congruent modulo $n$, we write this as $a \not\equiv b \mymod{n}.$  Here, $n$ is referred to as the \textbf{modulus}.
+\end{definition*}
+
+\begin{enumerate}[resume]
+\item This new definition really isn't so bad.  We can think of it as saying $a \equiv b \mymod{n}$ if $a$ and $b$ have the same remainder when divided by $n$.  For instance, $8 \equiv 14 \mymod{3}$ because $8=3(2)+\fbox{2}$ and $14=3(4)+\fbox{2}$.  Determine if the following statements are true or false.
+	\begin{enumerate} \itemsep=.5in
+	\item $7 \equiv 17 \mymod{5}$
+	\item $24 \equiv 6 \mymod{6}$
+	\item $-1 \equiv 4 \mymod{5}$
+	\item $8 \equiv -2 \mymod{4}$ 
+	\vspace{.5in}
+	\end{enumerate}
+
+\item Prove the following claim using both direct proof and proof by contrapositive.  Which proof is easier to write?  Which is easier to understand?  To prove the claim, you may apply the following variation of a result known as \textit{Euclid's Lemma}.
+
+\begin{lemma*}  Let $a,b,p \in \Z$.  If $p$ is prime and $p \divides ab$, then $p \divides a$ or $p \divides b$.
+\end{lemma*}
+
+\begin{claim} Let $a,b \in \Z$ and $n \in \N$.  If $a \equiv b \mymod{n}$ and $a \equiv c \mymod{n}$, then $c \equiv b \mymod{n}$.
+\end{claim}
+
+\newpage
+\ 
+\vspace{4in}
+
+\item There are no distinct rules about when to use a direct proof versus when to use proof by contrapositive.  However, you may have developed some intuition about where you may want to start.  List some ideas you have of how to decide between direct proof or proof by contrapositive.
+
+\end{enumerate}
+\end{document}
+
+
+
+

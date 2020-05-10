@@ -1,0 +1,208 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+\usepackage{cancel}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\P}{\mathscr{P}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\renewcommand{\subset}{\subseteq} 
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+\newcommand{\mymod}[1]{ \ (\bmod \ #1)}
+\newcommand{\esub}{\subseteq}
+\newcommand{\rel}{\mathbin{R}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem*{definition*}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Inverses, Images, and Preimages}
+\end{center}
+
+Every student that has gone through Calculus I has encountered inverse functions extensively.  In some instances you were able to explicitly solve (algebraically) for an expression that gave an inverse function.  In other instances inverses were more intangible.  Recall that there is no formal definition for the natural log function nor the inverse trig functions other than the fact that they are inverses.  With our newfound mastery of functions we can explore these concepts in more detail.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Define inverses, images, and preimages of functions
+\item Determine what kind of functions have inverses
+\item Find inverses, images, and preimages for various functions.
+\end{itemize}
+}}
+\end{center}
+
+\section{Inverses}
+
+\begin{enumerate}
+\item Let $f:\R \to \R$ be given by $f(x) = -2x+1$.  Find $f^{-1}$ using the techniques you learned in algebra.
+
+\vspace{2in}
+\end{enumerate}
+
+Often times in advanced mathematics there is no algebraic description for our function.  Certainly this means that there is no way to solve for the inverse of the function.  In this situation we need a definition for an inverse that doesn't rely on an equation or a graph.  Recall that a function is a relation before reading the next definition.
+
+\begin{definition*}[Inverse]  Suppose $f: A \to B$ is a function.  Then the \textit{inverse} of $f$, denoted $f^{-1}$, is the set
+\[f^{-1} = \set{(y,x):(x,y)\in f}.\]
+\end{definition*}
+
+The above definition says some pretty important things.  First, we can always construct the inverse of a function simply by flipping the ordered pairs that are elements of the function.  This may seem odd, but in reality this is precisely how we get the graph of functions like $y = \ln(x)$ and $y=\arctan(x)$.  Second, there's no reason to think that the inverse of a functions is itself a function.  
+
+\begin{enumerate}[resume]
+\item Let $A=\set{1,2,3,4,5}$, $B=\set{a,b,c,d}$, $C=\set{K,L,M}$, and $D = \set{\phi,\psi,\theta}$ and consider the following functions
+	\begin{align*}
+	f &: A \to B & f&= \set{(1,a),(2,a),(3,c),(4,b),(5,d)}\\
+	g &: C \to B & g&= \set{(K,a),(L,d),(M,c)}\\
+	h &: D \to C & h&= \set{(\phi,M),(\psi,K),(\theta,L)}\\
+	j &: B \to A & j&= \set{(a,2),(c,1),(b,3),(d,5)}.
+	\end{align*}
+	\begin{enumerate}
+	\item Which of the functions is injective?  Which is surjective?  Bijective?
+	
+	\vspace{3in}
+	
+	\item For which of the above functions is the inverse also a function?  Make sure you consider domains and codomains as you answer.
+	
+	\vspace{1in}
+	
+	\item What properties do you think a function $f$ must have to ensure that $f^{-1}$ is a function?  Be careful, it may not be the same as what you were taught in algebra.
+	
+	\vspace{1.5in}
+	\end{enumerate}
+\end{enumerate}
+
+\section{Images and Preimages}
+
+There's a surprising amount of disagreement about the appropriate definitions for some terms in mathematics.  For the most part it doesn't matter, but individual authors tend to have their own preferences.  This is definitely true with the definition of an image.  The author of our textbook and Dr.~Wright disagree on this definition in a subtle way.  For the purposes of this course, we'll go with Dr.~Wright's definition.  However, in practice, you'll always need to double check these definitions when they come up.  In most textbooks above the sophomore level, there is a preliminary chapter devoted to establishing the definitions of these common terms. 
+
+\begin{definition*}[Dr.~Wright's Image]  Let $f: A \to B$.  If $x_0 \in A$ then we call $y_0= f(x_0)$ the \textit{image} of $x_0$ under $f$.  If $X \esub A$, we also call $f(X) = \set{f(x): x\in X} \esub B$ the \textit{image} of $X$ under $f$.
+\end{definition*}
+
+\begin{definition*}[Book's Image] If $f: A \to B$ and $X \esub A$, then the \textit{image} of $X$ is the set $f(X) = \set{f(x):x \in X} \esub B$.
+\end{definition*}
+
+The only real difference here is that Dr.~Wright likes to be able to refer to the output of a particular input as an image.  There is almost no disagreement about the next definition.
+
+\begin{definition*}[Preimage]  Let $f: A \to B$.  If $Y \esub B$, the \textit{preimage} of $Y$ is the set $f^{-1}(Y) = \set{x \in A:f(x) \in Y} \subset A$.  If the invertibility of $f$ is unknown and $y_0 \in B$, then the \textit{preimage} of $y_0$ is the set $f^{-1}(y_0) = \set{x \in A: f(x)=y_0}$.  
+\end{definition*}
+
+\begin{enumerate}[resume]
+\item Let $f: \set{\alpha,\beta,\gamma,\delta,\varepsilon,\sigma,\varphi,\psi} \to \set{0,1,2,3,4,5,6,7,8,9}$ be given by
+\[f = \set{(\alpha,0),(\beta,2),(\gamma,2),(\delta,2),(\varepsilon,5),(\sigma,9),(\varphi,0),(\psi,8)}.\]
+	\begin{enumerate}
+	\item Determine each of the following.
+	\begin{enumerate}[label=(\roman*)] \itemsep=.3in
+	\item $f(\set{\alpha,\gamma,\delta,\sigma})$
+	\item $f(\set{\alpha,\delta,\varepsilon})$
+	\item $f(\set{\psi,\sigma})$
+	\item $f^{-1}(\set{1})$
+	\item $f^{-1}(\set{0,2,9})$
+	\item $f^{-1}(\set{2,5,8})$
+	\end{enumerate}
+	\item Is $f$ a bijection?  Explain.
+	
+	\vspace{2in}
+	
+	\item Is $f^{-1}$ a function?  Explain.
+	
+	\vspace{2in}
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+
+
+

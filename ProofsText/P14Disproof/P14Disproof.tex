@@ -1,0 +1,72 @@
+
+\chapter{Proving That Statements Are False (Disproof)}
+
+
+So far we've only been concerned with proving that true statements are true.  You've been handed a statement that you've been told is true and asked to prove the statement.  Even knowing that the statement is true, you may still have found it difficult to develop an appropriate proof.  Reality is more complicated.  Mathematicians spend most of their time making conjectures and trying to prove them.  However, not being able to develop a proof isn't the same as a conjecture being false.  Here we'll discuss common methods to prove that statements are false.
+
+% Our working process usually goes something like this:
+% 	\begin{enumerate}
+% 	\item Notice a pattern
+% 	\item Conjecture that the pattern will continue is some form
+% 	\item ``Collect data'' related to the pattern to see if there is an obvious case of your conjecture being false
+% 	\item Attempt to prove your conjecture
+% 	\item Discover you cannot prove your conjecture
+% 	\item Adapt your conjecture and repeat all steps until a proof is found
+% 	\end{enumerate}
+% 	
+% We usually discover the necessary adaptations to our conjectures by seeing what else we need to write a proof for our conjecture.  One reason proof writing is so important is it allows us to make new conjectures and show that they are true.  \\
+
+% Our focus in this class is not making and proving conjectures.    
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Determine what is necessary to prove that a universal statement is false.
+	\item Determine what is necessary to prove that a conditional statement is false.
+	\item Determine what is necessary to prove that an existence statement is false.
+	\end{itemize}
+}}
+\end{center}
+\section{Basic Disproof}
+\begin{question} \itemsep=.9in
+\item Consider the statement $P$: ``It rains every day.''  We know that this statement is false, but how can we demonstrate that this statement is false?  
+\item Write the statement $\sim P$ in English.  Try to do better than ``It does not rain every day.''
+\item By demonstrating that $P$ is false, have you said anything about $\sim P$?
+\newpage
+\item Now consider the statement $Q:$ There exist $x,y \in \R^+$ such that $\sqrt{x+y} = \sqrt{x} + \sqrt{y}$.  Hopefully you recognize that this statement is false.  What would you have to do to show that this statement is false?
+\item Would your argument in the above question say anything about $\sim Q$?
+\item What do you think is the fundamental structure of an argument to show that a statement is false?  Hint: Are you proving that anything is true by proving that a statement is false?
+
+\vspace{.9in}
+\end{question}
+
+\section{Disproving Universal Statements}
+Recall that a universal statement has the generic form $\forall x, P(x)$.  They are arguably the simplest type of statement to prove false.
+\begin{question}[resume] \itemsep=.9in
+\item Suppose $Q$ is the following statement: $\forall x, P(x)$.  Based on your work in the first section, how do you think you can disprove $Q$.
+\item In symbolic logic, what does the statement $\sim Q$ look like?
+\item Consider the statement ``For all positive real numbers $a$ and $b$, $a+b < 2 \sqrt{ab}$.''  What statement would you prove to show that this statement is false?
+\item What type of proof would be required in the above question?  What is the format for such a proof?
+\vspace{.9in}
+\end{question}
+The examples used to disprove universal statements are called \textbf{counterexamples}.  You should keep in mind that it is the responsibility of the proof writer, and not the proof reader, to explain why a given counterexample is in fact a counterexample.  Often times textbooks will expect the reader to determine why something is a counterexample for the students benefit, but this is unacceptable in most work.
+
+\section{Disproving Conditional Statements}
+\begin{question}[resume] \itemsep=.9in
+\item When is the conditional statement $P \Ra Q$ false?
+\item Based on your work in the first section, how can you show that $P \Ra Q$ is false?
+
+\item What do you need to do to disprove the statement ``If $x,y \in \R$, then $\ds \frac{x}{x+y} = \frac{1}{1+y}$.''  Keep in mind that you could rephrase this statement as \\``For all $\ds  x,y \in \R, \ \frac{x}{x+y} = \frac{1}{1+y}$.''
+\vspace{1in}
+\end{question}
+
+\section{Disproving Existence Statements}
+Recall that an existence statement has the form ``$\exists x, \ P(x)$.''
+\begin{question}[resume] \itemsep=1in
+\item  Disproving an existence statement requires some real work.  Why do you think this is the case?
+\item What would you have to do to prove that ``There exist distinct prime numbers $a$ and $b$ such that $a+b > ab$'' is a false statement?  Prove this statement is false.
+\end{question}
+
+
+
+
+

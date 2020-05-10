@@ -1,0 +1,256 @@
+\documentclass[12pt,          % font size: 11pt or 12pt
+           % spacing: onehalfspacing or doublespacing
+               %oneside  %%turn on to remove blank pages after chapters
+               ]{book}
+
+%%----------------------------------------------------------------------------%%
+%%------------------------------ Import Packages -----------------------------%%
+%%----------------------------------------------------------------------------%%
+\usepackage{fancyhdr}
+\usepackage[includeheadfoot,
+                margin=2cm,
+                top=1.5cm,
+                %lmargin=1.25in,
+               % headheight=0pt,
+               % headsep=-1cm,
+                %footskip=\ncsu@footskip
+                ]
+                {geometry}
+%\usepackage[Bjornstrup]{fncychap}
+\usepackage{titlesec}
+\usepackage{booktabs}  % professionally typeset tables
+\usepackage{amsmath}
+\usepackage{textcomp}  % better copyright sign, among other things
+\usepackage{xcolor}
+\usepackage{lipsum}    % filler text
+%\usepackage{subfig}    % composite figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{stmaryrd}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol,wasysym}
+\usepackage{tabu,arydshln}
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes,fit}
+\usepackage{xfrac}
+\usepackage{cancel}
+\usepackage{coffee4}
+\usepackage{url}
+\usepackage[framemethod=1]{mdframed}
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+
+%%--------------------------------------------------------------------%%
+%Formatting the header and page number placement.
+%\fancyhf{} % clear all header and footers
+%\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[LE,RO]{\thepage}
+%\pagestyle{fancy}                
+
+
+%%--------------------------------------------------------------------%%
+%%Control the chapter headings
+\makeatletter
+\titleformat{\chapter}[frame]
+  {\normalfont}{\filright\enspace \@chapapp~\thechapter\enspace}
+  {8pt}{\LARGE\bfseries\filcenter}
+\titlespacing*{\chapter}
+  {0pt}{-.5cm}{20pt} 
+\makeatother
+
+%%-------------------------------------------------------------------%%
+%%Title Info
+\title{Writing Mathematical Proofs\\
+\vspace{.2in}
+\small ``I don't draw a tombstone until I know I'm right.''
+\cofeAm{0.5}{0.7}{180}{1.5in}{2in}}
+\author{Dr.~Justin Wright\\ Mathematics Department, Plymouth State University}
+\date{}
+
+
+%%-----------------------------------------------------------------%%
+%%Control the question environments
+\newlist{question}{enumerate}{2}
+\setlist[question]{label=\textbf{Q\arabic*.}}
+
+\newlist{qpart}{enumerate}{2}
+\setlist[qpart]{label=(\alph*)}
+
+
+%\frenchspacing
+
+%%----------------------------------------------------------------------------%%
+%%---------------------------- Personal Macros -------------------------------%%
+%%----------------------------------------------------------------------------%%
+
+%% A central location to add your favorite macros.
+
+%% A few examples to get you started.
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}}
+\newcommand{\bo}{\ensuremath{\boldsymbol{\Omega}}}
+\newcommand{\eref}[1]{Example~\ref{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\ds}{\displaystyle} 
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\x}{\left\{x_n\right\}}
+\newcommand{\B}{\mathcal{B}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\PP}{\tilde{\mathcal{P}}}
+\newcommand{\tref}[1]{Theorem~\ref{#1}}
+\newcommand{\lref}[1]{Lemma~\ref{#1}}
+\newcommand{\dref}[1]{Definition~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\esub}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+\newcommand{\mymod}[1]{ \ (\bmod \ #1)}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\jme}{\text{Dr.~Justin Wright}}
+\newcommand{\me}{\text{Dr.~Wright}}
+\newcommand{\her}{\text{Dr.~Emma Wright}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}[section]
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}%[numbering]
+	\newtheorem{lemma}{Lemma}[chapter]
+	\newtheorem{cor}{Corollary}[chapter]
+	\newtheorem{claim}{Claim}[chapter]
+	
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}[chapter]
+	\newtheorem{axiom}{Axiom}[chapter]
+
+
+%%---------------------------------------------------------------------------%%
+\begin{document}
+
+
+
+%%---------------------------------------------------------------------------%%
+\frontmatter
+\maketitle
+\include{FrontMatter/License}
+\include{FrontMatter/Forward}
+\tableofcontents
+
+%\include{front}
+
+%%---------------------------------------------------------------------------%%
+\mainmatter
+
+\include{P3StatementsReview/P3AndOrNot}
+\include{P4Sets/P4Sets}
+\include{P5AxiomaticSystems/P5Axiomatic}
+\include{P5NBasicExistence/P5NBasicExistence}
+\include{P6DirectProof/P6DirectProof}
+\include{P7Cases/P7Cases}
+\include{P7NProof_Reading/P7NProofReading}
+\include{P8ProofbyContrapositive/P8Contrapositive}
+\include{P10ProofbyContradiction/P10Contradiction}
+\include{P11BiconditionalandExistence/P11BicEx}
+\include{P12ExistenceandUniqueness/P12ExandU}
+\include{P13ProofsInvolvingSets/P13Sets}
+\include{P14Disproof/P14Disproof}
+\include{P15Induction-Day1/P15Induction}
+\include{P16Induction-Day2/P16Induction}
+\include{P17Induction-Day3/P17Induction}
+\include{P18RelationsAndFunctions/P18RelFun}
+\include{P19Bijectivity/P19Injectivity}
+\include{P20Inverses/P20Inverses}
+\include{P21Countability/P21Countability}
+\include{P22InfiniteCardinality/P22Cardinality}
+
+
+
+
+\include{End}
+\blankpage
+%%---------------------------------------------------------------------------%%
+%%  Bibliography 
+
+%%  You can use the bibitem list.
+%\bibliographystyle{unsrt}
+%\begin{thebibliography}{99}
+%\bibitem{cb02}
+%Casella, G. and Berger, R.L. (2002)
+%\newblock {\it Statistical Inference, Second Edition.}
+%Duxbury Press, Belmont, CA.
+%
+%\bibitem{t06}
+%Tsiatis, A.A. (2006)
+%\newblock {\it Semiparametric Theory and Missing Data.}
+%Springer, New York.
+%
+%\end{thebibliography}
+
+%% or use BibTeX
+\bibliography{env}{}
+\bibliographystyle{plain}
+
+%%---------------------------------------------------------------------------%%
+% Appendices
+%\appendix
+
+%\include{Appendix-A/Appendix-A}
+
+
+
+%%---------------------------------------------------------------------------%%
+\backmatter
+
+
+\end{document}

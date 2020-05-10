@@ -1,0 +1,272 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\an}{\set{a_n}}
+\newcommand{\bn}{\set{b_n}}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\mymod}[3]{#1 \equiv #2 (\bmod #3)}
+\newcommand{\psub}{\subset}
+\newcommand{\ilim}{\lim_{x \ra \infty}}
+\newcommand{\esub}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+
+\renewcommand{\P}{\mathscr{P}}
+
+
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\renewcommand{\subset}{\subseteq} 
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+
+
+\newcommand{\mybox}{\tikz[baseline=(current bounding box.center)]{\draw (0,0) rectangle (1cm,1cm);}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}
+	\newtheorem{claim}{Claim}
+	
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}%[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem{axiom}{Axiom}[]
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Direct Proof}
+\end{center}
+
+Direct proof is the most often used, and in some sense most useful, proof writing method.  Students new to writing proofs often attempt to employ more complicated proof techniques when a direct proof will suffice.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Write a direct proof based on given definitions
+	\item Write a proof with subtle steps (rewriting proofs)
+	\item Develop a proof by considering examples of the statement
+	\end{itemize}
+}}
+\end{center}
+
+\noindent \textbf{Why you're here:}  You're in this course to learn to write mathematical proofs of statements.  To make this a digestible task, you'll be writing proofs of statements that we already know to be true.  You will often think to yourself ``Isn't that obvious?''  Maybe it is, but that doesn't mean you don't have to prove it.  If a statement isn't an axiom then it needs to be proven.  Once it has been proven it can be used in the future.\\
+
+You need to master the art of proof writing before you move on to more advanced math courses.  Abstract Algebra and Real Analysis are difficult enough on their own.  If you're trying to digest material from these courses and figure out how to write proofs in them at the same time, then you won't be successful.  \\
+
+We will need the following definitions for this packet and throughout the remainder of the semester.
+
+\begin{definition}[Even] An integer $n$ is \textbf{even} if $n= 2k$ for $k \in \Z$.
+\end{definition}
+
+\begin{definition}[Odd] An integer $n$ is \textbf{odd} if $n=2k+1$ for $k \in \Z$.
+\end{definition}
+
+\begin{definition}[Divides] An integer $a$ \textbf{divides} an integer $b$, denoted $a \divides b$, if and only if there exists $k \in \Z$ such that $ak=b$.
+\end{definition}
+
+\noindent \textit{Note:} The expression ``$a \divides b$'' is a mathematical statement, not a mathematical expression.  That is, ``$a \divides b$'' is true or false.  Do not confuse this notation with the expression ``$a/b$'' which is a rational number.\\
+
+\noindent  If $a,b \in \Z$ and $a \divides b$, then we will often say that $b$ is a \textbf{multiple} of $a$.  For instance, ``$5 \divides 10$'' and ``10 is a multiple of 5'' give us the same information.  The terms ``divides'' and ``multiple'' can be used in similar situations, but ``divides'' tends to be more concise.  For instance, consider
+
+\[\set{k \in \N : k \divides 12} = \set{k \in \N : 12 \ \text{is a multiple of }k} = \set{1,2,3,4,6,12}.\]
+
+\noindent \textbf{Writing note:}  The word ``divides'' is an active verb, where as ``is'' is not.  Most of us naturally prefer action verbs when reading.  As a result, saying ``$5 \divides 10$'' instead of ``10 is a multiple of 5'' will make your writing more interesting to read.
+
+\medskip
+
+\noindent \textbf{Directions:}  For each of the following claims answer the questions about the claim and then attempt to prove the claim.
+
+\begin{claim}  If $x$ is an even integer, then $x^2$ is even.
+\end{claim}
+
+	\begin{enumerate}[label=(\alph*)]
+	\item  Determine statements $P$ and $Q$ so that the claim can be written in the form $P \Rightarrow Q$.
+	\vspace{1in}
+	
+	\item  According to Definition 1, what does it mean for $x$ to be even?
+	
+	\vspace{.75in}
+	
+	\item  Square your new expression for $x$.  Can you rewrite this expression so it has the form of an even integer?
+	\end{enumerate}
+	
+	\vspace{1in}
+
+\fbox{\parbox{6in}{
+\begin{proof} Let $x\in \Z$ be even.
+
+\vspace{2.25in}
+
+\end{proof}
+}}
+\newpage 
+
+\begin{claim} Suppose $a$, $b$, and $c$ are integers.  If $a \divides b$ and $b \divides c$, then $a \divides (b+c)$.
+\end{claim}
+
+	\begin{enumerate}[label=(\alph*)]
+	\item According to Definition 3, what does it mean to say that $a \divides b$?
+	\vspace{.75in}
+	\item According to Definition 3, what does it mean to say that $b \divides c$?
+	\vspace{.75in}
+	\item What must we show to be able to conclude that $a \divides (b+c)$?
+	\vspace{.75in}
+	\end{enumerate}
+
+\fbox{\parbox{6in}{
+\begin{proof}  Let $a,b,c \in \Z$ such that
+
+\vspace{4in}
+
+\end{proof}
+}}
+\newpage
+
+\begin{claim}  Suppose $a$ is an integer.  If $7 \divides 4a$, then $7 \divides a$.\\
+\end{claim}
+
+	\begin{enumerate}[label=(\alph*)]
+	\item According to Definition 3, what does it mean to say that $7 \divides 4a$?
+	\vspace{.75in}
+	\item What do you need to show to be able to conclude that $7 \divides a$?
+	\vspace{.75in}
+	\item Find an integer $a$ such that $7 \divides 4a$.  What do you notice about the numbers $4a$ and $a$?
+	\vspace{1in}
+	\end{enumerate}
+
+
+\begin{proof} Let $a \in \Z$ such that
+
+\vspace{4in}
+
+\end{proof}
+
+\newpage
+\begin{claim}  If $x$ is a real number and $0<x<4$, then $\ds \frac{4}{x(4-x)} \geq 1$.
+\end{claim}
+
+Here we have \fbox{P: $x$ is a real number and $0<x<4$}, \fbox{Q: $\frac{4}{x(4-x)} \geq 1$}, and we want to show $P \Rightarrow Q$.  It isn't clear how we should start this (there's no way into the maze).  Begin with Q and manipulate the expression into a simple statement about $x$.
+	\vspace{4in}
+
+
+\begin{proof}  Let $x \in \R$ such that $0<x<4$.
+
+\vspace{2.75in}
+
+\end{proof}
+
+\newpage
+
+\begin{claim} Every odd integer is a difference of two squares.  (Example: $7=4^2-3^2$)
+\end{claim}
+
+	\begin{enumerate}[label=(\alph*)]
+	\item It will be very beneficial for you to find more examples.  Can you find the appropriate integers for 5, 9, and 11?  That is, find integers $a$ and $b$ such that $5 = a^2-b^2$ then do the same for $9$ and $11$.
+	\vspace{2in}
+	\item What do you notice about the relationship between $a$ and $b$?
+	\vspace{1in}
+	\end{enumerate}
+
+\begin{proof} Let
+
+\vspace{3.65in}
+\end{proof}
+
+\end{document}
+
+
+
+

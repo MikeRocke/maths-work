@@ -1,0 +1,97 @@
+\chapter{Inverses, Images, and Preimages}
+
+
+Every student that has gone through Calculus I has encountered inverse functions extensively.  In some instances you were able to explicitly solve (algebraically) for an expression that gave an inverse function.  In other instances inverses were more intangible.  Recall that there is no formal definition for the natural log function nor the inverse trig functions other than the fact that they are inverses.  With our newfound mastery of functions we can explore these concepts in more detail.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Define inverses, images, and preimages of functions
+\item Determine what kind of functions have inverses
+\item Find inverses, images, and preimages for various functions.
+\end{itemize}
+}}
+\end{center}
+
+\section{Inverses}
+
+\begin{question}
+\item Let $f:\R \to \R$ be given by $f(x) = -2x+1$.  Find the inverse of $f$, $f^{-1}$, using the techniques you learned in algebra.
+
+\vspace{2in}
+\end{question}
+
+Often times in advanced mathematics there is no algebraic description for our function.  Certainly this means that there is no way to solve for the inverse of the function.  In this situation we need a definition for an inverse that doesn't rely on an equation or a graph.  Recall that a function is a relation before reading the next definition.
+
+\begin{definition}[Inverse]  Suppose $f: A \to B$ is a function.  Then the \textit{inverse} of $f$, denoted $f^{-1}$, is the set
+\[f^{-1} = \set{(y,x):(x,y)\in f}.\]
+\end{definition}
+
+The above definition says some pretty important things.  First, we can always construct the inverse of a function simply by flipping the ordered pairs that are elements of the function.  This may seem odd, but in reality this is precisely how we get the graph of functions like $y = \ln(x)$ and $y=\arctan(x)$.  Second, there's no reason to think that the inverse of a function is itself a function.  
+
+\begin{question}[resume]
+\item Let $A=\set{1,2,3,4,5}$, $B=\set{a,b,c,d}$, $C=\set{K,L,M}$, and $D = \set{\phi,\psi,\theta}$ and consider the following functions
+	\begin{align*}
+	f &: A \to B & f&= \set{(1,a),(2,a),(3,c),(4,b),(5,d)}\\
+	g &: C \to B & g&= \set{(K,a),(L,d),(M,c)}\\
+	h &: D \to C & h&= \set{(\phi,M),(\psi,K),(\theta,L)}\\
+	j &: B \to A & j&= \set{(a,2),(c,1),(b,3),(d,5)}.
+	\end{align*}
+	\begin{qpart}
+	\item Which of the functions is injective?  Which is surjective?  Bijective?
+	
+	\vspace{3in}
+	
+	\item For which of the above functions is the inverse also a function?  Make sure you consider domains and codomains as you answer.
+	
+	\vspace{1in}
+	
+	\item What properties do you think a function $f$ must have to ensure that $f^{-1}$ is a function?  Be careful, it may not be the same as what you were taught in algebra.
+	
+	\vspace{1.5in}
+	\end{qpart}
+\end{question}
+
+\section{Images and Preimages}
+
+There's a surprising amount of disagreement about the appropriate definitions for some terms in mathematics.  For the most part it doesn't matter, but individual authors tend to have their own preferences.  This is definitely true with the definition of an image.  The author of our textbook and Dr.~Wright disagree on this definition in a subtle way.  For the purposes of this course, we'll go with Dr.~Wright's definition.  However, in practice, you'll always need to double check these definitions when they come up.  In most textbooks above the sophomore level, there is a preliminary chapter devoted to establishing the definitions of these common terms. 
+
+\begin{definition}[Dr.~Wright's Image]  Let $f: A \to B$.  If $x_0 \in A$ then we call $y_0= f(x_0)$ the \textit{image} of $x_0$ under $f$.  If $X \esub A$, we also call $f(X) = \set{f(x): x\in X} \esub B$ the \textit{image} of $X$ under $f$.
+\end{definition}
+
+\begin{definition}[Book's Image] If $f: A \to B$ and $X \esub A$, then the \textit{image} of $X$ is the set $f(X) = \set{f(x):x \in X} \esub B$.
+\end{definition}
+
+The only real difference here is that Dr.~Wright likes to be able to refer to the output of a particular input as an image.  There is almost no disagreement about the next definition.
+
+\begin{definition}[Preimage]  Let $f: A \to B$.  If $Y \esub B$, the \textit{preimage} of $Y$ is the set $f^{-1}(Y) = \set{x \in A:f(x) \in Y} \subset A$.  If the invertibility of $f$ is unknown and $y_0 \in B$, then the \textit{preimage} of $y_0$ is the set $f^{-1}(y_0) = \set{x \in A: f(x)=y_0}$.  
+\end{definition}
+
+\begin{question}[resume]
+\item Let $f: \set{\bigcirc,\Delta,\square,\heartsuit,\text{\lightning},\text{\smiley},\text{\leftmoon},\text{\checked}} \to \set{0,1,2,3,4,5,6,7,8,9}$ be given by
+\[f = \set{(\bigcirc,0),(\Delta,2),(\square,2),(\heartsuit,2),(\text{\lightning},5),(\text{\smiley},9),(\text{\leftmoon},0),(\text{\checked},8)}.\]
+	\begin{qpart}
+	\item Determine each of the following.
+	\begin{enumerate}[label=(\roman*)] \itemsep=.3in
+	\item $f(\set{\bigcirc,\square,\heartsuit,\text{\smiley}})$
+	\item $f(\set{\bigcirc,\heartsuit,\text{\lightning}})$
+	\item $f(\set{\text{\checked},\text{\smiley}})$
+	\item $f^{-1}(\set{1})$
+	\item $f^{-1}(\set{0,2,9})$
+	\item $f^{-1}(\set{2,5,8})$
+	\vspace{.3in}
+	\end{enumerate}
+	\item Is $f$ a bijection?  Explain.
+	
+	\vspace{2in}
+	
+	\item Is $f^{-1}$ a function?  Explain.
+	
+	\vspace{2in}
+	\end{qpart}
+\end{question}
+
+
+
+
+

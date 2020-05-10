@@ -1,0 +1,162 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\e}[1]{a \equiv b (\bmod \ #1)}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.~17 Strong Induction}
+\end{center}
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Compare strong induction to induction
+\item Write a proof by strong induction
+\item Determine when strong induction is necessary or appropriate.
+\end{itemize}
+}}
+\end{center}
+
+\noindent  Strong induction is a proof technique based on induction, but with a small variation.  Recall that in the induction step of an induction proof we assume the statement $P(n)$ is true (usually for some $n \geq 1$) and use this to prove that $P(n+1)$ is true.  In strong induction, we instead use $P(k)$ to prove $P(n+1)$ where $k$ is some natural number less that $n+1$.  If we use our stairs analogy from class, this would be like skipping stairs a few at a time rather than going up one step at a time.  \\
+
+We have to adjust the base step when using strong induction.  For example, suppose we will use $P(n)$ to prove $P(n+3)$ in a strong induction proof.  This would be like going up our staircase 3 steps at a time.  Remember, our goal isn't getting to the top of the staircase necessarily, but rather showing that you can get on every stair (that is, $P(n)$ is true $\forall n \in \N$).  Since our proof technique requires that we skip 3 stairs at a time, we have to ensure that we can get onto the first 3 steps.  Then, if we can get onto each of the first three stairs and go up three at a time, we can get onto any stair that we wish.\\
+
+There are essentially two situations in which strong induction is appropriate.  The first is when $P(n)$ alone isn't enough to ensure that $P(n+1)$ is true.  This happens when our statements require several previous cases as you'll see below.  The other situation, which appears on page 159, is when $P(n)$ may imply $P(n+1)$, but we can't come up with a proof to ensure that it is true.  You should take a look at the example, but bare in mind that it is a ridiculous application of strong induction.  A much simpler direct proof is possible.
+
+\begin{enumerate}
+\item The following claim has the perfect setup for strong induction.
+\begin{claim}  For the following recursively defined sequence, $a_n$ is odd for all $n \in \N$.  Here $a_1=1$, $a_2=3$, and $a_n=a_{n-2}+2a_{n-1}$ for $n \geq 3$.
+\end{claim}
+\begin{enumerate}
+\item Find the first 5 items in this sequence.
+
+\vspace{2in}
+
+\item Here, for $n \geq 3$, the statement $P(n)$ is ``$a_n=a_{n-2}+2a_{n-1}$ is odd.''  Since this statement refers explicitely to the $n-2$ and $n-1$ terms of our sequence, we need to consider these items in our basis step.  Determine what the statements $P(1)$ and $P(2)$ are, and determine if they're true.
+
+\vspace{2in}
+\item The remainder of the proof is very similar to the induction step in any induction proof.  Many of the justifications are left out of the proof.  As your read the argument, explain why each step is true.
+
+\begin{proof}  \openup=1.5em Suppose $a_n$ is odd for $n \geq 3$.  Then consider
+\begin{align*}
+a_n &= a_{n-2}+2a_{n-1}\\
+\ &= (2k+1) + 2(2m+1) \\
+\ &= 2k+1+4m+2 \\
+\ &= 2(k+2m+1)+1.
+\end{align*}
+Therefore $a_n$ is odd.
+\end{proof}
+
+\end{enumerate}
+\newpage
+\item Prove the following claim.
+\begin{claim}  Let a sequence be defined by $T_1=T_2=T_3=1$, and $T_n=T_{n-1}+T_{n-2}+T_{n-3}$ for $n\geq 4$.  Then $T_n<2^n$ for all $n \in \N$.
+\end{claim}
+
+\end{enumerate}
+
+\end{document}
+
+
+
+

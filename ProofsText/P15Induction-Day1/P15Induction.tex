@@ -1,0 +1,88 @@
+\chapter{Basic Induction}
+
+
+\noindent Proof by induction is a technique that allows us to prove a variety of statements that have one thing in common: the ``objects'' the statement refers to are in correspondance with the natural numbers.  Often times we use induction to prove statements about the natural numbers, but the method applies in a surprising variety of situations.\\
+
+Unlike many of our proof techniques, a proof by induction does follow a certain form to which we must adhere.  This form is necessary for both the validity of the method, and for others to be able to understand our proofs.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Follow along with the steps of an induction proof
+\item Write a basic induction proof
+\end{itemize}
+}}
+\end{center}
+
+\begin{question}
+\item Follow along with the induction proof below and answer the questions as you go.
+
+\begin{claim}
+For all $n\in \N$, $\ds 1+2+3+\cdots+n = \frac{n(n+1)}{2}$.
+\end{claim}
+
+\begin{qpart}
+\item This claim establishes a lot.  If we let $P(n)$ be the statement ``$1+2+3\cdots +n = \frac{n(n+1)}{2}$,'' then our claim becomes $\forall \ n\in \N, P(n)$.  What is the statement $P(1)$?  What about $P(2)$?  Are these statements true?
+\vspace{1in}
+\item By checking that $P(1)$ is true above, you actually did the first step of the induction proof.  This step is known as the ``Basis'' step.  Checking that $P(2)$ is true is not part of the basis step, but it never hurts to check a few values.
+\item The next step of induction is the ``induction step.''  The goal here is to show that $P(n) \Rightarrow P(n+1)$.  That is, we will show that ``If $P(n)$ is true, then $P(n+1)$ is true.''  What do you think is the purpose of the induction step, keeping in mind that we've already established that $P(1)$ is true?
+\vspace{2in}
+\item We almost always use a direct proof to show that $P(n) \Rightarrow P(n+1)$.  That is, we will suppose that $P(n)$ is true and use it to show that $P(n+1)$ is true.  What is the statement $P(n)$?  What is the statement $P(n+1)$?
+\vspace{2in}
+\item The proof below shows that $P(n) \Rightarrow P(n+1)$.  Follow along with the proof and justify each step.
+\begin{proof}
+\openup 1.5em Suppose $\ds 1+2+3+\cdots+n= \frac{n(n+1)}{2}$.  Then 
+\begin{align*}
+1+2+3+\cdots + n + (n+1) &= (1+2+3+\cdots + n)+(n+1)\\
+\ &= \frac{n(n+1)}{2} + (n+1) \\
+\ &= \frac{n(n+1)}{2} + \frac{2(n+1)}{2}\\
+\ &= \frac{n(n+1)+2(n+1)}{2}\\
+\ &= \frac{(n+1)(n+2)}{2}\\
+\ &= \frac{(n+1)((n+1)+1)}{2}.
+\end{align*}
+Therefore, if $1+2+\cdots+n = \frac{n(n+1)}{2}$ then $1+2+\cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}$.
+\end{proof}
+\item Together, the basis step and the induction step make up a proof by induction.
+\end{qpart}
+\item The following is a proof of the same claim.  The proof correctly follows the format of a proof by induction, but contains a severe flaw.  See if you can find the mistake.
+\begin{claim} 
+For all $n\in \N$, $\ds 1+2+3+\cdots+n = \frac{n(n+1)}{2}$.
+\end{claim}
+\begin{proof}  We proceed by mathematical induction.\\
+\noindent \textbf{Basis Step:} Notice that when $n=1$ the statement becomes $1= \frac{1(1+1)}{2}$, which is obviously true.\\
+
+\noindent \textbf{Induction Step:}  Suppose $1+2+3+\cdots+n = \frac{n(n+1)}{2}$.  Then
+\begin{align*}
+1+2+3+\cdots + n + (n+1) &= \frac{(n+1)((n+1)+1)}{2} \\
+(1+2+3+\cdots + n) + (n+1) &=  \frac{(n+1)(n+2)}{2}\\
+\frac{n(n+1)}{2} + (n+1) &= \frac{n^2+3n+2}{2}\\
+n+1 &= \frac{n^2+3n+2}{2}-\frac{n^2+n)}{2} \\
+n+1 &= \frac{n^2+3n+2-(n^2+n)}{2}\\
+n+1 &= \frac{2n+2}{2}\\
+n+1 &= n+1.
+\end{align*}
+Since the last statement if obviously true, if $1+2+\cdots+n = \frac{n(n+1)}{2}$ then $1+2+\cdots+n+1 = \frac{(n+1)(n+2)}{2}$.
+\end{proof}
+
+\newpage
+\item Prove the following claim using mathematical induction.
+\begin{claim} If $n \in \N$, then $1+3+5 + \cdots + (2n-1) = n^2.$
+\end{claim}
+
+\begin{proof}  We proceed by mathematical induction.\\
+\noindent \textbf{Basis Step:}\\
+\vspace{1in}
+
+\noindent \textbf{Induction Step:}
+\vspace{5.5in}\\
+\end{proof}
+%\be\item Prove the following claim using mathematical induction.  It should look familiar.
+%gin{claim}
+%For $n \in \Z$, if $n \geq 0$ then $3 | (n^3-n)$.
+%\end{claim}
+\end{question}
+
+
+
+
+

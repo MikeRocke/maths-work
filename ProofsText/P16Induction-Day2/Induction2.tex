@@ -1,0 +1,173 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\e}[1]{a \equiv b (\bmod \ #1)}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.~16 General Induction}
+\end{center}
+
+\noindent Since induction proofs have a standard form, proving a claim about the natural numbers that involves an equality is usually pretty straightforward.  Usually the only real challenge is the algebraic manipulations that are required during the induction step.\\
+
+Induction may seem more complicated if the statement is about an inequality, but the same techniques still apply.  Often times students just struggle to make the necessary observations while writing the proof.  Keep in mind that proof writing always has a goal and you can do anything necessary to reach that goal as long as it is mathematically valid.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Justify the steps of an induction proof involving an inequality
+\item Write an induction proof that contains an inequality
+\item Write an induction proof about an object other than a natural number
+\end{itemize}
+}}
+\end{center}
+
+\begin{enumerate}
+\item Follow along with the induction proof below and answer the questions as you go.
+
+\begin{claim}
+For all $n\in \N$, $3^n \leq 3^{n+1}-3^{n-1}-2$.
+\end{claim}
+
+\begin{enumerate}
+\item If $P(n)$ is the statement ``$3^n \leq 3^{n+1}-3^{n-1}-2$,'' what is the statement $P(1)$?  What about $P(2)$?  Are these statements true or false?
+
+\vspace{2in}
+
+\item The induction step for this proof follows below.  Justify each line of the proof.
+\begin{proof} \openup=1em Suppose $3^k \leq 3^{k+1}-3^{k-1}-2$ for $k \geq 1$.  Notice
+\begin{align*}
+3^{k+1} &= 3 \cdot 3^k \\
+\ &\leq 3(3^{k+1}-3^{k-1}-2)\\
+\ &\leq 3^{k+2}-3^k-6 \\
+\ &\leq 3^{(k+1)+1} - 3^{(k+1)-1} -6 +4 \\
+\ &\leq 3^{(k+1)+1} - 3^{(k+1)-1}-2.
+\end{align*}
+Thus, if $3^k \leq 3^{k+1}-3^{k-1}-2$ then $3^{k+1} \leq 3^{(k+1)+1} - 3^{(k+1)-1}-2.$
+\end{proof}
+
+
+\item The inequality symbol ``$\leq$'' is used throughout the above proof.  Could it be replaced by an equality symbol ($=$) or a strict inequality symbol ($<$) at any line?  Why do you think the proof writer chose to use the symbol ``$\leq$'' throughout?
+
+\vspace{2in}
+
+\end{enumerate}
+
+\newpage
+
+\item Prove the following claim.
+\begin{claim}
+If $n \in \N$, then \[\frac{1}{1}+\frac{1}{4}+\frac{1}{9} + \cdots + \frac{1}{n^2} \leq 2 - \frac{1}{n}.\]
+\end{claim}
+\newpage
+
+\item Prove the following claim using induction.
+\begin{claim}
+Suppose $A_1$, $A_2$, $\ldots$, $A_n$ are sets in some universal set $U$ and $n\geq 2$ is a natural number.  Then
+\[\c{A_1 \cup A_2 \cup \cdots A_{n-1} \cup A_n}=\c{A_1} \cap \c{A_2} \cap \cdots \cap \c{A_{n-1}} \cap \c{A_n}.\]
+\end{claim}
+\end{enumerate}
+\end{document}
+
+
+
+

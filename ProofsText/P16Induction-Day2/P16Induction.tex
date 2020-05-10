@@ -1,0 +1,67 @@
+\chapter{General Induction}
+
+
+\noindent Since induction proofs have a standard form, proving a claim about the natural numbers that involves an equality is usually pretty straightforward.  Usually the only real challenge is the algebraic manipulations that are required during the induction step.\\
+
+Induction may seem more complicated if the statement is about an inequality, but the same techniques still apply.  Often times students just struggle to make the necessary observations while writing the proof.  Keep in mind that proof writing always has a goal and you can do anything necessary to reach that goal as long as it is mathematically valid.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Justify the steps of an induction proof involving an inequality
+\item Write an induction proof that contains an inequality
+\item Write an induction proof about an object other than a natural number
+\end{itemize}
+}}
+\end{center}
+
+\begin{question}
+\item Follow along with the induction proof below and answer the questions as you go.
+
+\begin{claim}
+For all $n\in \N$, $3^n \leq 3^{n+1}-3^{n-1}-2$.
+\end{claim}
+
+\begin{qpart}
+\item If $P(n)$ is the statement ``$3^n \leq 3^{n+1}-3^{n-1}-2$,'' what is the statement $P(1)$?  What about $P(2)$?  Are these statements true or false?
+
+\vspace{2in}
+
+\item The induction step for this proof follows below.  Justify each line of the proof.
+\begin{proof} \openup=1em Suppose $3^k \leq 3^{k+1}-3^{k-1}-2$ for $k \geq 1$.  Notice
+\begin{align*}
+3^{k+1} &= 3 \cdot 3^k \\
+\ &\leq 3(3^{k+1}-3^{k-1}-2)\\
+\ &\leq 3^{k+2}-3^k-6 \\
+\ &\leq 3^{(k+1)+1} - 3^{(k+1)-1} -6 +4 \\
+\ &\leq 3^{(k+1)+1} - 3^{(k+1)-1}-2.
+\end{align*}
+Thus, if $3^k \leq 3^{k+1}-3^{k-1}-2$ then $3^{k+1} \leq 3^{(k+1)+1} - 3^{(k+1)-1}-2.$
+\end{proof}
+
+
+\item The inequality symbol ``$\leq$'' is used throughout the above proof.  Could it be replaced by an equality symbol ($=$) or a strict inequality symbol ($<$) at any line?  Why do you think the proof writer chose to use the symbol ``$\leq$'' throughout?
+
+\vspace{2in}
+
+\end{qpart}
+
+\newpage
+
+\item Prove the following claim.
+\begin{claim}
+If $n \in \N$, then \[\frac{1}{1}+\frac{1}{4}+\frac{1}{9} + \cdots + \frac{1}{n^2} \leq 2 - \frac{1}{n}.\]
+\end{claim}
+\newpage
+
+\item Prove the following claim using induction.
+\begin{claim}
+Suppose $A_1$, $A_2$, $\ldots$, $A_n$ are sets in some universal set $U$ and $n\geq 2$ is a natural number.  Then
+\[\c{A_1 \cup A_2 \cup \cdots A_{n-1} \cup A_n}=\c{A_1} \cap \c{A_2} \cap \cdots \cap \c{A_{n-1}} \cap \c{A_n}.\]
+\end{claim}
+\end{question}
+
+
+
+
+

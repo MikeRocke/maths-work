@@ -1,0 +1,180 @@
+\chapter{Proof by Contradiction}
+
+
+I've probably referred to all of our proof techniques as ``powerful,'' but the method of contradiction really is amazingly powerful.  Most often, we employ proof by contradiction when proving a claim for which there is no clear beginning for the proof.  You'll see some examples soon.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Develop the logic behind proof by contradiction
+	\item Find the contradiction in given proofs by contradiction
+	\item Write proofs using contradiction
+	\end{itemize}
+}}
+\end{center}
+
+\noindent We're still working to prove statements of the form $P \Ra Q$.  The process of proof by contradiction begins with negating such a statement.  You may recall from Intro to Formal Mathematics that
+	\[\sim(P \Ra Q) \equiv P \wedge \sim Q.\]
+	
+\begin{question}
+\item Confirm that $\sim(P \Ra Q) \equiv P \wedge \sim Q$ using the truth table below.
+\begin{center}
+{\tabulinesep=.1in
+	\begin{tabu}{c|c||c|c|c|c}
+	$P$ & $Q$ & $P \Ra Q$ & $\sim( P \Ra Q)$ & $\sim Q$ & $P \wedge \sim Q$ \\
+	\hline
+	T & T & \ & \ & \ & \ \\
+	T & F & \ & \ & \ & \ \\
+	F & T & \ & \ & \ & \ \\
+	F & F & \ & \ & \ & \ \\
+	\end{tabu}}
+\end{center}
+
+\item Negate the following conditional statements using the form $P \wedge \sim Q$.  Remember to negate $Q$ in a \textit{useful} way if possible.
+	\begin{qpart} \itemsep=1in
+	\item If $x>1$, then $x^3>x$.
+	\item If $a \divides b$, then $a \divides bc$.
+	\item If $a \equiv b \mymod{n}$ and $a \equiv c \mymod{n}$, then $b \equiv c \mymod{n}$. 
+	\item If $a$ is even, then $a^2$ is even and $a^3$ is even.
+	\item If $x \divides yz$, then $x \divides y$ or $x \divides z$.
+	\vspace{1in}
+	\end{qpart}
+\end{question}
+
+
+\noindent It is very possible that you've employed a contradiction argument before as it is common even outside of mathematics.  The structure of the method is simple.  We begin with a statement $R$ that is true.  The statement $R$ itself may be quite complicated.  It could be a conjunction, disjunction, conditional statement like $R \equiv (P \Ra Q)$, or any combination thereof.  To argue that $R$ is true we begin by supposing that $R$ is false.  We then derive a series of statements using correct deductive reasoning.  With any luck we manage to derive an \textit{absurdity}, that is, a statement that is always false.  Often times the absurdity will take the form $C \wedge \sim C$, but this is not always the case.
+
+\begin{question}[resume]
+\item Complete the following truth table for $C \wedge \sim C$ to show that this statement is an absurdity.
+\begin{center}
+	{\tabulinesep=.1in
+	\begin{tabu}{c||c|c}
+	$C$ & $\sim C$ & $(C \wedge \sim C)$\\
+	\hline
+	T & \ & \ \\
+	F & \ & \ \\
+	\end{tabu}}
+	\end{center}
+	
+\item The general form of the argument in a proof by contradiction is $\sim R \Rightarrow (C \wedge \sim C)$.  Fill in the truth table for this argument form to see that it is true precisely when $R$ is true.
+\begin{center}
+	{\tabulinesep=.1in
+	\begin{tabu}{c|c||c|c}
+	$R$ & $C$ & $(C \wedge \sim C)$ & $\sim R \Rightarrow (C \wedge \sim C)$\\
+	\hline
+	T & T & \ & \ \\
+	T & F & \ & \ \\
+	F & T & \ & \ \\
+	F & F & \ & \ \\
+	\end{tabu}
+	}
+	\end{center}
+	
+\item We need one more step before we really get started.  We'll use the following claims as lemmas today.  That is, we'll use them while proving other statements.  You can prove the following claims with either a direct proof or a proof by contrapositive.
+	\begin{claim}  Suppose $n \in \Z$.  If $n^3$ is even, then $n$ is even.
+	\end{claim}
+	
+		\newpage
+	
+	\begin{claim} Suppose $a,b,c \in \Z$.  If $a \divides (b+c)$ and $a \divides b$, then $a \divides c$.
+	\end{claim}
+	
+\vspace{3in}
+\end{question} 
+
+\vspace{.5in}
+
+\noindent  Let's take a look at using contradiction to prove the following claim.  The proof given below is adapted from the one given in your text.
+
+\begin{claim} If $a,b \in \Z$, then $a^2-4b-3 \neq 0$.
+\end{claim}
+
+Here, $R$ is the conditional statement ``If $a,b \in \Z$, then $a^2-4b-3 \neq 0$.''  Recall then that $\sim R$ will be ``$a, b \in \Z$ and $a^2-4b-3=0$.''  This is how our proof will begin.\\
+
+Notice, that there is no given $C$.  The statement of the claim gives no indication of what the contradicting piece will be.  We are forced deduce things from our initial claim seemingly at random until we stumble across a contradiction.\\
+
+Finally, like contrapositive, we want to tell our reader how we are proving the claim so that he or she is not confused by our proof.  Usually, we begin proofs by contradiction with the phrase ``Suppose for the sake of contradiction that...'' or ``By way of contradiction, suppose...''  For the purposes of this class, when using contradiction we will also start by writing ``(Contradiction).''\\
+
+\begin{proof}  (Contradiction) Suppose for the sake of contradiction that $a,b \in \Z$ and ${a^2-4b-3 = 0}$.  Then 
+\begin{align*}
+a^2 &= 4b+3\\
+\ &=4b+2+1\\
+\ &=2(2b+1)+1.\\
+\end{align*}
+  Since $2b+1$ is an integer, we have that $a^2$ is odd by definition.  Recall from a previous proof that if $a^2$ is odd then $a$ is odd, so $a=2c+1$ for $c \in \Z$.  By substitution, we have
+	\begin{align*}
+	a^2-4b-3 &= 0,\\
+	(2c+1)^2-4b-3 &= 0, \\
+	4c^2+4c+1 -4b-3 &= 0,\\
+	4c^2+4c-4b-2 &= 0,\\
+	2(2c^2+2c-2b-1) &=0, \\
+	2c^2 +2c -2b &= 1, \\
+	2(c^2+c-b) &= 1.
+	\end{align*}
+Since $(c^2+c-b) \in \Z$, the last equality gives us that $1$ is an even integer.  Since we know 1 to be an odd integer, we have a contradiction.
+\end{proof}
+
+\noindent  There are definitely a few things to point out about this process and this proof now that we've seen an example.  First, notice that the contradiction didn't exactly take the form $C \wedge \sim C$, though we could have phrased it that way.  Either way, we did arrive at a clearly false statement.  Second, no planning went in to decide to use $\sim R$ to show that $1$ is even.  After several lines of manipulation it became clear that this contradiction was possible.  Arguably the hardest part of proof by contradiction is recognizing your contradiction when you find it.  Third, it is very likely that there are many other contradictions that can be derived from assuming $\sim R$.  In general, there is no one way to write a contradiction proof.  Finally, our proof ends with an explanation to our reader of why we have a contradiction.  Unfortunately, this aspect is often left out of proofs by contradiction and it is the reader's responsibility to recognize the contradiction for what it is.\\
+
+\noindent When we write proofs by hand, we have a few common symbols people employ to indicate the line their contradiction appears on.  The most common that $\me$ has seen is the opposing arrows symbol ($\rightarrow\!\leftarrow$).  Another popular symbols is the ``blitzkrieg'' or lightning symbol (\lightning).  Neither symbol has any business in a formal proof and you won't find either one in standard LaTeX, so don't try typing them.\\
+
+\noindent We'll need the following definition as we go forward.
+
+\begin{definition}(Rational)  A number $n$ is \textit{rational}, denoted $n \in \Q$, if there exist integers $a$ and $b$ such that $n = \sfrac{a}{b}$.  The number $n$ is called \textit{irrational} if no such integers exist.
+\end{definition}
+
+\begin{question}[resume]
+\item The following proofs are written using contradiction, but no explanation is given as to what the contradiction is.  Read the proof and find the contradiction.
+	\begin{qpart} \itemsep.75in
+	\item There is no greatest even integer.
+		\begin{proof}  Suppose for sake of contradiction that there is a greatest even integer $N$.  Then for all $k \in \Z$, $n=2k \leq N$.  Let $M = N+2$.
+		\end{proof}
+	\item The sum of any rational number and any irrational number is irrational.
+		\begin{proof}  For the sake of contradiction, suppose there exists rational number $x$ and irrational number $y$ such that $(x+y)$ is rational.  Then $x =\sfrac{a}{b}$ for $a,b \in \Z$ and $b \neq 0$ and $(x+y) = \sfrac{c}{d}$ for $c,d \in \Z$ and $d \neq 0$.  Using substitution, 
+			\begin{align*}
+			x+y &= \frac{c}{d},\\
+			\frac{a}{b} +y &= \frac{c}{d},\\
+			y &= \frac{c}{d}-\frac{a}{b}, \\
+			y &= \frac{cb-ad}{bd}.
+			\end{align*}
+		\end{proof}
+	\item The cube root of 2 is irrational.
+	\begin{proof} Suppose for sake of contradiction that $\sqrt[3]{2}$ is rational.  Then there exist integers $a$ and $b \neq 0$ such that $\sqrt[3]{2} = (a/b)$ and we may assume that $(a/b)$ is fully reduced.  Using algebra, we see
+	\begin{align*}
+	2 &= \frac{a^3}{b^3} \\
+	2b^3 &= a^3.
+	\end{align*}
+	Since $b^3 \in \Z$, we have that $a^3$ is even which we have seen previously means that $a$ is even.  Then $a = 2c$ for $c \in \Z$ and using substitution again,
+	\begin{align*}
+	2b^3 &= (2c)^3, \\
+	2b^3 &= 8c^3, \\
+	b^3 &= 4c^3.
+	\end{align*}
+	\end{proof}
+	\vspace{.75in}
+	\end{qpart}
+
+
+\item It's time to write some contradiction proofs of your own.  As you work on each of the following, carefully consider how you might prove the claim without contradiction.  
+
+\begin{claim}  Suppose $n \in \Z$.  If $n$ is odd, then $n^2$ is odd.
+\end{claim}
+
+\newpage
+
+\begin{claim}  Suppose $a,b \in \R$.  If $a$ is rational and $ab$ is irrational, then $b$ is irrational.
+\end{claim}
+\vspace{3in}
+\begin{claim}  For every $x \in [\sfrac{\pi}{2},\pi]$, $\sin(x)-\cos(x) \geq 1$.
+\end{claim}
+(Hint: If $x \in [\sfrac{\pi}{2},\pi]$, then $\sin(x)-\cos(x)>0$.)
+
+%\newpage
+%A point $P=(x,y) \in \R^2$ is called \textbf{rational} if both $x$ and $y$ are rational.  That is, $P=(x,y)$ is rational if $P \in \mathbb{Q}^2$.  An equation $F(x,y)=0$ is said to have a \textbf{rational point} if there exists $x_0,y_0 \in \mathbb{Q}$ such that $F(x_0,y_0)=0$.  
+%\begin{claim}  The curve $x^2+y^2-3=0$ has no rational points.
+%\end{claim}
+\end{question}
+
+
+
+
+

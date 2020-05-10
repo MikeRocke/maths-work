@@ -1,0 +1,223 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\e}[1]{a \equiv b (\bmod \ #1)}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Reading Proofs 2}
+\end{center}
+
+Below are proofs written by yourself and classmates for the week 12 homework assignment.  Many of these proofs contain flaws, while others are correct.  You goal is to find errors within proofs and correct them where appropriate.  Many of these proofs have been altered slightly from their original version to combine different errors from different individuals.\\
+
+Scattered throughout are claims and examples that may help you better understand some of the concepts from the assignment.  Work through these exercises as you complete this sheet.
+
+\begin{enumerate}
+\item \begin{claim}[Exercise 6]  Suppose $x,y \in \R$.  Then $x^3+x^2y=y^2+xy$ if and only if $y=x^2$ or $y=-x$.
+\end{claim}
+
+\begin{proof} \openup 1em Suppose $x,y \in \R$ and $x^3+x^2y=y^2+xy$.  Rewriting we get $x^2(x+y)=y(y+x)$.  Divide both side by $x+y$ to get $x^2=y$.  Hence, when $x^3+x^2y=y^2+xy$, then $y=x^2$.\\
+
+	Conversely, let $x,y \in \R$ and $y=x^2$ or $y=-x$.  If $y=x^2$ then consider
+		\begin{align*}
+		x^3+x^2y &=y^2+xy\\
+		x^3+x^2(x^2) &= (x^2)^2+x(x^2)\\
+		x^3+x^4 &= x^4+x^3
+		\end{align*}
+Since this last equation is true, when $y=x^2$, then $x^3+x^2y = y^2+xy$.\\
+
+Therefore, $x^3+x^2y = y^2+xy$ if and only if $y=x^2$ or $y=-x$.
+\end{proof}
+
+\begin{proof}  Suppose $x,y \in \R$ and $x^3+x^2y=y^2+xy$.  Consider the following,
+	\begin{align*}
+	x^3+x^2y &= y^2+xy,\\
+	x^2(x+y) &= y(y+x),\\
+	x^2(x+y) - y (y+x) &= 0,\\
+	(x+y)(x^2-y) &=0.
+	\end{align*}
+We can then solve for $x+y=0$ and $x^2-y=0$ so that $y=-x$ or $y=x^2$.  Thus, for $x^3+x^2y = y^2+xy$ to be true $y=-x$ or $y=x^2$.\\
+
+Conversely, let $y=x^2$ or $y=-x$.  Then $y-x^2=0$ or $y+x=0$.  We see that,
+	\begin{align*}
+	(y-x^2)(y+x) &=0 , \\
+	y^2-x^2y+xy-x^3 &= 0 \\
+	x^3+x^2y &= y^2 +xy.
+	\end{align*}
+	Thus, if $y=x^2$ or $y=-x$, then $x^3+x^2y = y^2+xy$.  Therefore, $x^3+x^2y = y^2+xy$ if and only if $y=x^2$ or $y=-x$.
+\end{proof}
+
+\item \begin{claim}[Exercise 8]  Suppose $a,b \in \Z$.  Prove that $\e{10}$ if and only if $\e{2}$ and $\e{5}$.
+\end{claim}
+\begin{proof} \openup 1em
+Suppose $a,b \in \Z$.  Prove that if $\e{10}$, then $\e{2}$ and $\e{5}$.  By definition, $10 |(a-b)$, thus
+	\begin{align*}
+	10k &= a-b \\
+	5(2k) &= a-b \\
+	2(5k) &= a-b.
+	\end{align*}
+Therefore if $\e{10}$ then $\e{2}$ and $\e{5}$.\\
+
+Now prove that if $\e{2}$ and $\e{5}$ then $\e{10}$.  By definition, $2|(a-b)$ and $5|(a-b)$, thus $2k=a-b$ and $5m=a-b$.  Let $k=5p$, $p \in \Z$, then $2(5p)=a-b$, so $10p=a-b$.  Let $m=2n$, $n \in \Z$, then $5(2n)=a-b$, so $10n=a-b$.  Therefore, $\e{10}$ if and only if $\e{2}$ and $\e{5}$.
+\end{proof}
+
+\item The proof above (and many other submitted proofs) implicitly assumes the following claim.  Determine if the following claim is true or false.  Prove your answer in either case.
+\begin{claim}  Let $a,b,c \in \Z$.  If $a|c$ and $b|c$ then $(ab)|c$.
+\end{claim}
+\vspace{4in}
+
+\item \begin{claim}[Exercies 10]  If $a \in \Z$, then $a^3 \equiv a (\bmod \ 3)$.
+\end{claim}
+\begin{proof} \openup 1em
+Let $a \in \Z$.  Consider then $a^3 \equiv a (\bmod \ 3)$.  By definition of congruent modulo, $3|a^3-a$.  By definition of divides $3k=a^3-a$.  Notice that $3k = a(a^2-1)$.  we can factor that so $3k=(a-1)a(a+1)$.  By way of the division algorithm, $2b+c=n$ for $b,r,b \in \Z$.  In this statement $0 \leq r <3$ so we can have $3b+0$, $3b+1$ or $3b+2$.  We can rewrite $3b+2$ as $3(b+1)-1$.  Notice that we have a sequence of $b-1$, $b$, and $b+1$ that are all divisible by 3.  Notice also we have a sequence of $a-1$, $a$, and $a+1$ that is also divisible by 3.  Therefore, if $3k=(a-1)a(a+1)$ then $3|a^3-a$ so $a^3 \equiv a (\bmod \ 3)$.
+\end{proof}
+
+\item Exercise 18 required that you provide a set $X$ such that $\N \in X$ and $\N \subset X$.  This seemed to cause more than a little confusion for much of the class.  Complete the following exercises to hopefully increase your understanding of the situation.
+	\begin{enumerate}
+	\item Consider the sets $A=\set{0,1,2}$ and $B = \set{0, \set{1,2}}$.  List the elements of each set and the power set of each set.  Is $A = B$?
+	\vspace{3in}
+	\item Many of you concluded in your homework that $\set{0,\N}= \set{0,1,2,3,\ldots}$.  What is wrong with this statement?
+	\vspace{3in}
+	\item Give a set $X$ such that $\set{1,2} \in X$ and $\set{1,2} \subset X$.
+	\vspace{1in}
+	\end{enumerate}
+	
+\item \begin{claim}  Let $a,b, p \in \Z$ where $p$ is prime.  If $p|ab$ then $p|a$ or $p|b$.
+\end{claim}
+
+\begin{proof} \openup 1em
+By way of contradiction, suppose $a,b,p \in \Z$, $p$ is prime, $p|ab$, $p \nmid a$, and $p \nmid b$.  If $\gcd(a,p)=1$, notice that by Euclid's Lemma if $p|ab$ and $p \nmid a$, then $p|b$.  If $\gcd(b,p)=1$ and $p|ab$ and $p \nmid b$, then $p|a$.  Therefore, if $a,b,p \in \Z$ where $p$ is prime, and $p|ab$, then $p|a$ or $p|b$.
+\end{proof}
+
+\begin{proof} \openup 1em
+Suppose $a,b,p \in \Z$ where $p$ is prime and $p|ab$.  We can deduce that $p$ will be odd because it is prime and $p \neq 2$ and also that $pk=ab$ for $k \in \Z$.  So $p=2c+1$ for $c \in \Z$.  Notice that the $\gcd(p,a)=1$ or $p$ and $\gcd(p,b)=1$ or $p$.  The greatest common divisor would be $p$ itself in the case that $a$ or $b$ is a multiple of $p$.  Four our first case say that $\gcd(p,a)=1$.  So $1=np+ma$ for $n,m \in \Z$.  We can see that
+	\begin{align*}
+	pk &= ab\\
+	pmk &=amb\\
+	pmk &= (1-np)b \\
+	p(mk+nb) &=b.
+	\end{align*}
+Because $mk+nb \in \Z$, $p|b$.  If the $\gcd(p,b)=1$, the same result would occur, and $p|a$.  Now if $\gcd(p,a)=p$, then $p=lp+qa$ for $l,q \in \Z$.  We can see that 
+	\begin{align*}
+	pk &=ab\\
+	pqk &=aqb\\
+	pqk &= (p-lp)b\\
+	p(qk+lb-b) &= 1.
+	\end{align*}
+This would suggest that $p|1$.  But the only integer that can divide 1 is 1 and -1.  But $p$ cannot be 1 or -1 because they aren't prime numbers.  Therefore, we have shown this if $p|ab$ where $p$ is prime, then $p|a$ or $p|b$.
+\end{proof}
+
+\begin{proof} \openup 1em  Let $a,b,p \in \Z$ where $p$ is prime.  Suppose $p|ab$.  Because $p$ is prime, $\mbox{gcp}(a,p) =1 $ or $p$.
+\begin{description}
+\item{Case 1:}  Suppose $\gcd(a,b)=1$.  We know that $p|ab$.  Recall from claim 1, that if $a|(bc)$ and $\gcd(a,b)=1$ then $a|c$.  Thus if $p|(ab)$ and $\gcd(a,p)=1$ then $p|b$.
+\item{Case 2:}  Suppose $\gcd(a,p)=p$.  By definition of greatest common divisor, if $\gcd(a,p)=p$ the $p|a$.  
+\end{description}
+Therefore, if $p|ab$ then $p|a$ or $p|b$.
+\end{proof}
+\end{enumerate}
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,54 @@
+\chapter{Strong Induction}
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Compare strong induction to induction
+\item Write a proof by strong induction
+\item Determine when strong induction is necessary or appropriate.
+\end{itemize}
+}}
+\end{center}
+
+\noindent  Strong induction is a proof technique based on induction, but with a small variation.  Recall that in the induction step of an induction proof we assume the statement $P(n)$ is true (usually for some $n \geq 1$) and use this to prove that $P(n+1)$ is true.  In strong induction, we instead use $P(k)$ to prove $P(n+1)$ where $k$ is some natural number less that $n+1$.  If we use our stairs analogy from class, this would be like skipping stairs a few at a time rather than going up one step at a time.  \\
+
+We have to adjust the base step when using strong induction.  For example, suppose we will use $P(n)$ to prove $P(n+3)$ in a strong induction proof.  This would be like going up our staircase 3 steps at a time.  Remember, our goal isn't getting to the top of the staircase necessarily, but rather showing that you can get on every stair (that is, $P(n)$ is true $\forall n \in \N$).  Since our proof technique requires that we skip 3 stairs at a time, we have to ensure that we can get onto the first 3 steps.  Then, if we can get onto each of the first three stairs and go up three at a time, we can get onto any stair that we wish.\\
+
+There are essentially two situations in which strong induction is appropriate.  The first is when $P(n)$ alone isn't enough to ensure that $P(n+1)$ is true.  This happens when our statements require several previous cases as you'll see below.  The other situation, which appears on page 159, is when $P(n)$ may imply $P(n+1)$, but we can't come up with a proof to ensure that it is true.  You should take a look at the example, but bare in mind that it is a ridiculous application of strong induction.  A much simpler direct proof is possible.
+
+\begin{question}
+\item The following claim has the perfect setup for strong induction.
+\begin{claim}  For the following recursively defined sequence, $a_n$ is odd for all $n \in \N$.  Here $a_1=1$, $a_2=3$, and $a_n=a_{n-2}+2a_{n-1}$ for $n \geq 3$.
+\end{claim}
+\begin{qpart}
+\item Find the first 5 items in this sequence.
+
+\vspace{2in}
+
+\item Here, for $n \geq 3$, the statement $P(n)$ is ``$a_n=a_{n-2}+2a_{n-1}$ is odd.''  Since this statement refers explicitely to the $n-2$ and $n-1$ terms of our sequence, we need to consider these items in our basis step.  Determine what the statements $P(1)$ and $P(2)$ are, and determine if they're true.
+
+\vspace{2in}
+\item The remainder of the proof is very similar to the induction step in any induction proof.  Many of the justifications are left out of the proof.  As you read the argument, explain why each step is true.
+
+\begin{proof}  \openup=1.5em Suppose $a_n$ is odd for $n \geq 3$.  Then consider
+\begin{align*}
+a_{n+1} &= a_{n-1}+2a_{n}\\
+\ &= (2k+1) + 2(2m+1) \\
+\ &= 2k+1+4m+2 \\
+\ &= 2(k+2m+1)+1.
+\end{align*}
+Therefore $a_{n+1}$ is odd.
+\end{proof}
+
+\end{qpart}
+\newpage
+\item Prove the following claim.
+\begin{claim}  Let a sequence be defined by $T_1=T_2=T_3=1$, and $T_n=T_{n-1}+T_{n-2}+T_{n-3}$ for $n\geq 4$.  Then $T_n<2^n$ for all $n \in \N$.
+\end{claim}
+
+\end{question}
+
+
+
+
+

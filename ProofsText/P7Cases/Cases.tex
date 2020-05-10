@@ -1,0 +1,168 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.7 More on Direct Proof: Treating Cases}
+\end{center}
+
+Using cases to write proofs allows us to assume some information about the statement we are trying to prove.  This added information is often a helpful tool in writing proofs.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Break the $P$ statement in $P \Rightarrow Q$ into cases
+	\item Write proofs using cases
+	\item Write proofs about new definitions
+	\end{itemize}
+}}
+\end{center}
+
+\noindent Our focus is still on proving statements of the form $P \Rightarrow Q$.  Very often, $P$ doesn't give us much information to work with.  For instance, consider the following two statements.
+	\begin{description}
+	\item[Statement 1:]  If $n$ is an odd integer, then $n^2$ is an odd integer.
+	\item[Statement 2:]  If $n$ is an integer, then $n^2+7n+6$ is even.
+	\end{description}
+	
+By now, you have probably figured out that to prove Statement 1, you would start out by saying ``Suppose $n$ is an odd integer.  Then $n=2k+1$ for $k \in \Z.$''  However, in Statement 2, we only know that $n$ is an integer, so it isn't clear where we might start our proof.  We might consider the case when $n$ is even and the case when $n$ is odd separately, so we can make an assumption like we did for Statement 1.  Since an integer must be either even or odd, proving the statement for these two cases will give the desired result.  \\
+
+To keep things light for today, we'll write proofs about the following definition to give us practice with cases.
+
+\begin{definition}[Parity]  Two integers have the \textbf{same parity} if they are both even or they are both odd.  Otherwise, they have \textbf{opposite parity}.
+\end{definition}
+
+\begin{enumerate}
+\item Prove that if $n$ is an integer, then $n$ and $n+2$ have the same parity by considering the case when $n$ is even and the case when $n$ is odd separately. 
+
+\newpage
+
+\item Prove that if $n$ is an integer, then $n$ and $n^2$ have the same parity.
+
+\vspace{4in}
+
+\item Prove that if $n$ is an integer, then $n$ and $n+3$ have opposite parity.
+
+\newpage
+\item Prove that if two integers have the same parity, then their sum is even.
+
+\vspace{4in}
+
+\item Prove that if $n$ is an integer, then $2 \divides (n^2-n)$.
+\newpage
+\item Prove that if $x\in \R -\set{0,1}$, then either $x^2<x$ or $x^2>x$.  (Recall: $x \in \R - \set{0,1}$ if $x \in \R$ and $x \not\in \set{0,1}$.)
+\newpage
+\item Prove that if $n$ is an integer, then $3 \divides (n^3-n)$.
+\end{enumerate} 
+\newpage
+Using proof by cases can be very tempting, even when it isn't necessary.  Often times we'll initially write a proof by cases because the added assumption we get to make helps us see things more clearly.  Consider the following claim.
+\begin{claim}  If $n$ is an integer, then $(2n+3)+(-1)^n(2n+1)$ is even.
+\end{claim}
+\begin{enumerate} \setcounter{enumi}{7}
+\item Prove Claim 1 by using cases.  
+\vspace{3.5in}
+\item Prove Claim 1 by considering the parity of $2n+3$ and $(2n+1)$.
+\end{enumerate}
+\end{document}
+
+
+
+

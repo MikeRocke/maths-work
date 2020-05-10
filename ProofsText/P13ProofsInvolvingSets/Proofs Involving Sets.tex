@@ -1,0 +1,227 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+\newcommand{\mymod}[1]{ \ (\bmod \ #1)}
+\newcommand{\esub}{\subseteq}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.13 Proofs Involving Sets}
+\end{center}
+
+Since most structures in mathematics are collections of objects, many of the proofs we write are related to sets.  The proof techniques we use are the same ones we have seen before, but there are proof techniques associated with sets that work in general and are usually expected by an audience.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Prove that an object is an element of a set.
+	\item Prove that a set is contained in another set.
+	\item Prove that two sets are equal.
+	\end{itemize}
+}}
+\end{center}
+
+\section{Proving $a \in A$}
+
+In linear algebra you must show that vectors are contained in vector spaces.  In abstract algebra you must show that elements are contained in groups.  In real analysis you must show that functions are contained in functional spaces.  All of these structures are sets, so the proof boils down to showing that the object in question is in the set in question.\\
+
+Notice, if a set is finite then there should be no issue with showing that a given element is contained in the set.  Infinite sets, on the other hand, are usually defined using set builder notation, that is $A = \set{x : P(x)}$.  Recall that $P(x)$ is an open sentence, and if $P(x)$ is true then $x \in A$. Otherwise $x \notin A$.
+\begin{enumerate}
+\item Given a set $A=\set{x : P(x)}$, what do you think you need to show to ensure that $a \in A$?
+\vspace{1.5in}
+\item Prove that $18 \in \set{x \in \Z : 2 \divides x \ \mbox{and} \ 3\divides x}.$
+
+\vspace{2in}
+
+\item Prove that $(2,3) \in \set{(x,y): \exists\ k \in \R \ \mbox{where} \ x^k=y}$.
+
+\vspace{2in}
+
+\end{enumerate}
+
+\section{Proving $A \subset B$}
+
+\begin{enumerate}[resume]
+\item If $A$ and $B$ are two non-empty sets, what does it mean to say $A \subset B$?  
+
+\vspace{1in}
+
+\item What steps do you think are necessary to show that $A \subset B$?  Remember, if $A$ and $B$ are infinite sets then it is not possible to check if every element of $A$ is contained in $B$.
+
+\vspace{3in}
+
+\item Prove that $\set{x \in \Z : 8 \divides x} \subset \set{x \in \Z : 4 \divides x}$.
+
+\vspace{4in}
+
+\item Prove that $\set{x \in \Z : 12 \divides x} \subset \set{x \in \Z : 3 \divides x}$.
+
+\vspace{3in}
+
+\item Suppose $A$ and $B$ are non-empty sets.  Prove $A \cap B \subset B$.
+
+\vspace{3in}
+\end{enumerate}
+
+\section{Proving $A = B$}
+Recall that two sets, $A$ and $B$, are equal if they contain the same elements.  Of course, this means that all the elements of $A$ and contained in $B$ and all the elements of $B$ are contained in $A$.  More succinctly,
+\[A = B \Leftrightarrow (A \subset B \wedge B \subset A).\]
+
+As such, we show two sets are equal by showing that each set contains the other.  This is not the only way to show that two sets are equal, but it is the most expected method.
+
+\begin{enumerate}[resume]
+\item Prove that $\set{2k+1: k \in \Z} = \set {2k+3 : k \in \Z}$.
+
+\vspace{4in}
+
+\item Prove that $\set{x \in \Z: 15 \divides x} = \set{x \in \Z: 3 \divides x} \cap \set{x \in \Z: 5 \divides x}$.
+
+\vspace{4in}
+
+\item Prove that $\set{y=\sqrt{1-x^2}: 0 \leq x \leq 1} = [0,1]$.
+
+\vspace{4in}
+
+
+\end{enumerate}
+
+\noindent  Sometimes this proof technique is a little clumsy, especially if we do not have specific details about the sets with which we are dealing.  This happens especially when we have to prove general properties of sets.  In these instances, we use the definitions for basic set structures.\\
+
+\begin{enumerate}[resume]
+
+\item Justify each step of the following proof of one of DeMorgan's Laws.  Fill in the definitions below the statement of the law to help you.
+
+\noindent \textbf{DeMorgan's Law:}  If $A$ and $B$ are subsets of a universal set $\mathcal{U}$, then $\c{A \cup B} = \c{A} \cap \c{B}.$\\
+
+$\ds A \cap B = $ \\[.2in]
+
+$\ds A \cup B = $ \\[.2in]
+
+$\ds A - B = $\\[.2in]
+
+$\c{A} = $
+\begin{proof}  Suppose $A$ and $B$ are subsets of a universal set $\mathcal{U}$.  Then
+\begingroup
+\addtolength{\jot}{2.5em}
+	\begin{align*}
+	\c{A \cup B} &= \mathcal{U} - (A \cup B) \\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (x \notin A \cup B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge \sim (x \in A \cup B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge \sim ( (x \in A) \vee (x \in B))}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (\sim (x \in A) \wedge \sim (x \in B)}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge ((x \notin A) \wedge (x \notin B))}\\
+	\ &= \set{x: (x \in \mathcal{U}) \wedge (x \in \mathcal{U}) \wedge (x \notin A) \wedge (x \notin B)}\\
+	\ &= \set{x: (x \in \mathcal{U} \wedge (x \notin A) \wedge (x \in \mathcal{U}) \wedge (x \notin B)}\\
+	\ &= \set{x: ((x \in \mathcal{U} \wedge (x \notin A)) \wedge ((x \in \mathcal{U}) \wedge (x \notin B)}\\
+	\ &= \set{x: (x\in \mathcal{U}) \wedge (x \notin A)} \cap \set{x : (x \in \mathcal{U} \wedge (x \notin B)}\\
+	\ &= (\mathcal{U}-A) \cap (\mathcal{U}-B)\\
+	\ &= \c{A} \cap \c{B}.
+	\end{align*}
+	\endgroup
+\end{proof}
+\end{enumerate}
+\end{document}
+
+
+
+

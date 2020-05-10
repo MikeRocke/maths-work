@@ -1,0 +1,237 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\an}{\set{a_n}}
+\newcommand{\bn}{\set{b_n}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\e}[1]{a \equiv b (\bmod \ #1)}
+\newcommand{\psub}{\subset}
+\newcommand{\ilim}{\lim_{x \ra \infty}}
+\newcommand{\esub}{\subseteq}
+\renewcommand{\c}[1]{\overline{#1}}
+\newcommand{\mybox}{\tikz[baseline=(current bounding box.center)]{\draw (0,0) rectangle (1cm,1cm);}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}
+	\newtheorem{claim}{Claim}
+	
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}%[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem{axiom}{Axiom}[]
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.5 Axiomatic Systems}
+\end{center}
+
+You have most likely heard of Euclid's axioms and you've maybe even heard of the Axiom of Choice.  While there are a few famous axioms, most of the axioms of mathematics live in the dark corners and are ignored most of the time.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Describe some fundamental axioms.
+\item Use the Division Algorithm.
+\end{itemize}
+}}
+\end{center}
+
+Mathematics is the most rigorous scientific field.  However, even in mathematics, if you ask the question ``But why?'' enough times you arrive at a question without an answer.  An axiom is the frustrated parent of the mathematical world's way of saying ``Because I said so.''  In reality, \textbf{an axiom is just something we assume to be true without any proof that it is true.}\\
+
+For our purposes, we will take some properties of sets to be axiomatic.  Most of our axioms will seem so obviously true, that you may question why we're taking the time to point them out at all.  However, almost all of \textit{our} axioms are provable, just not with the mathematics available to us in this course.  That is, a mathematician's choice of axioms is often dependent on how much work he or she is willing to do.  See Section 1.10 of the text to learn about some of the impacts of the choice of axioms in mathematics.
+
+
+\begin{axiom}[Closure under addition] For $X = \Z,$ $\R$, or $\Q$, if $a \in X$ and $b \in X$, then $a+b \in X$.  
+\end{axiom}
+		\begin{enumerate}[label=\arabic*.]
+		\item Consider $X = \Z$ in the axiom.  Can you think of a reasonable argument that the statement is true that doesn't rely on the statement?
+		\vspace{1in}
+		\item We probably don't need to take the statement as an axiom when $X=\Q$.  Let $x=\sfrac{a}{b}$ and $y=\sfrac{c}{d}$.  Provide a reasonable explanation for the statement $x+y \in \Q$.
+		\vspace{1.5in}
+		
+		\item You argument for 2.~probably made an assumption about multiplication.  What assumption did you make?
+		\vspace{.5in}
+		\end{enumerate}
+		
+\begin{axiom}[Common Arithmetic Properties]  For $X = \Z$, $\R$, or $\Q$ and $a,b,c \in X$.
+		\begin{itemize}
+		\item $a(b+c) = ab+ac$  (\textit{Distribution}) 
+		\item $a+b=b+a$ and $ab=ba$  (\textit{Commutativity})
+		\item $(a+b)+c=a+(b+c)$ and $(ab)c=a(bc)$  (\textit{Associativity})
+		\end{itemize}
+\end{axiom}
+	
+\begin{axiom}[Ordering of the real numbers] If $x$ and $y$ are \textit{distinct} real numbers, then either $x<y$ or $y<x$.  This property allows us to plot real numbers on a number line.
+\end{axiom}
+	
+\begin{axiom} If $A$ is a set, then $A \esub A$.
+\end{axiom}
+	We will assume that every set is a subset of itself.  This axiom isn't required in general, and some very interesting things happen if you throw it out.\\
+	
+	\begin{enumerate}[resume]
+	\item Consider the set $A = \set{X : X \text{ is a set and } X \not\in X}$.
+	\begin{enumerate}[label=(\roman*)]
+	\item By the definition of $A$, what would be implied if $A \not\in A$?
+	\vspace{.5in}
+	\item What would be implied if $A \in A$?
+	\vspace{.5in}
+	\item What's wrong with these implications?
+	\vspace{.5in}
+	\end{enumerate}
+	\end{enumerate}
+	One of the set related axioms that we're using (but not explicitly stating) is that the questions above don't make sense because they would require that the set $A$ be defined in terms of itself.  
+	
+\begin{axiom}[The Well-Ordering Principal]	Any set of natural numbers contains a smallest element.
+\end{axiom}
+	\begin{enumerate}[resume]
+	\item Consider the set $A=\set{\frac{1}{n} : n\in \R, n > 0}$.  
+		\begin{enumerate}[label=(\roman*)]
+		\item Is $A$ a set of natural numbers?  
+		\vspace{.5in}
+		\item Does $A$ have a smallest element?  
+		\vspace{.5in}
+		\item Can you say that the Well-Ordering Principal holds for sets other than the natural numbers?
+	\vspace{1in}
+	\end{enumerate}
+	\end{enumerate}
+	
+
+
+	\begin{enumerate}[resume]
+	\item A concept closely related to the Well-Ordering Principal is the Division Algorithm.  To get things started, we need to go back to elementary school.
+	\begin{enumerate}[label=(\roman*)]
+		\item Use long division to determine the remainder when 113 is divided by 8.
+		
+		\vspace{2in}
+		
+		\item Give integers $p$ and $r$ such that $113=8p+r$ where $0 \leq r<8$.
+		
+		\vspace{1.5in}
+		
+	\end{enumerate}
+	\item Repeat the steps above when 258 is divided by 17.
+	\vspace{2in}
+	
+	\end{enumerate}
+	
+The Division Algorithm isn't really an algorithm.  Instead, it is the fact that you can do long division as you learned it in elementary school and you will always get an answer.  It is stated below.
+
+\begin{axiom}[The Division Algorithm]  Given any integers $a$ and $b$ with $b>0$, there exists integers $q$ and $r$ such that $a=qb+r$ where $0 \leq r < b$.
+\end{axiom}
+
+
+The most important thing to take from the Division Algorithm is the restriction on $r$.  It says that if $a$ is divided by $b$ then the remainder will be less than $b$.  This fact is surprisingly useful.\\
+
+	\begin{enumerate}[resume]
+	\item What are the possible remainders when dividing by $2$?  What about when dividing by $3$?
+	\vspace{.75in}
+	\item We can talk about writing integers in terms of other integers using the division algorithm.  For instance, we can write $7$ in terms of $2$ by writing $7=3(2)+1$.  In the notation of the division algorithm, we have $a=7$, $b=2$, $q=3$, and $r=1$.
+		\begin{enumerate}[label=(\roman*)]
+		\item Let $n \in Z$.  Ignoring the fact that we don't know the value for $q$, what are the only ways that $n$ can be written in terms of $2$?
+		\vspace{.75in}
+		\item Ignoring $q$ again, what are the only ways to write an integer $n$ in terms of $3$?
+		\vspace{1in}
+		\end{enumerate}
+	\end{enumerate}
+
+For now, we'll take the Division Algorithm as an axiom.  Later in the semester we'll be prepared to prove it.
+\end{document}
+
+
+
+

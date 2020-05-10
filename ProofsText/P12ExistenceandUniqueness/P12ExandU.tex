@@ -1,0 +1,97 @@
+
+\chapter{Existence and Uniqueness}
+
+Many ideas in mathematics aren't particularly useful unless we happen to know that something is unique.  For instance, the greatest common divisor of two numbers, the prime factorization of an integer, the absolute maximum of a function on a closed interval, and $y$-intercept of a function are all unique entities.  
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Prove Existence and Uniqueness Statements
+	\item Use Bezout's Lemma to write proofs
+	\end{itemize}
+}}
+\end{center}
+
+\noindent We've already discussed how to prove an existence statement.  Our goal now is to prove that the item that we have guaranteed to exist is also unique.  In short-hand notation, we'll be proving statements of the form
+\[\exists ! x, \ P(x).\]
+In the statement above, the ``!'' symbol is read as ``unique.''\\
+
+\noindent  To prove a uniqueness statement we use a process not unlike contradiction.  That is, we assume that the item is not unique, and then prove this to be an absurdity.  The following example demonstrates this.
+
+\begin{claim}  If $x \in \R$, there exists unique $y\in \R$ such that $x+y=x$.
+\end{claim}
+
+\begin{proof}  Notice that if we set $y=0$, then $x+y=x+0=x$.\\
+
+To prove uniqueness, assume that there exists $z \in \R$ such that $z \neq y$ and $x+z=x$.  If $x+z=x$, we can subtract $x$ from both sides of the equation to find that $z=0$, so $z=y$.  \\
+
+Therefore, there exists unique $y \in \R$ such that $x+y = x$.
+\end{proof}
+
+\begin{question}
+\item Prove the following claims.  Notice that they are both existence and uniqueness statements, and you'll need to prove both.
+\end{question}
+\begin{claim}  If $x \in \R$ and $x \neq 0$, there exists unique $y \in \R$ such that $xy=x$.
+\end{claim}
+
+\newpage
+\begin{claim}  If $x \in \R$, there exists unique $y \in \R$ such that $x+y=0$.
+\end{claim}
+
+\vspace{4in}
+
+\begin{claim}  If $x \in \R$ and $x \neq 0$, there exists unique $y \in \R$ such that $xy=1$.
+\end{claim}
+
+\newpage
+
+\begin{claim}  If $a,b \in \R$ and $a<b$, then there exists unique $M \in \R$ such that
+\[b-M=M-a = \frac{b-a}{2}.\]
+\end{claim}
+\noindent (Hint: On the real line, $b-a$ is the distance between $a$ and $b$.)
+
+\vspace{5in}
+
+\noindent  Existence and uniqueness proofs will be revisited later in this course and will play a major role in your upper level math course (especially Abstract Algebra and Analysis).  However, our exposure to a relatively limited amount of mathematics at this point will prevent us from proving them too often.\\
+
+\noindent We move on now to working with some ideas that should be familiar to you.  
+
+\begin{definition}[Greatest Common Divisor]  The \textit{greatest common divisor} of two integers $a$ and $b$, denoted $\gcd(a,b)$, is the largest integer that divides both $a$ and $b$.
+\end{definition}
+
+\begin{definition}[Prime]  An integer $n$ is \textit{prime} if it has exactly two positive divisors, 1 and $n$.
+\end{definition}
+\newpage
+\begin{question}[resume]
+\item Prove the following.
+\end{question}
+\begin{claim} Suppose $a,p \in \Z$.  If $p$ is prime then $\gcd(a,p)=1$ or $\gcd(a,p)=p$.
+\end{claim}
+
+
+\vspace{4in}
+
+\noindent The next claim is very commonly used in basic number theory and ties together a variety of ideas in basic arithmetic.  The text refers to the claim as Proposition 7.1, but the claim is so common that we will refer to it by the name Bezout's Lemma (pronounced BAY-Zoo).  The text gives a proof of the claim.
+
+\begin{lemma}[Bezout's Lemma]  If $a,b \in \N$, then there exists $k, \ell \in \Z$ such that $gcd(a,b)=ka+\ell b$.
+\end{lemma}
+\newpage
+\begin{question}[resume]
+\item Use Bezout's Lemma to prove the following claim which is often referred to as Euclid's Lemma.
+\end{question}
+
+\begin{claim}[Euclid's Lemma]  If $a \divides (bc)$ and $gcd(a,b)=1$, then $a \divides c$.
+\end{claim}
+
+\vspace{3in}
+
+\begin{question}[resume]
+\item Prove the following claim in two ways.  First, prove the claim using Euclid's Lemma, then prove the claim using only Bezout's Lemma.
+\end{question}
+
+\begin{claim}  Suppose $a,b,p \in \Z$.  If $p$ is prime and $p \divides (ab)$, then $p \divides a$ or $p \divides b$.
+\end{claim}
+
+
+
+
+

@@ -1,0 +1,292 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+\usepackage{cancel}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\P}{\mathscr{P}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\renewcommand{\subset}{\subseteq} 
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+\newcommand{\mymod}[1]{ \ (\bmod \ #1)}
+\newcommand{\esub}{\subseteq}
+\newcommand{\rel}{\mathbin{R}}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {6pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+	\newtheorem*{definition*}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{P.~18 Relations and Functions}
+\end{center}
+
+We'll now a make a major change in the focus of the course.  Up to this point, our focus has been on learning techniques to write proofs.  Along the way we've had to learn a few new concepts to have something new to write proofs about.  The remainder of our time will be devoted to learning to concepts and we'll write proofs about them along the way.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+\begin{itemize}
+\item Discuss and define relations
+\item Write common relations using set-builder notation
+\item Explore functions as relations
+\end{itemize}
+}}
+\end{center}
+
+\section{Relations}
+
+Every major concept in mathematics can be described entirely using sets.  This isn't exactly exciting news for many first-year mathematics students.  However, it is an important property to observe if we're going to view some concepts in a light that will allow us to write proofs about them.
+
+\begin{enumerate}
+\item Let's pretend that you're teaching an elementary school class and you need to teach the students how to properly use the less than symbol ``$<$.''  To keep things simple, we'll focus entirely on the integers in the set $\ds A = \set{1,2,3,4,5}.$  The students need to see some examples, so write down every possible correct use of the ``$<$'' symbol for this set.  (Yes, Matt...all of them.)
+
+\vspace{2.5in}
+
+\item Repeat the same process for the ``$=$'' symbol and the set $A$ in question 1.
+
+\end{enumerate}
+
+In the examples above, there's nothing particularly special about the ``$<$'' and ``$=$'' symbols.  That is, the symbols themselves don't really have any meaning.  It's the elements that we put the symbols between that really matter.  We could choose to represent this same information with the sets
+\begin{align*}
+R_< &=\set{(1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5),(4,5)},\\
+R_= &= \set{(1,1),(2,2),(3,3),(4,4),(5,5)}.
+\end{align*}
+
+This probably doesn't seem particularly beneficial to you.  However, it does completely encode the important information about ``less than'' and ``equal to'' for the set $A$, without ever having to define what ``less than'' or ``equal to'' actually mean.  This can be pretty handy for a more complicated idea.\\
+
+The concepts of ``less than'' and ``equal to'' are \textit{relations}.  Simply put, relations describe relationships between things.  Since this is math class, the ``things'' are the elements of some sets.  There are an infinite number of possible relations and many of them are very different.  As a result, the defintion of a relation may seem a little strange.
+
+\begin{definition*}[Relation]  A \textit{relation} $R$ between a set $A$ and a set $B$ is a subset $R \esub A \times B$.  We abbreviate the statement ``$(x,y) \in R$'' as $x R y$ which is read aloud as ``$x$ is related to $y$''.  If $(x,y) \notin R$ we write $x \cancel{R} y$.  Often, $A=B$.
+\end{definition*}
+
+Notice that a relation on a set $A$ is a subset of the Cartesian product $A \times B$.  That means that the elements of a relation are ordered pairs.  Each ordered pair tells you that those two elements are related.  The notation above may seem strange, but it's really no different than writing ``$x<y$'' or ``$x=y$.''  Keep in mind that we're not saying that the symbol ``$<$'' is a set, we're saying that the relationship it describes is a set.  Also, if the set $A$ or $B$ changes, then the elements that are related by ``$<$'' change as well.  This is why a relation is a subset of $A \times B$ and not defined on its own terms.
+
+\begin{enumerate} \setcounter{enumi}{2}
+\item Going by the definition above, do you think the order of the items in each ordered pair matters?  Why?
+
+\vspace{1.5in} 
+
+\item Let $A = \set{2,3}$.
+	\begin{enumerate}
+	\item What is $A \times A$?  List all of its elements.
+	\newpage
+	\item What is $\P(A \times A)$?  List all of its elements.
+	
+	\vspace{5in}
+	
+	\item Notice that $\P(A \times A)$ contains every possible subset of $A \times A$.  That means that you have now listed every possible relation for the set $A$.  Which of the relations are familiar to you and what common symbol do they represent?
+	
+
+	
+	\end{enumerate}
+	\newpage
+	
+\item Let $B=\set{-2,-1,0}$.  Express the relation ``$ \geq$'' on $B$ as a set of ordered pairs.
+
+\vspace{2in}
+\end{enumerate}
+
+So far, we've only discussed relations on finite sets.  Of course, ``$<$,'' ``$=$,'' and ``$\geq$'' can all be thought of on the infinite sets $\N$, $\Z$, $\R$, etc.  We can't possibly list all of the necessary ordered pairs for infinite sets, so we have to use set-builder notation instead.
+
+\begin{enumerate} \setcounter{enumi}{5}
+\item The set $R= \set{(x,y) \in \Z \times \Z: (x-y)\in \N}$ describes a common relation.  Determine what relation it is.
+
+\vspace{1in}
+
+\item Describe the divides relation `` $\divides$ '' on $\Z$ using set-builder notation.  (Remember that you can't use the divides symbol nor the word ``divides'' to define the relation.)
+
+\vspace{1.5in}
+
+\item Congruence modulo 7 is a relation on $\Z$.  Describe the relation using set builder notation.  In this example $xRy$ if and only if $x \equiv y \mymod{7}$.
+
+\vspace{1.5in}
+\end{enumerate}
+
+We could probably spend several weeks discussing relations.  Since we don't have many weeks left, this probably isn't the best use of our time.  Be assured, you'll spend a lot of time discussing relations in your Geometries, Abstract Algebra, Calculus 3, and Linear Algebra classes.  We'll move on to discussing the most common example of a relation: a function.
+
+\section{Functions}
+
+When Dr. Wright asks his students to define functions in classes, he invariably gets slightly different versions of the following three answers.
+	\begin{enumerate}
+	\item Like $f(x)$ is $x^2$ or like $\sin(x)$ or something.
+	\item It passes the vertical line test.
+	\item A rule that takes input and gives output.
+	\end{enumerate}
+	
+None of these answers are wrong, but none of them are particularly good either.  The first response is an example at best.  Many functions cannot be described using $f(x)$ (or with any algebraic formula for that matter).  The second answer shows a little more recognition, but there are lots of functions for which the idea of a vertical line test doesn't even make sense.  Ask your classmates in Calculus 3 about them some time.  The third answer is starting to get somewhere, but it's not strict enough to pin down what it really means.  (As a future teacher, you should be terrified of definitions like \#3.  Trying to explain a bad definition to a student who doesn't understand the concepts is like trying to shave a cat.  It's messy, it hurts, and in the end you won't like each other very much.)  In reality, a function is a special type of relation.
+
+\begin{definition*}[Function]  Suppose $A$ and $B$ are sets.  A \textit{function} $f$ from $A$ to $B$, denoted $f:A \to B$, is a relation $f \esub A \times B$ from $A$ to $B$ with the property that for each $a \in A$, $f$ contains exactly one ordered pair of the form $(a,b)$.  We abbreviate $(a,b) \in f$ by $f(a)=b$.
+\end{definition*}
+\begin{enumerate} \setcounter{enumi}{8}
+\item How is the definition of a function different from the definition of a relation?
+
+\vspace{2in}
+
+\item Does the definition indicate that every element $a \in A$ must be related to something by the function $f: A \to B$?
+
+\vspace{1.5in}
+
+\item Does the definition indicate that every element $b \in B$ must be related to something by the function $f: A \to B$?
+
+\vspace{1.5in}
+
+\item Consider the Birthmonth Function, $m$.  The two sets for our Birthmonth Function will be the individuals in our class and the month of their birth.  For  your group, write down the set $A$ of people in your group and the set $B$ of months of your birth.
+
+\vspace{2in}
+
+	\begin{enumerate}
+	\item Is $m: A \to B$ a function for your group?  Is it the same for the other groups in the class?
+	
+	\vspace{1in}
+	
+	\item Is $m: B \to A$ a function for your group?  Is it the same for the other groups in the class?
+	
+	\vspace{1in}
+	
+	\end{enumerate}
+\item Consider the Birthmonth Function, $m: A \to B$, again where $A$ is an unknown group of people and $B$ is their birth months.  What are the elements in $B$?  That is, what are the \textit{possible} outputs of the function?  Is it the same as all the actual outputs?
+
+\vspace{1in}
+
+\item One of Dr. Wright's favorite functions for examples is the archery function $a: C \to T$.  For the archery function, we have 3 colored arrows that will be shot at a square target.  When the arrows hit the target, their coordinates on the target are recorded.  In the example that follows, the arrows are represented by colored X's.
+	\begin{center}
+	\begin{tikzpicture}
+	\draw (0,0)--(2,0)--(2,2)--(0,2)--(0,0);
+	\node at (-.2,-.3){$(0,0)$};
+	\node at (2.2,2.3){$(2,2)$};
+	\node at (1.5,1.5){\textcolor{red}{X}};
+	\node at (0.5,0.25){\textcolor{blue}{X}};
+	\node at (1.2,1.8){\textcolor{green}{X}};
+	\end{tikzpicture}
+	\end{center}
+	\begin{enumerate}
+	\item What are the possible ``inputs'' for the function?  That is, what elements are in the set $C$? 
+	
+	\vspace{1in}
+	
+	\item What are the possible ``outputs'' for the function?  That is, what elements are in the set $T$?
+	
+	\vspace{1in}
+	
+	\item Is every element in $T$ hit by an arrow?
+	
+	\vspace{1in}
+	\end{enumerate}
+\end{enumerate}
+In the two previous examples of functions, the things that could get ``hit'' by the function and what actually got hit were not the same.  This is one of the issues that sometimes comes up when discussing the range of a function.  In higher levels of math, we clarify these issues with the following definitions.  
+\begin{definition*}[Domain, Codomain, \& Range]  For a function $f: A \to B$, we call the set $A$ the \textbf{domain} of $f$.  We call the set $B$ the \textbf{codomain} of $f$.  We call the set \\
+$R_f= \set{b \in B : \exists \ a \in A \ \text{for which} \ f(a)=b}$ the \textbf{range} of $f$.
+\end{definition*}
+
+In the above definition, the domain is the set of all ``inputs'' of the function.  Technically speaking, a function must be defined for all elements of its domain or it's not a function.  The codomain is the collection of all possible ``outputs.'' In our archery example the codomain was all coordinates on the target.  In the birthday example the codomain is all of the calendar months.  These are the things that could get hit by the function, but are not necessarily hit by the function.  Finally, the range is the collection of ``outputs,'' that is, the things that are actually hit by the function.
+
+\begin{enumerate} \setcounter{enumi}{14}
+\item Let $A = \set{1,5,7,9,-2,10}$ and $B = \set{ \Delta, \Psi, \Omega, \xi, \Sigma, \Pi , \Lambda, \Gamma}$ and let $f:A \to B$ be defined by 
+\[f = \set{(1,\Omega), (5, \Psi), (7, \Omega), (9,\xi), (-2,\xi),(10,\Delta)}.\]
+List the domain, codomain, and range of $f$.
+
+\vspace{1.5in}
+
+\item Consider the more traditional function $f(x)=\sin(x)$.  Give the implied domain, codomain, and range of $f$.
+
+\vspace{1.5in}
+
+\item Consider the ceiling function $f(x) = \lceil x \rceil$.  Recall that this function tells you to round up to the next integer so that $f(1)=1$, $f(1.1)=2$, $f(1.5)=2$, etc.  Determine the domain, codomain, and range of $f$.  Is there more than one possible codomain?  Is there more than one possible range?
+\end{enumerate}
+\end{document}
+
+
+
+

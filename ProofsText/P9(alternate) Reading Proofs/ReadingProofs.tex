@@ -1,0 +1,232 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\divides}{\! \mid \!}
+\newcommand{\ndivides}{\! \nmid \!}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Reading Direct Proofs}
+\end{center}
+
+One aspect of writing proofs is learning to read and critique them.  Usually you will reading and trying to understand proofs of concepts with which you are not particularly familiar.  Here, we will read and critique proofs that are either similar to things we have done or are proofs we have actually worked on.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Read an interpret proofs written by others
+	\item Find mistakes in proofs
+	\end{itemize}
+}}
+\end{center}
+
+%We will need the following definitions throughout the remainder of the semester.
+\noindent The following proofs come from both your assignments and the assignments of previous students.  Each proof contains at least one error and most contain several.  However, none of these proofs is totally wrong.  They just need some adjusting.  For each proof, find any errors that you can and suggest a correction.\\
+
+For clarification, separate solutions for an individual proof are separated by a single horizontal bar and proofs of different claims are separated by double horizontal bars.\\
+
+As you read these, please keep in mind that you are reading the work of your classmates.  It is very inappropriate to make fun of anyone's work.
+
+\newpage
+
+\begin{center} \underline{\hspace{\textwidth}}\\ \underline{\hspace{\textwidth}} \end{center}
+
+\begin{claim}
+If $n \in \Z$, then $5n^2+3n+7$ is odd.
+\end{claim}
+
+\begin{proof} \openup 2em{Suppose $n$ is some integer.
+\begin{description}
+\item {Case 1:} Assume $n$ is an even integer.  By definition of an even integer $n=2k$ for some integer $k$.  Then $5n^2+3n+7=5(2k)^2+7=20k^2+6k+6+1.$  We can then factor out a $2$ so $5n^2+3n+7=2(10k^2+3k+3)+1$.  Let $p = 10k^2+3k+3$ so that $5n^2+3n+7=2p+1$.  Which is the definition of an odd integer, thus $5n^2+3n+7$ is odd.
+\item{Case 2:} Assume $n$ is an odd integer.  By definition of an odd integer $n=2k+1$ for some integer $k$.  Then $5n^2+3n+7$ is equal to $5(2k+1)^2+3(2k+1)+7=20k^2+16k+14+1$.  We can factor out a 2 so $5n^2+3n+7=2(10k^2+8k+7)+1$.  Let $p=10k^2+8k+7$ so that $5n^2+3n+7=10k^2+8k+7$.  Which is the definition of an odd integer thus, $5n^2+3n+7$ is odd.
+\item{Case 3:} Assume $n$ is equal to zero.  Then $5(0)^2+3(0)+7=7$, by definition $7$ is an odd integer.  Thus, $5n^2+3n+7$ is odd.  
+\end{description}
+Since all three cases math up then for some integer $n$, $5n^2+3n+7$ is odd.}
+\end{proof}
+
+\begin{center} \underline{\hspace{\textwidth}} \end{center}
+
+\begin{proof} \openup 2em 
+Suppose $n$ is an odd integer.  Thus, $n=2k+1,k\in\Z$.  We substitute for $n$ in $n^2+7n+6$ to get:
+\openup -1em
+	\begin{align*}
+	(2k+1)^2+7(2k+1)+6\\
+	4k^2+4k+1+14k+7+6\\
+	4k^2+18k+14\\
+	2(2k^2+9k)+14\\
+	\end{align*}
+We let $m=(2k^2+9k+7)$ to get $2m+14$.  We know that $m$ will be some integer, therefore, $n^2+7n+6$ is even.
+\end{proof}
+
+\begin{proof} \openup 1em
+Suppose $n$ is an even integer.  Thus,$n=2k,k\in\Z$.  We substitute for $n$ in $n^2+7n+6$ to get:
+	\begin{align*}
+	(2k)^2+7(2k)+6\\
+	4k^2+14k+6\\
+	2(2k^2+7k)+6
+	\end{align*}
+We let $m=(2k^2+7k+3)$ to get $2m+6$.  We know that $m$ is some integer, therefore, $n^2+7n+6$ is even.
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}}\\ \underline{\hspace{\textwidth}} \end{center}\newpage
+
+\begin{claim}
+If $x \in \R$ and $x \notin \set{-1,0,1}$, then $x^3<x$ or $x^3>x$.
+\end{claim}
+
+\begin{proof} \openup 1em (By Contrapositive) [If $x \in \R$ and $x = x^3$, then $x \in \set{-1,0,1}$.]  Suppose $x=x^3$, then 
+ \[0=x^3-x\]
+ \[=x(x^2-1).\]
+ The zeros of the equation $0=x(x^2-1)$ are 0, -1, and 1.  Therefore $x \in \set{-1,0,1}$.
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}} \end{center}
+
+\begin{proof} \openup 2em  Suppose that $X \in \R$.  We can say that $x(x+1)(x-1)>0$ or $x(x+1)(x-1)<0$ is true when $x \notin \set{-1,0,1}$.  We can rewrite the inequality $x(x+1)(x-1)>0$ to get $x(x^2-1)>0$ which can be factor to $x^3-x>0$ and finally expressed as $x^3>x$.\\
+  We can do the same to the inequality $x(x+1)(x-1)<0$ to get $x(x^2-1)<0$ which can be factored to $x^3-x<0$ and finally expressed as $x^3<x$.\\
+  Therefore, if $X \in \R$ \& $x \notin \set{-1,0,1}$, then $x^3>x$ or $x^3<x$.
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}}\\ \underline{\hspace{\textwidth}} \end{center}
+\begin{claim}  Suppose $a,b,c,d \in \Z$.  If $a \divides b$ and $c \divides d$, then $ac \divides bd.$
+\end{claim}
+
+\begin{proof} \openup 2em
+Suppose $a,b,c,d \in \Z$ so that $a \divides b$ and $c \divides d$.  For $a$ to divide $b$, we need an integer $k$ so that $ak=b$.  For $c$ to divide $d$, we need an integer $\ell$ so that $c\ell=d$.  We can multiple each of these sides to give us $bd=akc\ell$ which can be rewritten as $bd=(ac)(k\ell)$.  We can make $k\ell$ some integer $m$ giving us $bd=(ac)(m)$.  Showing that $ac$ divides $bd$.  Therefore, if $a \divides b$ and $c \divides d$, then $ac \divides bd.$
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}} \end{center}
+\begin{proof} \openup 1.5em
+By definition, $a$ divides $b$ if $ak=b$ for $k \in \Z$.  That applies to $c$ dividing $d$, so we have $c\ell=d.$  Therefore, $bd=(ak)(c\ell)$ or $bd=(ac)(k\ell)$ which shows that $ac$ is a multiple of $bd$.
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}}\\ \underline{\hspace{\textwidth}} \end{center}
+\begin{claim}  Suppose $x,y \in \R$.  If $x<y$, then $\ds x<\frac{x+y}{2} < y.$
+\end{claim}
+
+\begin{proof}  \openup 2em Suppose $x,y \in \R$, then $x<\frac{x+y}{2}$ where $x=\frac{2x}{x} = \frac{x+x}{2}$.  By substituting, $\frac{x+x}{2}<\frac{x+y}{2}$ is equivalent to $\frac{2x}{2}<\frac{x+y}{2}$ in which, $x< \frac{x+y}{2}.$  If $\frac{x+y}{2}<y$ and $y = \frac{2y}{2}=\frac{y+y}{2}$, then $\frac{x+y}{2}<\frac{y+y}{2}$.  After multiplying both sides by 2 we get $x+y<y+y$.  Then, by subtracting $y$ we can see that $x<y$.  Therefore, $x<\frac{x+y}{2}<y$.
+\end{proof}
+\begin{center} \underline{\hspace{\textwidth}} \end{center}
+\begin{proof} \openup 2em
+Let $x,y\in \R$ and suppose $x<y$.  Multiplying each side by $2$, $x<y = 2x<2y$ and subtracting an $x$ and $y$ from both sides we have $-x-y<-y-x$.  Adding $2x$ to the left side, and $2y$ to the right side of the inequality, $2x-x-y<2y-y-x$ which can be rewritten as $2x<x+y<2y$.  Dividing each expression by $2$ we see that when $x<y$ then $x< \frac{x+y}{2} < y$.
+\end{proof}
+
+\begin{center} \underline{\hspace{\textwidth}}\\ \underline{\hspace{\textwidth}} \end{center}
+
+\begin{claim}
+Suppose $x$ and $y$ are positive real numbers.  If $x<y$, then $x^2<y^2$.
+\end{claim}
+
+\begin{proof}
+\openup 2em {Let $x,y \in \R$.  Suppose $x^2<y^2$.  Subtracting $y^2$ from both sides, we get $x^2-y^2<0$.  This can also be written as $(x+y)(x-y)<0.$  By dividing both sides by $(x+y)$, we get $x<y$.  Therefore, if $x<y$, then $x^2<y^2$.}
+\end{proof}
+
+\begin{center} \underline{\hspace{\textwidth}} \end{center}
+
+\begin{proof}
+\openup 2em {Let $x<y$.  By subtracting $y$ from both sides we see $x-y<0$.  This can also be written as,
+	\begin{align*}
+	& x^4-y^4<0\\
+	& \frac{=(x^2+y^2)(x^2-y^2)}{(x^2+y^2)} \begin{array}{c} < \\ \ \end{array} \frac{0}{(x^2+y^2)}\\
+	&= x^2-y^2 <0\\
+	&=x^2<y^2
+	\end{align*}
+	Therefore, if $x<y$, then $x^2<y^2$.}
+\end{proof}
+\end{document}
+
+
+
+

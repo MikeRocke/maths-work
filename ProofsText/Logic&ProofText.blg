@@ -1,0 +1,77 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Logic&ProofText.aux
+A level-1 auxiliary file: FrontMatter/License.aux
+A level-1 auxiliary file: FrontMatter/Forward.aux
+A level-1 auxiliary file: P3StatementsReview/P3AndOrNot.aux
+A level-1 auxiliary file: P4Sets/P4Sets.aux
+A level-1 auxiliary file: P5AxiomaticSystems/P5Axiomatic.aux
+A level-1 auxiliary file: P5NBasicExistence/P5NBasicExistence.aux
+A level-1 auxiliary file: P6DirectProof/P6DirectProof.aux
+A level-1 auxiliary file: P7Cases/P7Cases.aux
+A level-1 auxiliary file: P7NProof_Reading/P7NProofReading.aux
+A level-1 auxiliary file: P8ProofbyContrapositive/P8Contrapositive.aux
+A level-1 auxiliary file: P10ProofbyContradiction/P10Contradiction.aux
+A level-1 auxiliary file: P11BiconditionalandExistence/P11BicEx.aux
+A level-1 auxiliary file: P12ExistenceandUniqueness/P12ExandU.aux
+A level-1 auxiliary file: P13ProofsInvolvingSets/P13Sets.aux
+A level-1 auxiliary file: P14Disproof/P14Disproof.aux
+A level-1 auxiliary file: P15Induction-Day1/P15Induction.aux
+A level-1 auxiliary file: P16Induction-Day2/P16Induction.aux
+A level-1 auxiliary file: P17Induction-Day3/P17Induction.aux
+A level-1 auxiliary file: P18RelationsAndFunctions/P18RelFun.aux
+A level-1 auxiliary file: P19Bijectivity/P19Injectivity.aux
+A level-1 auxiliary file: P20Inverses/P20Inverses.aux
+A level-1 auxiliary file: P21Countability/P21Countability.aux
+A level-1 auxiliary file: P22InfiniteCardinality/P22Cardinality.aux
+A level-1 auxiliary file: End.aux
+I couldn't open database file env.bib
+---line 67 of file Logic&ProofText.aux
+ : \bibdata{env
+ :             }
+I'm skipping whatever remains of this command
+The style file: plain.bst
+I found no \citation commands---while reading file Logic&ProofText.aux
+I found no database files---while reading file Logic&ProofText.aux
+You've used 0 entries,
+            2118 wiz_defined-function locations,
+            521 strings with 4773 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 3 error messages)

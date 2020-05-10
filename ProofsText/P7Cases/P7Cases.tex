@@ -1,0 +1,64 @@
+
+\chapter{More on Direct Proof: Treating Cases}
+
+Using cases to write proofs allows us to assume some information about the statement we are trying to prove.  This added information is often a helpful tool in writing proofs.
+
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Break the $P$ statement in $P \Rightarrow Q$ into cases
+	\item Write proofs using cases
+	\item Write proofs about new definitions
+	\end{itemize}
+}}
+\end{center}
+
+\noindent Our focus is still on proving statements of the form $P \Rightarrow Q$.  Very often, $P$ doesn't give us much information to work with.  For instance, consider the following two statements.
+	\begin{description}
+	\item[Statement 1:]  If $n$ is an odd integer, then $n^2$ is an odd integer.
+	\item[Statement 2:]  If $n$ is an integer, then $n^2+7n+6$ is even.
+	\end{description}
+	
+By now, you have probably figured out that to prove Statement 1, you would start out by saying ``Suppose $n$ is an odd integer.  Then $n=2k+1$ for $k \in \Z.$''  However, in Statement 2, we only know that $n$ is an integer, so it isn't clear where we might start our proof.  We might consider the case when $n$ is even and the case when $n$ is odd separately, so we can make an assumption like we did for Statement 1.  Since an integer must be either even or odd, proving the statement for these two cases will give the desired result.  \\
+
+To keep things light for today, we'll write proofs about the following definition to give us practice with cases.
+
+\begin{definition}[Parity]  Two integers have the \textbf{same parity} if they are both even or they are both odd.  Otherwise, they have \textbf{opposite parity}.
+\end{definition}
+
+\begin{question}
+\item Prove that if $n$ is an integer, then $n$ and $n+2$ have the same parity by considering the case when $n$ is even and the case when $n$ is odd separately. 
+
+\newpage
+
+\item Prove that if $n$ is an integer, then $n$ and $n^2$ have the same parity.
+
+\vspace{4in}
+
+\item Prove that if $n$ is an integer, then $n$ and $n+3$ have opposite parity.
+
+\newpage
+\item Prove that if two integers have the same parity, then their sum is even.
+
+\vspace{4in}
+
+\item Prove that if $n$ is an integer, then $2 \divides (n^2-n)$.  (Note:  You should prove this statement now with cases, but there is a much shorter proof possible that doesn't require a proof by cases.  See if you can figure it out after you've finished this section.)
+\newpage
+\item Prove that if $x\in \R -\set{0,1}$, then either $x^2<x$ or $x^2>x$.  (Recall: $x \in \R - \set{0,1}$ if $x \in \R$ and $x \not\in \set{0,1}$.)
+\newpage
+\item Prove that if $n$ is an integer, then $3 \divides (n^3-n)$.
+\end{question} 
+\newpage
+Using proof by cases can be very tempting, even when it isn't necessary.  Often times we'll initially write a proof by cases because the added assumption we get to make helps us see things more clearly.  Consider the following claim.
+\begin{claim}  If $n$ is an integer, then $(2n+3)+(-1)^n(2n+1)$ is even.
+\end{claim}
+\begin{question}[resume]
+\item Prove Claim 5.1 by using cases.  
+\vspace{3.5in}
+\item Prove Claim 5.1 by considering the parity of $2n+3$ and $(2n+1)$.
+\end{question}
+
+
+
+
+

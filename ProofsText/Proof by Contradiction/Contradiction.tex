@@ -1,0 +1,222 @@
+\documentclass[12 pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin 0.2in
+%\textheight 10in
+%\voffset -1.25in
+%\textwidth 6.2in
+%\parindent 0.25in
+%\itemindent 0.in
+%\leftmargin 0.5in
+%\hoffset -0.8in
+
+%\addtolength{\textwidth}{ain}
+%\addtolength{\hoffset}{-bin}
+%\addtolength{\textheight}{cin}
+%\addtolength{\voffset}{cin}
+%a=2b
+
+\addtolength{\textwidth}{1.in}
+\addtolength{\hoffset}{-.5in}
+\addtolength{\textheight}{1.in}
+\addtolength{\voffset}{-1.in}
+
+
+%Packages
+\usepackage{graphicx}
+\usepackage[mathcal,mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm, amssymb,epsfig,amscd,multicol}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{arydshln}
+%\usepackage{mathptmx}
+
+%New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\ds}{\displaystyle}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{plain}
+
+\newtheoremstyle{mytheorem}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+  
+ 	\theoremstyle{mytheorem}
+  	\newtheorem{theorem}{Theorem}[section]%[numbering]
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{claim}{Claim}
+
+\newtheoremstyle{myexample}% name of the style to be used
+  {22pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {22pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{myexample}
+	\newtheorem{example}{Example}[section]
+	
+\newtheoremstyle{mydefinition}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {.}% punctuation between head and body
+  {5 pt plus 1pt minus 1pt}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+	\theoremstyle{mydefinition}
+	\newtheorem{definition}{Definition}
+
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{center}
+\textbf{Proof by Contradiction}
+\end{center}
+
+I've probably referred to all of our proof techniques as ``powerful,'' but the method of contradiction really is amazingly powerful.  Most often, we employ proof by contradiction when proving a claim for which there is no clear beginning for the proof.  You'll see some examples soon.
+\begin{center}
+\fbox{\parbox{5.5in}{Goals:
+	\begin{itemize}
+	\item Develop the logic behind proof by contradiction
+	\item Find the contradiction in given proofs by contradiction
+	\item Write proofs using contradiction
+	\end{itemize}
+}}
+\end{center}
+
+\noindent It is very possible that you've employed a contradiction argument before as it is common even outside of mathematics.  The structure of the method is simple.  We begin with a statement $P$ that is true.  The statement $P$ itself may be quite complicated.  It could be a conjunction, disjunction, conditional statement, or any combination thereof.  To argue that $P$ is true we begin by supposing that $P$ is false.  We then derive a series of statements using correct deductive reasoning.  With any luck we manage to derive an \textit{absurdity}, that is, a statement that is always false.  Often times the absurdity will take the form $C \wedge \sim C$, but this is not always the case.
+
+\begin{enumerate}
+\item Complete the following truth table for $C \wedge \sim C$ to show that this statement is an absurdity.\\
+	{\tabulinesep=.1in
+	\begin{tabu}{c|c:c}
+	$C$ & $\sim C$ & $(C \wedge \sim C)$\\
+	\hline
+	T & \ & \ \\
+	F & \ & \ \\
+	\end{tabu}}
+	
+\item The general form of the argument in a proof by contradiction is $P \Rightarrow (C \wedge \sim C)$.  Fill in the truth table for this argument form to see that it is true precisely when $P$ is true.\\
+	{\tabulinesep=.1in
+	\begin{tabu}{cc|c:c}
+	$P$ & $C$ & $(C \wedge \sim C)$ & $P \Rightarrow (C \wedge \sim C)$\\
+	\hline
+	T & T & \ & \ \\
+	T & F & \ & \ \\
+	F & T & \ & \ \\
+	F & F & \ & \ \\
+	\end{tabu}
+	}
+\end{enumerate} 
+
+\vspace{.5in}
+
+\noindent  Let's take a look at using contradiction to prove the following claim.  The proof given below is adapted from the one given in your text.
+
+\begin{claim} If $a,b \in \Z$, then $a^2-4b-3 \neq 0$.
+\end{claim}
+
+Here, $P$ is the conditional statement ``If $a,b \in \Z$, then $a^2-4b-3 \neq 0$.''  Recall then that $\sim P$ will be $a, b \in \Z$ and $a^2-4b-3=0$.  This is how our proof will begin.\\
+
+Notice, that there is no given $C$.  The statement of the claim gives no indication of what the contradicting piece will be.  We are forced deduce things from our initial claim seemingly at random until we stumble across a contradiction.\\
+
+Finally, like contrapositive, we want to tell our reader how we are proving the claim so that he or she is not confused by our proof.  Usually, we begin proofs by contradiction with the phrase ``Suppose for the sake of contradiction that.''\\
+
+\begin{proof}  Suppose for the sake of contradiction that $a,b \in \Z$ and $a^2-4b-3 = 0$.  Then $a^2=4b+3=4b+2+1=2(2b+1)+1.$  Since $2b+1$ is an integer, we have that $a^2$ is odd by definition.  Recall from a previous proof that if $a^2$ is odd then $a$ is odd, so $a=2c+1$ for $c \in Z$.  By substitution, we have
+	\begin{align*}
+	a^2-4b-3 &= 0,\\
+	(2c+1)^2-4b-3 &= 0, \\
+	4c^2+4c+1 -4b-3 &= 0,\\
+	4c^2+4c-4b-2 &= 0,\\
+	2(2c^2+2c-2b-1) &=0, \\
+	2c^2 +2c -2b &= 1, \\
+	2(c^2+c-b) &= 1.
+	\end{align*}
+Since $(c^2+c-b) \in \Z$, the last equality gives us that $1$ is an even integer.  Since we know 1 to be an odd integer, we have a contradiction.
+\end{proof}
+
+\noindent  There are definitely a few things to point out about this process and this proof now that we've seen an example.  First, notice that the contradiction didn't take the form $C \wedge \sim C$.  However, we did arrive at a clearly false statement.  Second, no planning went in to decide to use $\sim P$ to show that $1$ is even.  After several lines of manipulation it became clear that this contradiction was possible.  Arguable the hardest part of proof by contradiction is recognizing your contradiction when you find it.  Third, it is very likely that there are many other contradictions that can be derived from assuming $\sim P$.  In general, there is no one way to write a contradiction proof.  Finally, our proof ends with an explanation to our reader of why we have a contradiction.  Unfortunately, this aspect is often left out of proofs by contradiction and it is the reader's responsibility to recognize the contradiction for what it is.\\
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item The following proofs are written using contradiction, but no explanation is given as to what the contradiction is.  Read the proof and find the contradiction.
+	\begin{enumerate} \itemsep.75in
+	\item There is no greatest even integer.
+		\begin{proof}  Suppose for sake of contradiction that there is a greatest even integer $N$.  Then for all $k \in \Z$, $n=2k \leq N$.  Let $M = N+2$.
+		\end{proof}
+	\item The sum of any rational number and any irrational number is irrational.
+		\begin{proof}  For the sake of contradiction, suppose there exists rational number $x$ and irrational number $y$ such that $(x+y)$ is rational.  Then $x =(a/b)$ for $a,b \in \Z$ and $b \neq 0$ and $(x+y) = (c/d)$ for $c,d \in \Z$ and $c \neq 0$.  Using substitution, 
+			\begin{align*}
+			x+y &= \frac{c}{d},\\
+			\frac{a}{b} +y &= \frac{c}{d},\\
+			y &= \frac{a}{b}-\frac{c}{d}, \\
+			y &= \frac{ad-bc}{bd}.
+			\end{align*}
+		\end{proof}
+	\item The cube root of 2 is irrational.
+	\begin{proof} Suppose for sake of contradiction that $\sqrt[3]{2}$ is rational.  Then there exist integers $a$ and $b \neq 0$ such that $\sqrt[3]{2} = (a/b)$ and we may assume that $(a/b)$ is fully reduced.  Using algebra, we see
+	\begin{align*}
+	2 &= \frac{a^3}{b^3} \\
+	2b^3 &= a^3.
+	\end{align*}
+	Since $b^3 \in \Z$, we have that $a^3$ is even which we have seen previously means that $a$ is even.  Then $a = 2c$ for $c \in \Z$ and using substitution again,
+	\begin{align*}
+	2b^3 &= (2c)^3, \\
+	2b^3 &= 8c^3, \\
+	b^3 &= 4c^3.
+	\end{align*}
+	\end{proof}
+	\vspace{.75in}
+	\end{enumerate}
+
+
+\item It's time to write some contradiction proofs of your own.  As you work on each of the following, carefully consider how you might prove the claim without contradiction.  
+
+\begin{claim}  Suppose $n \in \Z$.  If $n$ is odd, then $n^2$ is odd.
+\end{claim}
+\vspace{2in}
+\begin{claim}  Suppose $a,b \in \R$.  If $a$ is rational and $ab$ is irrational, then $b$ is irrational.
+\end{claim}
+\vspace{3in}
+\begin{claim}  For every $x \in [\pi/2,\pi]$, $\sin(x)-\cos(x) \geq 1$.
+\end{claim}
+\vspace{4in}
+A point $P=(x,y) \in \R^2$ is called \textbf{rational} if both $x$ and $y$ are rational.  That is, $P=(x,y)$ is rational if $P \in \mathbb{Q}^2$.  An equation $F(x,y)=0$ is said to have a \textbf{rational point} if there exists $x_0,y_0 \in \mathbb{Q}$ such that $F(x_0,y_0)=0$.  
+\begin{claim}  The curve $x^2+y^2-3=0$ has no rational points.
+\end{claim}
+\end{enumerate}
+\end{document}
+
+
+
+
