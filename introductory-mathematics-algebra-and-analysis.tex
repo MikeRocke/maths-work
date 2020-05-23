@@ -2,7 +2,8 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{venndiagram}
-
+\usepackage{float}
+\usepackage{amsthm}
 
 \title{Introductory Mathematics: Algebra and Analysis Solutions}
 \author{Michael Rocke}
@@ -72,13 +73,11 @@ m) $ i = \{\emptyset, \{\emptyset\}, 0\}, ii = \{\emptyset, \{\emptyset\}, 0\}, 
 
 \subsubsection{1.3}
 
-\begin{venndiagram3sets}
-\end{venndiagram3sets}
 
 a)
 
 
-\begin{figure}
+\begin{figure} [H]
 	\begin{venndiagram3sets}
 		\fillACapBCapC
 	\end{venndiagram3sets}
@@ -87,7 +86,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillACapBNotC
 	\end{venndiagram3sets}
@@ -97,7 +96,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillACapCNotB
 	\end{venndiagram3sets}
@@ -107,7 +106,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillBCapCNotA
 	\end{venndiagram3sets}
@@ -115,7 +114,7 @@ a)
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyA
 	\end{venndiagram3sets}
@@ -124,7 +123,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyB
 	\end{venndiagram3sets}
@@ -133,7 +132,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyC
 	\end{venndiagram3sets}
@@ -142,7 +141,7 @@ a)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillNotABC
 	\end{venndiagram3sets}
@@ -153,16 +152,45 @@ b)
 
 
 
-
-\begin{figure}
+\begin{figure} [H]
 	\begin{venndiagram3sets}
-		\fillBCapCNotA
+		\fillACapBCapC
 	\end{venndiagram3sets}
-	\caption{ $ (A \cup (B' \cup C'))' $}
+	\caption{ $ $}
 \end{figure}
 
 
-\begin{figure}
+
+\begin{figure}[H]
+	\begin{venndiagram3sets}
+		\fillACapBNotC
+	\end{venndiagram3sets}
+	\caption{ $  $}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+	\begin{venndiagram3sets}
+		\fillACapCNotB
+	\end{venndiagram3sets}
+	\caption{ $ $}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+	\begin{venndiagram3sets}
+		\fillBCapCNotA
+	\end{venndiagram3sets}
+	\caption{ $ $}
+\end{figure}
+
+
+
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyA
 	\end{venndiagram3sets}
@@ -171,7 +199,7 @@ b)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyB
 	\end{venndiagram3sets}
@@ -180,7 +208,7 @@ b)
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillOnlyC
 	\end{venndiagram3sets}
@@ -188,11 +216,98 @@ b)
 \end{figure}
 
 
-\begin{figure}
+
+\begin{figure}[H]
 	\begin{venndiagram3sets}
 		\fillNotABC
 	\end{venndiagram3sets}
 	\caption{ $ (A \cup B \cup C)' $}
 \end{figure}
 
+
+\subsubsection{1.4}
+
+a) Prove that ${1, 2, 3} = {1, 1, 2, 3}$
+
+\begin{proof}
+Lets define the following sets
+$A = \{1, 2, 3\}$ and $B = \{1, 1, 2, 3\}$. For two sets to be equal, every element in one set must belong to the other, meeting the property $A = A \cup B = B$.
+Just looking empirically, $A$ contains the elements $1, 2, 3$ and B contains the same elements. 
+We can also prove this by defining both sets as follows
+$A = \{a | a \in \mathbb{N},  1 \leq a \leq 3\}$ and $B = \{b | b \in \mathbb{N},  1 \leq b \leq 3\}$ which is the same definition
+\end{proof}
+
+b) Using $P(A)$ to represent the Power Set of $A$. How many elements are there in the set $P(\{1,2,3\})$? $2^3 = 8$. These are: $\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}$
+
+c)  Deterime the cardinality of $P(\emptyset)$? $2^0 = 1$ resulting in $\{\emptyset\}$
+
+d) $P(P(\emptyset))$? $2^1 = 2$ $\{\emptyset, \{\emptyset\}\}$
+
+e)  $P(P(P(P(P(P(\emptyset)))))))$? Using substitution, we can see $P(P(P(P(\{\emptyset, \{\emptyset\}\}))))$, and the cardinality of a powerset is defined $2^n$ where  $n$ is the cardinality of the  argument set.  This becomes the following
+
+\begin{align*}
+A_1 = P(\emptyset), |A_1| = 2^0 = 1\\
+A_2 = P(A_1), |A_2| = 2^1 = 2 \\
+A_4 = P(A_2), |A_4| = 2^2 = 4 \\
+A_16 = P(A_4), |A_ 16| = 2^4 = 16 \\
+A_65536 = P(A_16), |A_ 65536| = 2^16 = 65536
+\end{align*}
+
+\subsubsection{1.5}
+
+a) Draw Venn diagrams illustrating the truth to De Morgan's laws
+
+$(A \cup B)' = A' \cap  B'$
+
+\begin{figure}[H]
+	\begin{venndiagram2sets}
+		\fillNotAorB
+	\end{venndiagram2sets}
+= \\
+	\begin{venndiagram2sets}
+		\fillNotA
+	\end{venndiagram2sets}
+    $\cap$
+    \begin{venndiagram2sets}
+    	\fillNotB
+    \end{venndiagram2sets}
+= \\
+(    \begin{venndiagram2sets}
+    	\fillA
+    \end{venndiagram2sets}
+$\cup$
+    \begin{venndiagram2sets}
+    	\fillB
+    \end{venndiagram2sets})'
+\end{figure}
+
+$(A \cap B)' = A' \cup B'$
+
+\begin{figure}[H]
+	\begin{venndiagram2sets}
+		\fillNotAorNotB
+	\end{venndiagram2sets}
+	= \\
+	\begin{venndiagram2sets}
+		\fillNotA
+	\end{venndiagram2sets}
+	$\cup$
+	\begin{venndiagram2sets}
+		\fillNotB
+	\end{venndiagram2sets}
+	= \\
+	(    \begin{venndiagram2sets}
+		\fillA
+	\end{venndiagram2sets}
+	$\cap$
+	\begin{venndiagram2sets}
+		\fillB
+	\end{venndiagram2sets})'
+\end{figure}
+
+b) Prove De Morgan's laws.
+
+\begin{proof}
+	First we prove $(A \cup B)' = A' \cap B'$. Lets denote the set $X = (A \cup B)'$ and $Y = A' \cap B'$. In English, $X$ contains all the items that aren't in either A or B. That would state that $A$ is not a subset of $X$ and same goes for $B$, e.g. $X = U - (A + B)$ where U is the universal set. $Y$ in English states that it contains all the elements which are not in $A$ and not in $B$, e.g. $Y= U - A -  B$, which we can see that $Y = X$
+\end{proof}
 \end{document}

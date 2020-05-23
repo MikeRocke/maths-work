@@ -750,14 +750,61 @@ In the adjoining figure find a, b, c, d, e
 	\end{scriptsize}
 	\end{tikzpicture}
 	
-
+If a, b, c, d, e are areas
 $a = \frac{1}{2} 1 \cdot 1 = \frac{1}{2}$\\
 $b = \frac{1}{2} 1 \cdot (\sqrt{1^2 + 1^2}) = \frac{\sqrt{2}}{2}$\\
 $c = \frac{1}{2} 1 \cdot (\sqrt{1^2 + \sqrt{2^2}}) = \frac{\sqrt{3}}{2}$\\
 $d = \frac{1}{2} 1 \cdot ( \sqrt{1^2 + \sqrt{3^2}}) = \frac{\sqrt{4}}{2} = 1$\\
 $e = \frac{1}{2} 1 \cdot (\sqrt{1^2 + \sqrt{4^2}}) = \frac{\sqrt{5}}{2}$
 
+When a, b, c, d, e are the hypotenuse (diagram does not make this clear)
 
+$a = \sqrt{1^2 + 1^2} =\sqrt{2}$
+$b = \sqrt{\sqrt{2}^2 + 1^2} =\sqrt{3}$
+$c = \sqrt{\sqrt{3}^2 + 1^2} =\sqrt{4}$
+$d = \sqrt{\sqrt{4}^2 + 1^2} =\sqrt{5}$
+$e = \sqrt{\sqrt{5}^2 + 1^2} =\sqrt{6}$
+
+
+\subsubsection{27}
+Show that in any parallelogram the sum of the squares of the diagnols equals the sum of the squares of the four sides. 
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+
+	\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-12,8) -- (-12,6) -- (-8,6) -- (-8,8) -- cycle;
+	\draw [line width=2pt,color=zzttqq] (-12,8)-- (-12,6);
+	\draw [line width=2pt,color=zzttqq] (-12,6)-- (-8,6);
+	\draw [line width=2pt,color=zzttqq] (-8,6)-- (-8,8);
+	\draw [line width=2pt,color=zzttqq] (-8,8)-- (-12,8);
+	\draw [line width=2pt] (-12,8)-- (-8,6);
+	\draw [line width=2pt] (-12,6)-- (-8,8);
+	\draw (-9.12,7.18) node[anchor=north west] {x};
+	\draw (-11.1,7.04) node[anchor=north west] {y};
+	\draw (-10.12,8.54) node[anchor=north west] {a};
+	\draw (-12.3,7.38) node[anchor=north west] {b};
+	\draw (-9.94,5.94) node[anchor=north west] {c};
+	\draw (-7.66,7.34) node[anchor=north west] {d};
+	\begin{scriptsize}
+	\draw [fill=ududff] (-12,8) circle (2.5pt);
+	\draw[color=ududff] (-11.84,8.43) node {$A$};
+	\draw [fill=ududff] (-12,6) circle (2.5pt);
+	\draw[color=ududff] (-11.84,6.43) node {$B$};
+	\draw [fill=ududff] (-8,6) circle (2.5pt);
+	\draw[color=ududff] (-7.84,6.43) node {$C$};
+	\draw [fill=ududff] (-8,8) circle (2.5pt);
+	\draw[color=ududff] (-7.84,8.43) node {$D$};
+	\end{scriptsize}
+	\end{tikzpicture}
+	
+	So using the above statement, we are saying $y^2 + x^2 = a^2 + b^2 + c^2 + d^2$
+	
+	
+	We will prove this as follows.
+	
+	\begin{proof}
+		Treating a parallelogram as two triangles $ABD$ and $CBD$, we can apply the pythagorean formula to get the following,
+		$a^2 + b^2 = y^2$ and $d^2 + c^2 = y^2$. Doing the same for triangles $ACD$ and $ABC$ we get $a^2 + d^2 = x^2$ and $b^2 + c^2 = x^2$.Because we are dealing with a parallelogram, we know that the length of $b = d$ and $a = c$ and $x = y$ regardless of the inner angles. This also means $x^2 = y^2$. Given that, I can say $2(a^2 + d^2) = 2(x^2)$ or $a^2 + a^2 + d^2 + d^2 = x^2 + x^2$ and then replacing a $a^2 =  b^2$ $d^2 = c^2$ and $y^2 = x^2$ I get $a^2 + b^2 + c^2 + d^2 = x^2 + y^2$, thus completing the proof
+	\end{proof}
 
 \section{Algebra}
 
