@@ -805,6 +805,122 @@ Show that in any parallelogram the sum of the squares of the diagnols equals the
 		Treating a parallelogram as two triangles $ABD$ and $CBD$, we can apply the pythagorean formula to get the following,
 		$a^2 + b^2 = y^2$ and $d^2 + c^2 = y^2$. Doing the same for triangles $ACD$ and $ABC$ we get $a^2 + d^2 = x^2$ and $b^2 + c^2 = x^2$.Because we are dealing with a parallelogram, we know that the length of $b = d$ and $a = c$ and $x = y$ regardless of the inner angles. This also means $x^2 = y^2$. Given that, I can say $2(a^2 + d^2) = 2(x^2)$ or $a^2 + a^2 + d^2 + d^2 = x^2 + x^2$ and then replacing a $a^2 =  b^2$ $d^2 = c^2$ and $y^2 = x^2$ I get $a^2 + b^2 + c^2 + d^2 = x^2 + y^2$, thus completing the proof
 	\end{proof}
+\subsubsection{28}
+A side of one square, equals a diagonal of a second square. Find the ratio of the area of the larger square to that of the smaller square. 
+
+Let $a$ be the side of the fiirst square, and $a^2$ be the area of the first square
+
+Given $a$ is a diagonal of a second square, we can use the pythagorean formula $base^2 + height^2 = hypotenuse^2$ and given the second square is a square, $base^2 = height^2$, which we can substitute $hypotenuse = a$ to make $a^2 = 2(base^2)$. meaning the ratio of the two areas will be 2
+
+\subsubsection{29}
+A side of one equilateral triangle equals the height of a second equilateral triangle. Find the ratio of the perimeter of the larger trianger to that of the smaller.
+
+Let $a$ be the side of the first equilateral triangle. The perimeter of the first triangle will be $3a$
+
+Given $a$ is the height of the second equilateral triangle, we need to find the length of its side, which we will call $b$. We will use the Pythagorean formula which will give us $b^2 = a^2 + (\frac{1}{2}b)^2$, when rearranged $\frac{3}{4}b^2 = a^2$, giving us the ratio $\frac{2}{3}\sqrt{3}$
+
+
+\subsection{2}
+
+\subsubsection{1}
+
+The diameter of one circle equals the radius of the second circle. What is the ratio of their areas.
+
+let $d$ be the diameter of the first circle, and $2d$ the diameter of the second as $d = 2r$ where $r$ is the radius of the first circle.
+
+We know that the area of the first circle is $\pi r^2$ or $\pi (\frac{d}{2})^2$ and the area of the second ciircle will be $\pi d^2$ so the ratio of their areas is $\frac{1}{4}$
+
+\subsubsection{2}
+
+The ratio of the areas of two circles of radii $R$ and $r$ is $2/1$. What is the ratio $R/r$ of their radii?
+
+Given the ratio between the two circles is $2/1$ aka one is twice as big in area as the other, then to figure the ratio of their radiii,
+
+$A_1 = 2\cdot A_2$ where $A_1 = \pi R^2$ and $A_2 = \pi r^2$ so we have $\cancel{\pi} R^2 = 2\cdot \cancel{\pi} r^2$ so $R = \sqrt{2} r$
+
+\subsubsection{3}
+
+Find the area of a sector of a ciircle of radius 10 whos central angle is 
+
+For a circle, the area will be $A = \pi 10^2 = 100\pi$
+
+a) $60\degree = \frac{100\pi}{6} = \frac{50}{3} \pi$ 
+
+b) $90\degree = \frac{100\pi}{4} = 25\pi$
+
+c) $48\degree = \frac{100\pi}{7.5} = \frac{40}{3} \pi$
+
+\subsubsection{4}
+Two concentric circles have circuumferences $30\pi$ and $40\pi$. Find the area of the ring-shaped region between them.
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt] (0,0) circle (1.5cm);
+	\draw [line width=2pt] (0,0) circle (2cm);
+	\draw (0.08,-0.16) node[anchor=north west] {AB = 15};
+	\draw (-1.26,-0.38) node[anchor=north west] {CA = 20};
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0,0) circle (2pt);
+	\draw[color=uuuuuu] (0.16,0.39) node {$A$};
+	\draw [fill=uuuuuu] (1.5,0) circle (2pt);
+	\draw[color=uuuuuu] (1.66,0.39) node {$B$};
+	\draw [fill=uuuuuu] (-2,0) circle (2pt);
+	\draw[color=uuuuuu] (-1.84,0.39) node {$C$};
+	\draw [fill=uuuuuu] (-1,0) circle (2pt);
+	\end{scriptsize}
+	\end{tikzpicture}
+
+So given two circles and the forumula $circumference = \pi \cdot diameter$, we know that the radii for the two circles are $15$ and $20$ respectively.
+To work out the ring shape between them, $A_{2} - A_{1} = \pi 20^2 - \pi 15^2 = \pi (20^2 - 15^2) = \pi (400 - 225) = 175\pi$ where $A_{2}$ is the area of the bigger circle and $A_{1}$ the smaller circle.
+
+\subsubsection{5} 
+Show that the area of the ring-shaped region between two concentric circles equals the area of a circle whose diameter is a chord of the outer circle which is tangent to the inner circle.
+
+
+
+
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+	\draw [line width=2pt] (0,0) circle (1.5cm);
+	\draw [line width=2pt] (0,0) circle (2cm);
+	\draw [line width=2pt] (1.5067640006909853,1.3151662428079944)-- (1.4753583714722502,-1.3503028089013034);
+	\draw [line width=2pt] (0,0)-- (1.5067640006909853,1.3151662428079944);
+	\draw [line width=2pt] (0,0)-- (1.4753583714722502,-1.3503028089013034);
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0,0) circle (2pt);
+	\draw[color=uuuuuu] (0.0739178778552663,0.1756218592008048) node {$A$};
+	\draw [fill=xdxdff] (1.5067640006909853,1.3151662428079944) circle (2.5pt);
+	\draw[color=xdxdff] (1.5755812604704045,1.5054081076611934) node {$B$};
+	\draw [fill=xdxdff] (1.4753583714722502,-1.3503028089013034) circle (2.5pt);
+	\draw[color=xdxdff] (1.548442765603866,-1.1541643892595834) node {$C$};
+	\end{scriptsize}
+
+	\end{tikzpicture}
+	
+	Let $r_b$ be the radius of the big circle and $r_s$ be the radius of the smaller circle. 
+	The area of the ring shape is $A = \pi ((r_b)^2 - (r_s)^2)$
+
+	Now let us find the length of the chord $BC$ in the diagram. $BC = \sqrt{2(r_b)^2} = \sqrt{2}(r_b)$ and let this be the diameter of a third circle. We can calculate this another way, whereby the hypotenuse $AB = r_b$ and the height of the triangle is $r_s$. So the base of this right-angle (halfway between $BC$) is $(r_b)^2 - (r_s)^2$.
+	
+
+\subsubsection{6}
+
+a) 
+Area of the square = $a^2$ 
+Area of circle of radius $a$ = $\pi a^2$
+Area of quarter circle $\frac{\pi a^2}{4}$
+Area of shaded $a^2 - \frac{\pi a^2}{2}$
+
+b)
+
+Area of Square = $4a^2$
+Area of one circle = $\pi a^2$
+Area of Shaded = $4a^2 -a^2 - \frac{1}{2}\pi a^2 = 3a^2 - \frac{1}{2}\pi a^2 = a^2 (3 - \frac{\pi}{2})$
+
+
+c)
+
+Area of triangle = $\frac{\sqrt{3}}{4} (2a)^2 = \frac{\sqrt{3}}{4} 4a^2 = \sqrt{3}a^2$
+Area of 3 white areas, which is 3 lots of $60\degree$ segments of a circle, or half a circle $\frac{\pi a^2}{2}$
+Area of shaded = $a^2 (\sqrt{3} - \frac{\pi}{2})$
 
 \section{Algebra}
 
