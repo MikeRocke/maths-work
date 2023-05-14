@@ -1,0 +1,143 @@
+\documentclass[]{report}
+\usepackage{amsmath}
+
+\title{Solutions for Linear Algebra: Step by step by Kuldeep Singh}
+\author{Michael Rocke}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Linear Equations and Matrices}
+\section {Exercises}
+
+\subsection{1}
+
+1.
+
+a) $x - y -z = 3$ is linear, each variable has a degree of 1
+\\
+b) $\sqrt{x} + y + z = 6$ is not linear, due to the square root of x. 
+\\
+c) $\cos{x} + \sin{y} = 1$ is not linear, due to trigonomic functions for x and y
+\\
+d) $\exp{x + y + z} = 1$  is not linear, due to the exponential function
+\\
+e) $x - 2y + 5z = \sqrt{3}$ is linear, as the square root is not on one of the variables, but is on a constant value of 3. 
+\\
+f) $x = -3y$ is linear
+\\
+g) $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, is linear. No mention of y or z on the right hand side and it equates to a constant value.
+\\
+h) $\pi{}x + y + ez = 5$, is linear. 
+\\
+i) $\sqrt{2}x + \frac{1}{2}y + z = 0$ is linear, the square root is just a coefficient of x
+\\
+j) $\sinh{^{-1}}({x}) = \ln|x + \sqrt{x^2 + 1}| $ is not linear due to the trigonomic and logarithmic functions
+\\
+k) $\frac{\pi}{2}x - \sqrt{2}y + z\sin{\pi} = 0$ is linear. $\sin{\pi}$ is a constant coefficient of z, same goes for y and x. each variable has a degree of 1
+\\
+l) $x^{2^0} + y^{3^0} + z^{3^0} = 0$ is linear. The trick is each power resolves to 1, as $2^0$ and $3^0$ is 1
+\\
+m) $y^{\cos{^2}(x) + \sin{^2}(x)} + x - z = 9$. This is linear, trick is to know that ${\cos{^2}(x) + \sin{^2}(x)} $ is a trig identity, resolving to 1
+\\
+
+2.
+
+a) 
+\begin{align*}
+x + y = 2 \tag{1}\\
+x - y = 0 \tag{2} \\
+\begin{split}
+x + y = 2\\
++(x - y =0)\\
+\hline
+2x = 2\\
+\end{split}\\
+x = 1\\
+y = 1 
+\end{align*}
+
+b)
+\begin{align*}
+2x - 3y = 5\\
+x - y = 2 \\
+2x-2y = 4\\
+\begin{split}
+2x - 3y = 5\\
+-(2x - 2y = 4)\\
+\hline
+-y = 1 \\
+\end{split}\\
+y = -1\\
+x = 1
+\end{align*}
+
+c)
+\begin{align*}
+2x - 3y = 35\\
+x - y = 2\\
+2x - 2y = 4\\
+\begin{split}
+2x - 3y = 35\\
+-(2x - 2y = 4)\\
+\hline
+-y = 31 \\
+\end{split}\\
+y = -31\\
+x = -29
+\end{align*}
+
+
+d) 
+\begin{align*}
+5x - 7y = 2\\
+9x - 3y = 6\\
+3x - y = 2 \\
+15x - 5y = 10\\
+15x - 21y = 6\\
+\begin{split}
+15x - 5y = 10\\
+-(15x - 21y = 6)\\
+\hline
+16y = 4 \\
+\end{split}\\
+4y=1\\
+y=\frac{1}{4}\\
+3x = 2 + \frac{1}{4} = \frac{9}{4}\\
+x = \frac{3}{4}
+\end{align*}
+
+
+e) 
+\begin{align*}
+\pi{}x - 5y = 2\\
+\pi{}x - y = 1\\
+\begin{split}
+\pi{}x - 5y = 2\\
+-(\pi{}x - y = 1)\\
+\hline
+-4y = 1 \\
+\end{split}\\
+y=-\frac{1}{4}\\
+\pi{}x = 1 + y = \frac{3}{4}\\
+x = \frac{3}{4\pi}
+\end{align*}
+
+f)
+\begin{align*}
+ex - ey = 2\\
+ex + ey = 0\\
+\begin{split}
+ex - ey = 2\\
++(ex + ey = 0)\\
+\hline
+2ex = 2 \\
+\end{split}\\
+x = \frac{1}{e}\\
+y = -\frac{1}{e}
+\end{align*}
+
+\end{document}
