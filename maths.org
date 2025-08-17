@@ -1,0 +1,321 @@
+#+title: Maths
+#+OPTIONS: tex:t
+#+LATEX_HEADER: \usepackage{amssymb}
+* Statistics
+** Distributions
+*** Geometric distribution :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       670a42ce-1e8c-43d0-9a60-7890c5f79a52
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 5
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+What is a geometric distribution
+
+**** Answer
+the count of failures before the first success
+*** Uniform continuous distribution :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       8519ca70-86bb-4a6b-b4d1-be7781f0e93b
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+
+What is a uniform continuous distribution
+**** Answer
+a distribution, with constant density over a specified interval. Default of [0,1]
+*** Continuous distribution :drill:
+SCHEDULED: <2025-08-25 Mon>
+:PROPERTIES:
+:ID:       6ec52a57-bfb5-46b0-8e15-8deb3cd09d44
+:DRILL_LAST_INTERVAL: 9.1096
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+Do Continuous distributions have no point value
+
+**** Answer
+correct, as there is infinite real values. So we want to use a density, area under a curve
+*** standard normal distribution :drill:
+SCHEDULED: <2025-08-26 Tue>
+:PROPERTIES:
+:ID:       c39e969c-9931-40f8-938f-e9de096adaf8
+:DRILL_LAST_INTERVAL: 10.3873
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.46
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+
+what is the mean and standard dev
+**** answer
+mean = 0, standard dev of 1
+* Calculus
+** Numbers
+*** Natural numbers :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       d3972397-b04b-4de4-8162-9699f7cf6f1b
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+ what number do they start with
+**** Answer
+1,2,3,4....
+*** Symbols :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       38e43ade-8866-4d9a-ad96-e971a1c4b530
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+Natural Numbers
+**** Answer
+$$\mathbb{N}$$
+*** Whole number :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       1df4f038-cdea-401d-aabd-f629e8a79de6
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+What number do they start with
+**** Answer
+0,1,2,3,4...
+*** Integers
+:PROPERTIES:
+:ID:       c92a6fa0-a11c-4b29-8dca-9e71cc0d2829
+:END:
+**** Integer Set Symbol :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       5ddf0781-3215-4e58-a487-92fafd2b6c94
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+What symbol represents them?
+***** Answer
+\begin{equation}
+\mathbb{Z}
+\end{equation}
+*** Rational Numbers :drill:
+SCHEDULED: <2025-08-20 Wed>
+:PROPERTIES:
+:ID:       88eb1117-c7c5-434c-95c3-c1bdee546e56
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-16 Sat 22:%]
+:END:
+they are $$\mathbb{Z}/\mathbb{Z}$$ except for dividing by zero
+**** Rational number symbol
+what is the symbol
+***** Answer
+$$\mathbb{Q}$$
+*** Irrational Numbers :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       798d486b-079e-4531-bf27-757df96ccf42
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+How would you describe irrational numbers? Can you give an example?
+**** Answer
+Can't be represented as an integer divided by an integer
+Square root of 2 as an example
+*** Algebraic numbers :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       e8172eb5-2512-4554-8a9c-4be854cbd52e
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+How would you describe an Algebraic number
+**** Answer
+Number is a root of a non-zero Polynomial
+Rational numbers and Integers are members
+can represented as roots of polynomials
+*** Transcendental numbers :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       3102f6e8-3482-4082-9d99-1df288c99a85
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+What relationship are Transcendental numbers are to Algebraic numbers?
+Can you give examples?
+
+**** Answer
+These are are real or complex numbers that are not algebraic
+examples Pi and Eulers number
+*** Real Numbers :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       3f20b36e-4660-4053-99c1-76bdbb171e95
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+How would you describe the set of Real numbers, using other number sets
+
+**** Answer
+
+Rational numbers + Irational numbers =
+$$\mathbb{R}$$
+*** Complex numbers
+
+real part of z = (z + zbar) / z
+imaginary z = (z - zbar)/zi
+
+multiplying z and zbar = x^2+y^2
+also known as absolute value of Z
+
+
+(x+iy)/(s+it)
+
+multiply by the conjucate (s-it)
+(xs+yt)/(s^2+t^2) + i(ys-xt)/(s^2+t^2)
+
+
+**** What symbol for the Complex number set :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       78ed6b32-448f-405f-a833-c641a19eff48
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+What symbol for the Complex number set
+***** Answer
+Symbol $\mathbb{C}$
+**** Complex number parts :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       e2961593-9e84-4450-ad92-072f3a77ad70
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+What are the parts of a complex number
+***** Answer
+$Z = x+ iy$ where $x,y \in \mathbb{R}$
+X is called the real part of Z
+y is called the imaginary part of Z
+$i = \sqrt{-1}$ or $i^2 = -1$
+**** Complex number Equality :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       fdb79cc2-4837-4b5a-9c74-47cf296ab4ea
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+Describe the properties of equality for a complex number
+***** Answer
+To be equal, then the two Real Parts are equal, and the two Imaginary parts are equal.
+This helps with $2x + iy = 3a + 2ib$ would mean $2x = 3a$ and $y = 2b$
+**** Complex number conjucate function :drill:
+SCHEDULED: <2025-08-21 Thu>
+:PROPERTIES:
+:ID:       95d8f324-9998-4bc8-b7ff-e09c3190444e
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-08-17 Sun 19:%]
+:END:
+What is the conjucate function?
+***** Answer
+$\bar{\mathbb{Z}}$
+Means the same Real part, same magnitude of the imaginary part, but in opposite direction
+e.g. $Z = x + iy$ becomes $\bar{Z} = x - iy$
