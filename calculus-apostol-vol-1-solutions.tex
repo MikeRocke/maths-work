@@ -267,6 +267,58 @@ Compute the value of the following integrals
   \end{tikzpicture}
   \caption{Plot of [x] function}
   \label{floor_x}
-  \end{figure}
+\end{figure}
+
+\setcounter{section}{25}
+\section{Exercises}
+Compute the value of the following integrals
+\begin{enumerate}[1.]
+  \item $\int_0^3x^2dx = \left. \frac{x^3}{3} \right|_0^3 = \frac{3^3}{3} - \frac{0^3}{3} = 9$
+  \item $\int_{-3}^3x^2dx = \left. \frac{x^3}{3} \right|_{-3}^3 = \frac{3^3}{3} - \frac{-3^3}{3} = 9 - (\frac{-27}{3}) = 18$
+  \item $\int_0^2{4x}^3dx = \left. \frac{{4x}^4}{4} \right|_0^2 = \left. x^4 \right|_0^2 = 2^4 - 0 = 16$
+  \item $\int_{-2}^2{4x}^3dx = \left. x^4 \right|_{-2}^2 = 2^4 - {(-2)}^4 = 0$
+\end{enumerate}
+
+21. Find all values of c for which
+\begin{enumerate}[(a)]
+  \item $\int_0^c x(1-x)dx = 0$ \\
+        \paragraph{Solution}
+        $\int_0^c x(1-x)dx = \int_0^c (x-x^2)dx = \left. \frac{x^2}{2} - \frac{x^3}{3} \right|_0^c = (\frac{c^2}{2} - \frac{c^3}{3}) - 0$
+        $\frac{c^2}{2} - \frac{c^3}{3} = 0 = c^2(\frac{1}{2} - \frac{c}{3}) = c^2(\frac{3}{6} - \frac{2c}{6})$ thus $c=0$ or $c=1.5$ Figure\ref{x(x-1)}
+  \item $\int_0^c \lvert x(1-x)\rvert dx = 0$ \\
+        \paragraph{Solution}
+        $c=0$ as this never has area under the y-axis. See Figure\ref{x(x-1)}
+\end{enumerate}
+
+
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = {$x$},
+    ylabel = {$y$},
+    domain = -0.5:2,
+    samples = 200,
+    ymin = -0.5, ymax = 0.5,
+    xmin = -0.5, xmax = 2,
+    xtick = {0,1,1.5},
+    ytick = {-0.25,0,0.25},
+    grid = both,
+    width=10cm,
+    height=6cm
+]
+
+\addplot[thick] {x*(1-x)};
+
+% Mark important points
+\addplot[only marks] coordinates {(0,0) (1,0) (1.5,-0.75/4)};
+\addplot[only marks] coordinates {(1.5,{1.5*(1-1.5)})};
+
+\end{axis}
+\end{tikzpicture}
+  \caption{Plot of $x(x-1)$ function}
+  \label{x(x-1)}
+\end{figure}
+
 
 \end{document}
