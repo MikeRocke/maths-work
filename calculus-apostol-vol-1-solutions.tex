@@ -13,8 +13,9 @@
 
 \begin{document}
 \maketitle
-
 \tableofcontents
+
+\newpage
 
 \section{Introduction}
 
@@ -30,7 +31,7 @@
 		axis lines=middle,
 		ymajorgrids=true,
 		xmajorgrids=true,
-		xmin=0,
+		xmin=-3,
 		xmax=3,
 		ymin=0,
 		ymax=5,
@@ -58,7 +59,7 @@ Draw the new figure.
 	axis lines=middle,
 	ymajorgrids=true,
 	xmajorgrids=true,
-	xmin=0,
+	xmin=-3,
 	xmax=3,
 	ymin=0,
 	ymax=5,
@@ -87,7 +88,7 @@ b) $3x^2$
 		axis lines=middle,
 		ymajorgrids=true,
 		xmajorgrids=true,
-		xmin=0,
+		xmin=-3,
 		xmax=3,
 		ymin=0,
 		ymax=5,
@@ -113,7 +114,7 @@ c) $\frac{1}{4}x^2$
 	axis lines=middle,
 	ymajorgrids=true,
 	xmajorgrids=true,
-	xmin=0,
+	xmin=-5,
 	xmax=5,
 	ymin=0,
 	ymax=5,
@@ -149,31 +150,28 @@ S_n = \frac{b^4}{n^4} (1^3 + 2^3 + ... + n^3), \; s_n = \frac{b^4}{n^4}[1^3 + 2^
 
 b)
 
-\section{The concepts of integral calculus}
+\setcounter{chapter}{0}
+\chapter{The concepts of integral calculus}
 
-\subsection{1.5 Exercises}
+\setcounter{section}{4}
+\section{Exercises}
 
-\subsubsection{1}
+\subsection{1}
 
-Let $f(x) = x + 1$ for al real x. Compute the following
+Let $f(x) = x + 1$ for al real $x$. Compute the following
 
-$f(2) = 3$
+\begin{align*}
+f(2) &= 3\\
+f(-2) &= -1\\
+-f(2) &= -3\\
+f(\frac{1}{2}) &= \frac{3}{2}\\
+1/f(2) &= \frac{1}{3}\\
+f(a + b) &= a + b + 1\\
+f(a) + f(b) &= a + b + 2\\
+f(a)f(b) &= (a+1)(b+1) = ab + a + b + 1\\
+\end{align*}
 
-$f(-2) = -1$
-
-$-f(2) = -3$
-
-$f(\frac{1}{2})= \frac{3}{2}$
-
-$1/f(2) = \frac{1}{3}$
-
-$f(a + b) = a + b + 1$
-
-$f(a) + f(b) = a + b + 2$
-
-$f(a)f(b) = (a+1)(b+1) = ab + a + b + 1$
-
-\subsubsection{2}
+\subsection{2}
 
 Let $f(x) = 1 + x$ and let $g(x) = 1 - x$ for all real x. Compute the following:
 
@@ -193,7 +191,7 @@ $f(a) + g(-a) = 1 + a + (1 - (-a)) = 2 + 2a$
 
 $f(t)g(-t) = (1 + t)(1 - (-t)) = 1 + 2t + t^2$
 
-\subsubsection{3}
+\subsection{3}
 
 Let $\psi(x) = |x - 3| + |x -1|$ for all real x. Compute the following:
 
@@ -219,7 +217,7 @@ thus $|t - 3| = |t + 1|$
 
 Only value that will satisfy is when $t = 1$
 
-\subsubsection{4}
+\subsection{4}
 
 Let $f(x) = x^2$ for all real x. Verify each of the following formulas. In each case describe the set of real x, y, t, etc., for which the given formula is valid
 
@@ -232,5 +230,43 @@ Let $f(x) = x^2$ for all real x. Verify each of the following formulas. In each 
 	\item $\sqrt{f(a)} = |a|$, So $\sqrt{f(a)} = \sqrt{a^2}$ which when taking the positive root, is $|a|$ for all a
 \end{enumerate}
 
+\setcounter{section}{14}
+\section{Exercises}
+\subsection{1}
+Compute the value of the following integrals
+\begin{enumerate}[(a)]
+        \item $\int_{-1}^{3}[x]dx =  \int_{-1}^{0}(-1)dx + \int_{0}^{1}(0)dx + \int_{1}^{2}(1)dx + \int_{2}^{3}(2)dx = -1 + 0 + 1 + 2 = 2$ See Figure \ref{floor_x}
+\end{enumerate}
+
+\begin{figure}
+\begin{tikzpicture}[scale=1.5]
+    % Draw grid and axes
+    \draw[step=1, gray!20, very thin] (-1.5,-1.5) grid (3.5,3.5);
+    \draw[->, thick] (-1.5,0) -- (3.5,0) node[right] {$x$};
+    \draw[->, thick] (0,-1.5) -- (0,3.5) node[above] {$[x]$};
+
+    % Shading for the areas
+    \fill[gray!20] (-1,-1) rectangle (0,0);
+    \fill[gray!20] (1,0) rectangle (2,1);
+    \fill[gray!20] (2,0) rectangle (3,2);
+
+    % Draw the segments of the floor function
+    \foreach \x in {-1, 0, 1, 2} {
+        \draw[blue, very thick] (\x, \x) -- (\x+1, \x);
+        \filldraw[blue] (\x, \x) circle (1.5pt); % Closed circle
+        \draw[blue, fill=white] (\x+1, \x) circle (1.5pt); % Open circle
+    }
+    
+    % Point at 3 (optional depending on definition)
+    \filldraw[blue] (3,3) circle (1.5pt);
+
+    % Labels for clarity
+    \node[below left] at (-1,-1) {Area: $-1$};
+    \node[above left] at (2,0.5) {Area: $1$};
+    \node[above left] at (3,1) {Area: $2$};
+  \end{tikzpicture}
+  \caption{Plot of [x] function}
+  \label{floor_x}
+  \end{figure}
 
 \end{document}

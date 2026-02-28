@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{venndiagram}
 \usepackage{float}
+\usepackage{enumitem}
 \usepackage{amsthm}
 
 \title{Introductory Mathematics: Algebra and Analysis Solutions}
@@ -15,43 +16,48 @@
 \section{Chapter 1}
 
 \subsection{Exercises}
-Notes \\
+Notes
 
-$\mathbb{N} $ = Set of Natural numbers, $ \{1, 2, 3, .. \}$ \\
 
-$\mathbb{Z} $ = Set of Integers, $ \{..., -2, -1, 0, 1, 2, .. \}$ \\
+\begin{description}
+  \item[$\mathbb{N}$] Set of natural numbers, $\{1,2,3,\dots\}$
+  \item[$\mathbb{Z}$] Set of integers, $\{\dots,-2,-1,0,1,2,\dots\}$
+  \item[$\mathbb{Q}$] Set of rational numbers,
+    $\left\{\frac{a}{b} \mid a,b \in \mathbb{Z},\, b \ne 0 \right\}$
+  \item[$\mathbb{R}$] Set of real numbers
+\end{description}
 
-$\mathbb{Q} $ = Set of Rational Numbers, $ Q = \{\frac{a}{b} | a,b \in \mathbb{Z}, b \ne 0 \} $ \\
-
-$\mathbb{R} $ = Set of Real numbers
 
 \subsubsection{1.1}
-$ A = \{1,2,3\} , B = \{1, 2\}, C=\{1, 3\}, D=\{2, 3\}, E=\{1\}, F=\{2\}, G=\{3\}, H=\emptyset$ \\
+\[
+\begin{aligned}
+A &= \{1,2,3\}, &
+B &= \{1,2\}, &
+C &= \{1,3\}, \\
+D &= \{2,3\}, &
+E &= \{1\}, &
+F &= \{2\}, \\
+G &= \{3\}, &
+H &= \emptyset
+\end{aligned}
+\]
+
+\begin{enumerate}[label=\alph*)]
+  \item $A \cap B = B$
+  \item $A \cup C = A$
+  \item $A \cap (B \cap C) = E$
+  \item $(C \cup A) \cap B = B$
+  \item $A \setminus B = G$
+\item $ C \setminus A = H $ 
+\item $ (D \setminus F) \cup (F \setminus D)  = G$ 
+\item $ G \setminus A = H$ 
+\item $ A \cup ((B \setminus C) \setminus F)  = A$
+\item $ H \cup H = H $
+\item $ A \cap A = A $
+\item $ ((B \cup C) \cap C) \cup H = C $
+\end{enumerate}
 
 
-a) $A \cap B = B $ \\
-
-b) $A \cup C = A $ \\
-
-c) $A \cap (B \cap C) = E $ \\
-
-d) $(C \cup A) \cap B  = B $ \\
-
-e) $ A \setminus B = G $ \\
-
-f) $ C \setminus A = H $ \\
-
-g) $ (D \setminus F) \cup (F \setminus D)  = G$ \\
-
-h) $ G \setminus A = H$ \\
-
-j) $ A \cup ((B \setminus C) \setminus F)  = A$\\
-
-k) $ H \cup H = H $\\
-
-l) $ A \cap A = A $\\
-
-m) $ ((B \cup C) \cap C) \cup H = C $\\
 
 \subsubsection{1.2}
 
@@ -310,4 +316,30 @@ b) Prove De Morgan's laws.
 \begin{proof}
 	First we prove $(A \cup B)' = A' \cap B'$. Lets denote the set $X = (A \cup B)'$ and $Y = A' \cap B'$. In English, $X$ contains all the items that aren't in either A or B. That would state that $A$ is not a subset of $X$ and same goes for $B$, e.g. $X = U - (A + B)$ where U is the universal set. $Y$ in English states that it contains all the elements which are not in $A$ and not in $B$, e.g. $Y= U - A -  B$, which we can see that $Y = X$
 \end{proof}
+
+\section{Chapter 3}
+\subsection{Exercises}
+\subsubsection{3.1}
+
+Put the following expressions into the shape $a+ib$ with $a,b \in \mathbb{R} $
+
+\begin{enumerate}[label=\alph*)]
+  \item $i^3 = (i^2)i = (-1)i = -i$
+  \item $(1-i)i = i - i^2 = i - (-1) = 1 + i$
+  \item $(1+i)^2 = (1+i)(1+i) = 1 + 2i - 1 = 2i$
+  \item $(1+i)^8=((1+i)^2)^4 = (2i)^4 = 2^4(i^4) = 16((i^2)^2) = 16(-1)^2 = 16$
+  \item $(1-i)^8 = ((1-i)^2)^4 = (1-2i-1)^4 = (-2i)^4 = 16(1) = 16$
+  \item $(1-2i)(3-4i) - i^3 = (3 -4i -6i + 8i^2) + i = 3 - 9i - 8 = -5 - 9i$
+        
+\end{enumerate}
+
+\subsubsection{3.4}
+Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be a map which preserves distances. Prove that there are numbers $a \in {1, -1}$ and $b \in \mathbb{R}$ such that $f(x) = ax + b \forall x \in \mathbb{R}$.
+
+\begin{proof}
+  Given $\forall x,y \in \mathbb{R}$, $|f(x) - f(y)| = |x-y|$
+  todo complete me
+\end{proof}
+
+
 \end{document}

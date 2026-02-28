@@ -22,4 +22,3 @@ attach(juul)
 
 juul.girl = juul[juul$age > 7 & juul$age < 14 & juul$sex == 2,]
 summary(juul.girl)
-:

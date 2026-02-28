@@ -1,0 +1,89 @@
+#+title: Module 1
+* Rational numbers are dense
+#+begin_quote
+Consider two rational numbers a and b.  Identify a rational number that lies between a and b and prove that it is rational.
+#+end_quote
+
+Let a and b be rational numbers.
+lets consider the mean/average of the two $$(a+b)/2$$
+
+if a and b are rational, we can represent with
+
+
+$$a = \frac{m}{n}$$
+$$b = \frac{p}{q}$$
+
+which, when subsituted are
+$$\frac{a+b}{2} = \frac{\frac{m}{n} + \frac{p}{q}}{2} = \frac{mq+np}{2nq}$$
+
+which, m,n,p,q and 2 are all integers, thus, $$(a+b)/2$$ is rational
+* Square root of two is irrational
+
+Prove that $\sqrt{2}$ is irrational.
+Proof:
+lets assume $\sqrt{2}$ is rational, represented by $\frac{m}{n}$ and that $n \neq 0$ and is in simplest form, $\sqrt{2} = \frac{m}{n}$
+
+squaring both sides we get
+$2 = \frac{m^2}{n^2}$ meaning that $m^2$ is even.
+
+to get $m^2$ to be even, $m$ must be even, and if $m$ is even, we can represent with $m=2k$
+
+Substituting $m=2k$ in, we get $2n^2 = (2k)^2 = 4k^$
+dividng by 2, we get $n^2 = 2k$, meaning $n$ is even
+
+So we have $m$ and $n$ being even, which contradicts our simplest form property
+Given this contradiction, assumption of $\sqrt{2}$ is rational is false
+* Write as a complex number
+** 1. -(7-i)(-4-2i)(2-i)
+\begin{align}
+i = \sqrt{-1} \\
+-(7-i)(-4-2i)(2-i) = \\
+-(7-i)(-8 + 4i -4i + 2i^2) = \\
+-(7-i)(-8 + 2(-1)) = \\
+-(7-i)(-10) = \\
+70-10i
+\end{align}
+** 2.
+\begin{align}
+\frac{1+3i}{3-2i} \\
+\frac{1+3i}{3-2i} \cdot \frac{3+2i}{3+2i} \\
+\frac{(1+3i)(3+2i)}{(3-2i)(3+2i)}\\
+\frac{3+2i+9i+6i^2}{9-4i^2}\\
+\frac{-3 + 11i}{13}
+\end{align}
+** 3
+\begin{align}
+
+\end{align}
+* Solve a complex equation
+Solve for x and y, where x and y are real
+$2y + ix = 4 + x - i$
+
+Given a complex number, the with equality, the two real parts should be equal, and the two imaginary parts should be equal
+\begin{align}
+2y = 4 + x \\
+y = 2 + \frac{x}{2} \\
+\end{align}
+
+\begin{align}
+ix = -i \\
+x = -1
+\end{align}
+
+meaning $y=\frac{3/2}$
+* Determine the square root of i
+#+begin_quote
+Find two complex numbers for $\sqrt{i}$
+​by writing $\sqrt{i} = x +iy$ squaring both sides, and solving for x and y.
+#+end_quote
+
+\begin{align}
+\sqrt{i} = x + iy \\
+i = (x + iy)^2 = (x + iy)(x + iy) \\
+i = x^2 + 2xiy - y^2
+\end{align}
+
+which if we break into the real part $x^2 - y^2 = 0$  thus $x^2 = y^2$ $x=y$
+
+where the imaginary parts, $i = 2xiy$ and given $x=y$,
+$i = 2ix^2$ and $1 = 2xy$
