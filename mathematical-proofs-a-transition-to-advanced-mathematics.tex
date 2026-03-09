@@ -1,0 +1,39 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Solutions for Mathematical Proofs: A Transition to Advanced Mathematics}
+\author{Michael Rocke}
+\begin{document}
+\maketitle
+
+
+\setcounter{chapter}{2}
+\chapter{Direct Proof and Proof by Contrapositive}
+
+\paragraph{3.1 Prove that if $x$ is an odd integer, then $9x+5$ is even.}
+
+\begin{proof}
+  Let $x=2k+1$ such that $k \in \mathbb{Z}$
+  \begin{align*}
+    9x+5 &= 9(2k+1) + 5\\
+    &= 18k + 14\\
+    &= 2(9k+7)
+  \end{align*}, since $9k+7$ is an integer, thus $9x+5$ is even 
+\end{proof}
+
+\paragraph{3.2 Prove that if x is an even integer, then $5x-3$ is an odd integer}
+
+\begin{proof}
+  Let $x=2k$, such that $k \in \mathbb{Z}$
+  \begin{align*}
+    5x - 3 &= 5(2k) - 3\\
+           &= 10k - 3\\
+           &= (10k - 2) - 1 \\
+           &= 2(5k - 1) - 1 \\
+  \end{align*}
+  since $5k-1$ is an integer, then $5x-3$ is an odd integer
+\end{proof}
+
+
+\end{document}
